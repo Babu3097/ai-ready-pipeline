@@ -21,13 +21,13 @@ Keep "synthetic" and "Built with AI assistance". You may now say a four-page Pow
 
 ## LinkedIn "Featured" description (short)
 
-"A portfolio project on a problem UK public-service providers face: AI pilots stall because the data is messy, nobody trusts the output, and the savings aren't proven. Using synthetic data for a fictional council contact centre, I built a pipeline that cleans and scores the data, masks personal details, triages enquiries with AI, sends anything urgent or uncertain to a human, logs every decision, and measures accuracy and time saved against a known answer key. Built with AI assistance as part of learning Python, SQL and Power BI; honest limitations are in the README."
+"A portfolio project on a problem UK public-service providers face: AI pilots stall because the data is messy, nobody trusts the output, and the savings aren't proven. Using synthetic data for a fictional council contact centre, I built a pipeline that cleans and scores the data, masks personal details, triages enquiries with AI, sends anything urgent or uncertain to a human, logs every decision, and measures accuracy and time saved against a known answer key. Built with AI assistance; honest limitations are in the README."
 
 ## What I can say honestly in an interview
 
 **Can say:**
 - "I used AI tools to build it, and I understand each step: what the clean-up rules do, why uncertain values are blanked, how the review rule works, and what the numbers do and don't prove."
-- "I'm learning Python and SQL properly now and plan to rebuild the clean-up and some queries myself."
+- "I'm rebuilding the clean-up script and some of the queries myself, and I can walk through each step."
 
 **Don't say:**
 - That you wrote the code unaided.

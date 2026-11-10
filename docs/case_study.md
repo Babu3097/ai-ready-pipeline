@@ -38,7 +38,7 @@ Data quality: consistency rose from 65% to 100%, and the clean-up introduced 1 w
 
 **Cautions.** The enquiries are synthetic and template-based, so real ones will be harder. The "human reviewer" is simulated and knows the answers. The time saving rests on assumptions (4 minutes manual triage, 2 minutes to review an AI suggestion, £18 an hour) and falls sharply if review takes longer. The real runs cost about £1.3 in total on assumed prices.
 
-## What I learned
+## What I took from it
 
 - Clean data matters more than clever AI. Most of the effort went into making the data trustworthy.
 - "Human in the loop" has a cost. Sending every urgent case to a person is the safe choice, and it is also what limits the saving.
@@ -51,4 +51,4 @@ Test on a harder dataset written by someone else, try a larger model on the ambi
 
 ## How it was built
 
-Built with AI assistance (Claude Code) while I was learning to code. I am now learning Python, SQL and Power BI properly and will rebuild key parts myself.
+Built with AI assistance (Claude Code). I'm rebuilding key parts myself, starting with the data-cleaning script and the SQL queries.

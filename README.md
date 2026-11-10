@@ -165,4 +165,4 @@ docs/         results, error analysis, case study, video script, CV notes, scree
 
 ## Built with AI assistance
 
-Built with Claude Code as a learn-by-building project by someone new to coding. The plan is to learn the underlying skills next, then rebuild the clean-up script, the Claude call, three SQL queries and one report page from scratch. See [LEARNING_NOTES.md](LEARNING_NOTES.md).
+Built with Claude Code. Next step: rebuild the clean-up script, the Claude call, three SQL queries and one report page from scratch, so I can write and explain every part myself.

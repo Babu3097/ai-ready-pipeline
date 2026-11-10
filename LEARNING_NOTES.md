@@ -156,3 +156,13 @@ Order from CLAUDE.md: terminal and VS Code -> Python basics -> pandas -> SQL -> 
 - **New words:** *prompt version* (keeping v1 so you can compare); *held-out set* (test data you don't tune on); *tuning on the test set* (fitting your changes to the same data you score, which inflates results); *secondary category*; *calibration* (making the AI's "Medium" mean what your organisation means).
 - **Mistakes I made and fixed:** forgot to rebuild the database after a schema change (the run crashed on its first save; I caught it by reading the log, not trusting "completed"); my cost estimate ignored the longer prompt.
 - **New questions to answer in your own words:** (12) Why test on messages you wrote *before* changing the prompt? (13) Why did urgency not improve when category did? (14) Why does a longer prompt cost more on every call?
+
+
+---
+
+## Update: the Power BI report
+
+- **What I did:** built a four-page report in the Power BI service from the repo's CSVs, using their public GitHub addresses. Real screenshots are in `docs/screenshots/powerbi_*.jpg`.
+- **What went wrong and what I learned:** Power BI refused a local Excel upload (needs OneDrive/SharePoint); the web editor has no custom measures; moving visuals by dragging was unreliable, so I used the numeric Size and Position boxes. Microsoft also said a Fabric trial wasn't available for my account, so Fabric stays "prepared, not run".
+- **New words:** *semantic model* (the data tables behind a report); *Power Query* (the tool that loads and shapes data); *aggregation* (Count, Sum, Average of a column); *page-level filter* (a filter that applies to every visual on a page); *measure* (a reusable calculation written in DAX).
+- **New questions to answer in your own words:** (15) Why filter the AI-performance page to the 300 original rows? (16) Why can't a card show "Review rate" as a ready-made number without a measure, and what did I use instead? (17) What does it mean that the report reads data from GitHub, and what would I need to do to refresh it?

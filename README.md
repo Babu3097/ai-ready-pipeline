@@ -31,8 +31,8 @@ Messy legacy sheet ─► 1 Clean & score (Python) ─► 2 SQL tables (SQLite /
 | 4 | AI triage (pydantic, retry, cost guard) | **Done and tested with the real Claude API** (312 enquiries, about £0.41), plus the keyword stand-in and a chat-session run for comparison |
 | 5 | Human review loop + audit log | **Local version tested**; the n8n workflow is drafted, **not run** (no Docker or Google account here) |
 | 6 | Evaluation vs answer key, time saved | **Done** on the real API run (see Results) |
-| 7 | Power BI report | **Not built.** Data model, DAX and page designs are ready (`powerbi/BUILD_GUIDE.md`); the four pages are drawn in Python as previews, not Power BI |
-| 8 | Microsoft Fabric edition | **Prepared, not run.** Notebooks, T-SQL and a step-by-step guide are in `fabric/` |
+| 7 | Power BI report | **Built in the Power BI service** (4 pages, from this repo's CSVs; real screenshots below). No `.pbix` file (Power BI Desktop is Windows-only), and the web editor can't create custom DAX measures, so it uses built-in aggregations. Default visual titles still need polish |
+| 8 | Microsoft Fabric edition | **Prepared, not run.** Notebooks, T-SQL and a step-by-step guide are in `fabric/`. On 10 Nov 2026 I tried to start a Fabric trial for my account and Microsoft replied that a Fabric trial isn't available for it, so the notebooks have never been run |
 | 9 | Packaging | README, case study, video script and CV notes done; **video not recorded** |
 
 ## Results
@@ -85,12 +85,16 @@ Checked against the answer key: **1 wrong value in about 3,300 cleaned cells**. 
 
 Full detail: [docs/results.md](docs/results.md) | [where it was wrong](docs/error_analysis.md) | [data quality report](data/clean/quality_report.md) | [example audit trail](docs/example_audit_trail.txt)
 
-### Report pages (Python previews of the planned Power BI pages)
+### The Power BI report (real screenshots from the Power BI service)
+
+Built on the repo's CSV files (`powerbi/data/`), loaded into Power BI from their public GitHub addresses. Four pages: overview, data quality before/after, AI performance, value.
 
 | | |
 |---|---|
-| ![Overview](docs/screenshots/1_overview.png) | ![Data quality](docs/screenshots/2_data_quality.png) |
-| ![AI performance](docs/screenshots/3_ai_performance.png) | ![Value](docs/screenshots/4_value.png) |
+| ![Overview](docs/screenshots/powerbi_1_overview.jpg) | ![Data quality](docs/screenshots/powerbi_2_data_quality.jpg) |
+| ![AI performance](docs/screenshots/powerbi_3_ai_performance.jpg) | ![Value](docs/screenshots/powerbi_4_value.jpg) |
+
+Honest notes: visual titles are Power BI defaults ("Count of raw_row"), the month axis isn't sorted, and the data is a snapshot of the CSVs (re-run `evaluate.py`, push, then refresh the model to update). Earlier Python-drawn mock-ups of the pages are in `docs/screenshots/python_preview/`.
 
 ## Run it (no API key needed)
 
@@ -156,7 +160,7 @@ docs/         results, error analysis, case study, video script, CV notes, scree
 2. Add a harder test set (typos, two issues in one message, very short messages).
 3. Sample the cases the AI handled *without* review every week to catch drift.
 4. Tune the confidence threshold against the cost of a missed urgent case.
-5. Complete the Power BI report and the Fabric run, with real screenshots.
+5. Polish the Power BI report (titles, sorting, custom DAX measures in Power BI Desktop) and run the Fabric edition if an account that can start the trial becomes available.
 6. Re-test on a harder dataset that someone else wrote.
 
 ## Built with AI assistance

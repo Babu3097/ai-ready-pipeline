@@ -8,7 +8,7 @@ Only claim what is true *today*. This project was **built with AI assistance**; 
 
 > Built and evaluated an AI triage pipeline on synthetic council enquiries (Python, SQL, pandas, Claude API): cleaned 330 messy records to 312 (consistency 65% to 100%), masked personal data before AI use, and measured Claude against a known answer key. Improved category accuracy from 84% to 98% by rewriting the prompt (87.5% to 96.4% on a separate held-out set), with 0 of 86 urgent cases missed without human review at about £0.60 per 312 enquiries. Documented where it still fails. Built with AI assistance.
 
-Keep "synthetic" and "Built with AI assistance". Do not write "on Microsoft Fabric" or "Power BI report" yet. A shorter version: "Built and evaluated a Claude-based triage pipeline on synthetic council data: category accuracy 84% to 98% after prompt redesign (96% on a held-out set), 0 urgent cases missed without human review, failures documented."
+Keep "synthetic" and "Built with AI assistance". You may now say a four-page Power BI report was built (in the Power BI service, with built-in aggregations). Do not write "on Microsoft Fabric" or imply a `.pbix` file or custom DAX; neither exists. A shorter version: "Built and evaluated a Claude-based triage pipeline on synthetic council data: category accuracy 84% to 98% after prompt redesign (96% on a held-out set), 0 urgent cases missed without human review, failures documented."
 
 **Say the held-out number first when asked.** The 98% was tuned on the same data; the 96.4% on unseen messages is the more honest figure.
 
@@ -16,7 +16,6 @@ Keep "synthetic" and "Built with AI assistance". Do not write "on Microsoft Fabr
 
 | When you have... | You can add |
 |---|---|
-| Built and saved the Power BI report | "with a four-page Power BI report for contract managers" |
 | Run it in a Fabric trial | "prepared and ran the pipeline on Microsoft Fabric (Lakehouse, notebooks, SQL endpoint, Power BI)" |
 | Rebuilt the pieces yourself | "then rebuilt the data-cleaning script and key SQL queries from scratch" |
 
@@ -58,11 +57,11 @@ Keep "synthetic" and "Built with AI assistance". Do not write "on Microsoft Fabr
 3. "I'm upfront that results came from a keyword stand-in on easy data."
 
 **Phase 7 - Reporting**
-1. "I designed a four-page report a contract manager can read in 30 seconds, with the DAX measures written out."
-2. "Power BI Desktop is Windows-only and I'm on a Mac, so I previewed the pages in Python and documented how to build them."
+1. "I built a four-page Power BI report in the service: overview, data quality before/after, AI performance, value."
+2. "Power BI Desktop is Windows-only and I'm on a Mac, so I used the web editor. It can't create custom DAX measures, so I used built-in aggregations and wrote the measures I'd add in Desktop. Power BI also no longer takes local Excel uploads, so I loaded the CSVs from their GitHub addresses."
 
 **Phase 8 - Fabric**
-1. "I checked the trial terms: 60 days, no card via the Fabric app, items removed after expiry, so I planned to export evidence and delete the workspace."
+1. "I checked the trial terms (60 days, items removed after expiry) and tried to start the trial, but Microsoft said it isn't available for my account, so I kept the Fabric notebooks as prepared-but-untested."
 2. "The notebooks reuse the same Python files as the local edition, so only the plumbing is new."
 
 **Phase 9 - Packaging**

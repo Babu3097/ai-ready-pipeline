@@ -1,5 +1,17 @@
 # Building the Power BI report (Phase 7)
 
+## What was actually built (10 Nov 2026)
+
+A four-page report, **Northfield AI triage report**, was built in the Power BI service (web) with a Power BI trial account, then saved to "My workspace". Screenshots are in `docs/screenshots/powerbi_*.jpg`. How it was done, and what went wrong on the way, so you can repeat or improve it:
+
+1. **Loading data.** Power BI no longer accepts Excel uploads from a local folder (it asks for OneDrive/SharePoint). What worked: **Create -> Get data -> Text/CSV**, pasting each file's public GitHub address, for example `https://raw.githubusercontent.com/Babu3097/ai-ready-pipeline/main/powerbi/data/triage_facts.csv` (authentication: Anonymous), and repeating **Get data** for `quality_scores.csv`, `eval_summary.csv` and `value_sensitivity.csv`. One fix in Power Query: set the `month` column to **Text**. Then **Create a report** (semantic model name `northfield_model`).
+2. **Pages.** Page size is 1920x1080. Visuals were positioned with Format -> General -> Properties (Size and Position boxes), which is more reliable than dragging.
+3. **Page 3 filter.** A page-level filter `row_type = original` makes the AI-performance charts count only the 300 real enquiries.
+4. **What the web editor can't do.** There is no "New measure", so the DAX measures below were **not** created; the report uses built-in aggregations (Count of `raw_row`, Average of `needs_human_review`, Average of `category_correct`, and so on). To get nicer titles, percentage cards and the measures below, open the model in **Power BI Desktop** (Windows).
+5. **Known rough edges.** Default titles ("Count of raw_row"), the month axis is not sorted, and the Overview cards could use clearer labels.
+
+## The original plan (still the target for Power BI Desktop)
+
 **Status:** the data and the design are ready, but **no `.pbix` file exists yet**. Power BI Desktop only runs on Windows and this project was built on a Mac. Pictures of the four pages (drawn with Python from the same data) are in `docs/screenshots/`; they show what to build. They are not Power BI screenshots.
 
 Do this on a Windows PC, or in the Power BI service (app.powerbi.com) using a free/trial account, which also works from a Mac browser. Save the finished file as `powerbi/northfield_report.pbix` and take real screenshots into `docs/screenshots/`.

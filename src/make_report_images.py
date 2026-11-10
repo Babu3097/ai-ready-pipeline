@@ -16,7 +16,7 @@ import pandas as pd
 import db
 
 DATA = db.ROOT / "powerbi" / "data"
-OUT = db.ROOT / "docs" / "screenshots"
+OUT = db.ROOT / "docs" / "screenshots" / "python_preview"
 BLUE, ORANGE, GREY, RED, GREEN, INK = "#2F5D8C", "#D9822B", "#8A94A0", "#B23A3A", "#3C8D5A", "#1F2933"
 plt.rcParams.update({"font.family": "DejaVu Sans", "axes.spines.top": False, "axes.spines.right": False,
                      "axes.edgecolor": GREY, "axes.labelcolor": INK, "xtick.color": INK, "ytick.color": INK})

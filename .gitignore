@@ -1,0 +1,11 @@
+# Secrets - never commit these
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Local database and Mac clutter
+*.db
+.DS_Store

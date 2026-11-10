@@ -1,6 +1,6 @@
-# Learning Notes
+# Project Notes
 
-Updated after each phase. Plain English, my words to grow into.
+Updated after each phase. Plain English.
 
 ## Time tracking
 
@@ -8,7 +8,7 @@ Updated after each phase. Plain English, my words to grow into.
 |---|---|---|---|
 | Phases 0-2 build | 2026-11-10 | _to fill in_ | _to fill in_ |
 
-Estimates: project 58-80 hours, learning 70-90, rebuild 15-20.
+Estimates: project 58-80 hours, rebuild 15-20.
 
 ---
 
@@ -128,11 +128,11 @@ Phases 3-6:
 
 ### Time tracking
 
-Add your real hours in the table at the top of this file. Time so far on this project (your hours, not mine): _to fill in_.
+Add your real hours in the table at the top of this file. Time so far on this project: _to fill in_.
 
-### Next: learn from scratch, then rebuild
+### Next: rebuild
 
-Order from CLAUDE.md: terminal and VS Code -> Python basics -> pandas -> SQL -> APIs/JSON/Claude -> n8n -> Power BI/DAX/Fabric. Then rewrite `data_quality.py`, the Claude call in `triage.py`, three SQL queries and one Power BI page yourself.
+Rewrite `data_quality.py`, the Claude call in `triage.py`, three SQL queries and one Power BI page from blank files.
 
 
 ---
@@ -163,7 +163,7 @@ Order from CLAUDE.md: terminal and VS Code -> Python basics -> pandas -> SQL -> 
 ## Update: the Power BI report
 
 - **What I did:** built a four-page report in the Power BI service from the repo's CSVs, using their public GitHub addresses. Real screenshots are in `docs/screenshots/powerbi_*.jpg`.
-- **What went wrong and what I learned:** Power BI refused a local Excel upload (needs OneDrive/SharePoint); the web editor has no custom measures; moving visuals by dragging was unreliable, so I used the numeric Size and Position boxes. Microsoft also said a Fabric trial wasn't available for my account, so Fabric stays "prepared, not run".
+- **What went wrong and what I found:** Power BI refused a local Excel upload (needs OneDrive/SharePoint); the web editor has no custom measures; moving visuals by dragging was unreliable, so I used the numeric Size and Position boxes. Microsoft also said a Fabric trial wasn't available for my account, so Fabric stays "prepared, not run".
 - **New words:** *semantic model* (the data tables behind a report); *Power Query* (the tool that loads and shapes data); *aggregation* (Count, Sum, Average of a column); *page-level filter* (a filter that applies to every visual on a page); *measure* (a reusable calculation written in DAX).
 - **New questions to answer in your own words:** (15) Why filter the AI-performance page to the 300 original rows? (16) Why can't a card show "Review rate" as a ready-made number without a measure, and what did I use instead? (17) What does it mean that the report reads data from GitHub, and what would I need to do to refresh it?
 

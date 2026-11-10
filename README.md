@@ -31,7 +31,7 @@ Messy legacy sheet ─► 1 Clean & score (Python) ─► 2 SQL tables (SQLite /
 | 4 | AI triage (pydantic, retry, cost guard) | **Done and tested with the real Claude API** (312 enquiries, about £0.41), plus the keyword stand-in and a chat-session run for comparison |
 | 5 | Human review loop + audit log | **Local version tested**; the n8n workflow is drafted, **not run** (no Docker or Google account here) |
 | 6 | Evaluation vs answer key, time saved | **Done** on the real API run (see Results) |
-| 7 | Power BI report | **Built in the Power BI service** (4 pages, from this repo's CSVs; real screenshots below). No `.pbix` file (Power BI Desktop is Windows-only), and the web editor can't create custom DAX measures, so it uses built-in aggregations. Default visual titles still need polish |
+| 7 | Power BI report | **Built in the Power BI service** (4 pages, from this repo's CSVs; real screenshots below). No `.pbix` file (Power BI Desktop is Windows-only), and the web editor can't create custom DAX measures, so it uses built-in aggregations. Titles, labels and month order were polished; some default subtitles remain |
 | 8 | Microsoft Fabric edition | **Prepared, not run.** Notebooks, T-SQL and a step-by-step guide are in `fabric/`. On 10 Nov 2026 I tried to start a Fabric trial for my account and Microsoft replied that a Fabric trial isn't available for it, so the notebooks have never been run |
 | 9 | Packaging | README, case study, video script and CV notes done; **video not recorded** |
 
@@ -94,7 +94,7 @@ Built on the repo's CSV files (`powerbi/data/`), loaded into Power BI from their
 | ![Overview](docs/screenshots/powerbi_1_overview.jpg) | ![Data quality](docs/screenshots/powerbi_2_data_quality.jpg) |
 | ![AI performance](docs/screenshots/powerbi_3_ai_performance.jpg) | ![Value](docs/screenshots/powerbi_4_value.jpg) |
 
-Honest notes: visual titles are Power BI defaults ("Count of raw_row"), the month axis isn't sorted, and the data is a snapshot of the CSVs (re-run `evaluate.py`, push, then refresh the model to update). Earlier Python-drawn mock-ups of the pages are in `docs/screenshots/python_preview/`.
+Honest notes: charts have clear titles and labels, but their subtitles are still Power BI's defaults (for example "Count of raw_row by category_final"); the first column in the month chart (about 15 enquiries) is rows whose date couldn't be read; the "Urgent missed" figures come from the headline table, not a dedicated card; and the data is a snapshot of the CSVs (re-run `evaluate.py`, push, then refresh the model to update). Earlier Python-drawn mock-ups of the pages are in `docs/screenshots/python_preview/`.
 
 ## Run it (no API key needed)
 

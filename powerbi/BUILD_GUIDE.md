@@ -8,7 +8,7 @@ A four-page report, **Northfield AI triage report**, was built in the Power BI s
 2. **Pages.** Page size is 1920x1080. Visuals were positioned with Format -> General -> Properties (Size and Position boxes), which is more reliable than dragging.
 3. **Page 3 filter.** A page-level filter `row_type = original` makes the AI-performance charts count only the 300 real enquiries.
 4. **What the web editor can't do.** There is no "New measure", so the DAX measures below were **not** created; the report uses built-in aggregations (Count of `raw_row`, Average of `needs_human_review`, Average of `category_correct`, and so on). To get nicer titles, percentage cards and the measures below, open the model in **Power BI Desktop** (Windows).
-5. **Known rough edges.** Default titles ("Count of raw_row"), the month axis is not sorted, and the Overview cards could use clearer labels.
+5. **Polish done afterwards:** chart titles (Format -> General -> Title -> Text), card and series names (select the visual, double-click the field in the well, Cmd+A, type, Enter), months sorted ascending (visual ... -> Sort by -> month -> Sort ascending), percent formats (Format -> General -> Data format). **Still rough:** default subtitles, a (blank)-month column for undated rows, and no dedicated card for "urgent cases missed".
 
 ## The original plan (still the target for Power BI Desktop)
 

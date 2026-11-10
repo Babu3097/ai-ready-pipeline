@@ -52,6 +52,7 @@ def main():
     conn = db.connect()
     mode = [r[0] for r in conn.execute("SELECT DISTINCT mode FROM ai_triage")]
     demo = mode == ["demo"]
+    session = mode == ["claude-code-session"]
     results = db.run_sql_file(db.SQL_DIR / "evaluation_queries.sql", conn)
     R = {title.split(":")[0]: (cols, rows) for title, cols, rows, _ in results}
 
@@ -92,7 +93,7 @@ def main():
         ("Time saved", round(saved / 60, 1), "hours", "Over the scored enquiries"),
         ("Time saved %", round(saved_pct, 1), "%", "Triage time only, not fixing the problem"),
         ("Staff cost saved", round(money_saved, 2), "GBP", f"At £{HOURLY_COST_GBP}/hour (assumed), after AI cost"),
-        ("AI cost", round(ai_cost, 4), "GBP", "Demo mode = 0; real Claude cost is estimated from assumed token prices"),
+        ("AI cost", round(ai_cost, 4), "GBP", "Demo / chat-session modes = 0 (no API billing); API cost is estimated from assumed token prices"),
         (f"Hours saved per {SCALE_VOLUME:,} enquiries", round(saved * scale / 60), "hours", "Straight scaling - illustrative only"),
     ]
 
@@ -113,8 +114,13 @@ def main():
               "> The synthetic enquiries were written from a small set of templates, so a keyword matcher scores very well on them.",
               "> These figures prove the *pipeline and measurement work*. They do **not** show how Claude, or any AI, would do on real, messier enquiries.",
               "> Re-run with a real API key (`python src/triage.py --redo`, then `python src/evaluate.py`) to get Claude's numbers.\n"]
+    elif session:
+        L += ["> **READ THIS FIRST - the triage here was done by Claude in a Claude Code chat session, NOT by the Claude API.**",
+              "> Claude read each *distinct* masked message once and its answer was applied to every copy of that wording.",
+              "> Limits: (1) the same assistant wrote the synthetic data and the triage, so this is **not an independent test**; (2) the API code path in `src/triage.py` is still unproven;",
+              "> (3) the synthetic enquiries come from about 34 templates, which is far easier than real enquiries. Treat these as a best case.\n"]
     else:
-        L += [f"Mode: **real Claude** ({', '.join(mode)}). Synthetic, template-based data is easier than real enquiries, so treat these as a best case.\n"]
+        L += [f"Mode: **real Claude API** ({', '.join(mode)}). Synthetic, template-based data is easier than real enquiries, so treat these as a best case.\n"]
     L += ["## Accuracy against the answer key\n", md_table(*R["Q1"]), "",
           "### By category\n", md_table(*R["Q2"]), "",
           "### Urgency: what was true vs what the AI said\n", md_table(*R["Q3"]), "",

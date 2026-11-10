@@ -6,9 +6,9 @@ Only claim what is true *today*. This project was **built with AI assistance**; 
 
 ## CV line (true today)
 
-> Built an AI-assisted triage pipeline on synthetic council enquiries (Python, SQL, pandas, Claude API with a no-key demo mode): cleaned 330 messy records to 312 with consistency up from 65% to 100%, masked personal data before AI use, routed all urgent/safety cases to human review, and estimated a ~64% triage-time saving under stated assumptions. Built with AI assistance.
+> Built an AI-assisted triage pipeline on synthetic council enquiries (Python, SQL, pandas, Claude API with a no-key demo mode): cleaned 330 messy records to 312 with consistency up from 65% to 100%, masked personal data before AI use, routed all urgent/safety cases to human review, and estimated a 64-75% triage-time saving under stated assumptions. Built with AI assistance.
 
-Use "estimated" and keep "Built with AI assistance". Do not write "on Microsoft Fabric", "Power BI report" or "X% AI accuracy" yet.
+Use "estimated" and keep "Built with AI assistance". Do not write "on Microsoft Fabric", "Power BI report" or "X% AI accuracy" yet. The accuracy figures so far come from a keyword stand-in and a chat session on data the same assistant wrote, not the API.
 
 ## Upgrade the line when each thing is true
 
@@ -31,7 +31,7 @@ Use "estimated" and keep "Built with AI assistance". Do not write "on Microsoft 
 
 **Don't say:**
 - That you wrote the code unaided.
-- That the AI is "97% accurate". That figure came from a keyword stand-in on easy synthetic data.
+- That the AI is "97%" or "99% accurate". Those figures came from a keyword stand-in and a Claude chat session on easy synthetic data the same assistant wrote.
 - That it runs on Fabric or that a Power BI report exists, until it does.
 
 ## Talking points for phases 3 to 9

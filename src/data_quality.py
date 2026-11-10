@@ -480,14 +480,15 @@ def ground_truth_check(clean_df):
 
     # personal-detail leak check on the masked message
     leaks = Counter()
-    for _, r in originals.iterrows():
+    known = merged[merged["enquiry_id"].fillna("") != ""]  # every row we know the owner of, incl. repeats
+    for _, r in known.iterrows():
         t, masked = truth.loc[r["enquiry_id"]], r["message_masked"]
-        if t["email"] in masked: leaks["email"] += 1
+        if t["email"].lower() in masked.lower(): leaks["email"] += 1
         if t["phone"] in masked or t["phone"].replace(" ", "") in masked.replace(" ", ""): leaks["phone"] += 1
-        if t["postcode"] in masked: leaks["postcode"] += 1
-        if any(len(tok) >= 3 and re.search(rf"\b{re.escape(tok)}\b", masked) for tok in t["name"].split()): leaks["name"] += 1
-        if re.search(r"\b\d{1,4} [A-Z][a-z]+ (Street|Road|Avenue|Lane|Close|Drive|Way|Court|Gardens|Crescent|Terrace|Grove|Place)\b", masked): leaks["address"] += 1
-        if re.search(r"\bQQ\s?\d{2}\s?\d{2}\s?\d{2}\s?[A-D]\b", masked): leaks["ni_number"] += 1
+        if t["postcode"].lower() in masked.lower(): leaks["postcode"] += 1
+        if any(len(tok) >= 3 and re.search(rf"\b{re.escape(tok)}\b", masked, re.I) for tok in t["name"].split()): leaks["name"] += 1
+        if re.search(r"\b\d{1,4} [A-Za-z]+ (Street|Road|Avenue|Lane|Close|Drive|Way|Court|Gardens|Crescent|Terrace|Grove|Place)\b", masked, re.I): leaks["address"] += 1
+        if re.search(r"\bQQ\s?\d{2}\s?\d{2}\s?\d{2}\s?[A-D]\b", masked, re.I): leaks["ni_number"] += 1
 
     types = merged["row_type"].value_counts().to_dict()
     flagged = merged[merged["possible_duplicate_of"].fillna("") != ""]
@@ -497,7 +498,7 @@ def ground_truth_check(clean_df):
         "near_duplicates_in_data": int(types.get("near_duplicate", 0)),
         "originals_wrongly_flagged_as_duplicate": int((flagged["row_type"] == "original").sum()),
         "pii_leaks": dict(leaks),
-        "n_original_rows_checked": len(originals),
+        "n_original_rows_checked": len(originals), "n_rows_leak_checked": len(known),
     }
     sugg = originals[originals["category_ai_suggestion"].fillna("") != ""]
     if len(sugg):

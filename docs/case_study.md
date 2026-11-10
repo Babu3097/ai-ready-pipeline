@@ -18,25 +18,24 @@ A pipeline that deals with each of those three problems in turn:
 4. **Record everything.** A diary logs each AI answer and each human decision.
 5. **Measure honestly.** I made up the data, so I knew the right answers and could check the AI against them, including how many urgent cases it missed.
 
-## What the numbers say (demo mode)
+## What the numbers say
 
-| | |
-|---|---|
-| Data completeness / consistency before clean-up | 88% / 65% |
-| After clean-up | 90% / 100% |
-| Wrong values introduced by the clean-up | 1 in about 3,300 cells |
-| Urgent enquiries missed without a person seeing them | 0 of 86 |
-| Enquiries sent to a person | 62% |
-| Estimated triage time saved | about 64% (20.0 h -> 7.1 h on 300 enquiries) |
+| | Keyword stand-in | Claude (in a chat session) |
+|---|---|---|
+| Urgent enquiries missed without a person seeing them | 0 of 86 | 0 of 86 |
+| Enquiries sent to a person | 62% | 34% |
+| Estimated triage time saved | about 64% | about 75% |
 
-**An important caution.** These results come from a simple keyword matcher standing in for the AI, tested on easy, template-based enquiries. They show the pipeline and the measurement work; they do not show how a real AI would perform on real enquiries. The time saving depends on assumptions (4 minutes manual triage, 2 minutes to review an AI suggestion, £18 an hour). If review takes 4 minutes instead of 2, the saving falls to about a third.
+Data quality: consistency rose from 65% to 100%, and the clean-up introduced 1 wrong value in about 3,300 cells (a mistyped postcode that still looked valid).
+
+**An important caution.** Neither run used the Claude API. One is a simple keyword matcher; the other is Claude reading each distinct message once in a chat, on data the same assistant wrote, so it isn't an independent test. The enquiries are easy and template-based. These results show the pipeline and the measurement work; they do not show how an AI would perform on real enquiries. The time saving also rests on assumptions (4 minutes manual triage, 2 minutes to review an AI suggestion, £18 an hour), and falls sharply if review takes longer.
 
 ## What I learned
 
 - Clean data matters more than clever AI. Most of the effort went into making the data trustworthy.
 - "Human in the loop" has a cost. Sending every urgent case to a person is the safe choice, and it is also what limits the saving.
 - A result without its assumptions is just a claim. Every figure here comes with the assumption behind it.
-- Testing against a known answer key found a real flaw: a mistyped postcode that still looked valid slipped through.
+- Testing against a known answer key found real flaws: a mistyped postcode that still looked valid slipped through, and my own leak check had missed a street name left unmasked in lower-case text until I widened it.
 
 ## What I would do next
 

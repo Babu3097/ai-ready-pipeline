@@ -429,9 +429,9 @@ My name is Yvonne Young.  ","Could I order a replacement green bin for 64 Junipe
 108,name,name_and_email_swapped,fixed,guy.murray@example.net,Guy Murray
 108,email,name_and_email_swapped,fixed,Guy Murray,guy.murray@example.net
 108,received_date,date_format_standardised,fixed,01/11/2025,2025-11-01
-108,phone,phone_hidden_blank,treated_as_missing,   ,
-108,phone,phone_found_in_message_text,filled_from_message,   ,0161 461 8019
-108,postcode,postcode_found_in_message_text,filled_from_message,,M4 7WY
+108,postcode,postcode_hidden_blank,treated_as_missing,   ,
+108,phone,phone_found_in_message_text,filled_from_message,,0161 461 8019
+108,postcode,postcode_found_in_message_text,filled_from_message,   ,M4 7WY
 109,postcode,postcode_placeholder,treated_as_missing,N/A,
 109,urgency,urgency_format_standardised,fixed,P3,Low
 109,status,status_format_standardised,fixed,Complete,Closed

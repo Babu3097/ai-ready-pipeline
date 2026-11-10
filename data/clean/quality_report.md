@@ -47,9 +47,9 @@ Row status after clean-up:
 | phone_unreadable | cleared_invalid | 22 |
 | lost_leading_zero_restored | fixed | 21 |
 | email_unreadable | cleared_invalid | 19 |
-| phone_hidden_blank | treated_as_missing | 18 |
 | postcode_format_standardised | fixed | 18 |
 | case_ref_format_standardised | fixed | 18 |
+| phone_hidden_blank | treated_as_missing | 17 |
 | category_hidden_blank | treated_as_missing | 15 |
 | name_hidden_blank | treated_as_missing | 15 |
 | email_placeholder | treated_as_missing | 13 |
@@ -57,10 +57,10 @@ Row status after clean-up:
 | near_duplicate | flagged | 12 |
 | postcode_placeholder | treated_as_missing | 12 |
 | email_hidden_blank | treated_as_missing | 11 |
+| postcode_hidden_blank | treated_as_missing | 11 |
 | category_unmappable | cleared_invalid | 10 |
 | channel_hidden_blank | treated_as_missing | 10 |
 | exact_duplicate | removed | 10 |
-| postcode_hidden_blank | treated_as_missing | 10 |
 | date_partial | cleared_invalid | 9 |
 | name_placeholder | treated_as_missing | 9 |
 | blank_row | removed | 8 |

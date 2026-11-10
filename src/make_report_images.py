@@ -50,8 +50,10 @@ def main():
     ev = pd.read_csv(DATA / "eval_summary.csv").set_index("metric")["value"]
     q = pd.read_csv(DATA / "quality_scores.csv")
     sens = pd.read_csv(DATA / "value_sensitivity.csv")
-    demo = (f["ai_mode"].dropna() == "demo").all()
-    banner = "DEMO MODE: keyword stand-in, not Claude" if demo else None
+    modes = set(f["ai_mode"].dropna())
+    demo = modes == {"demo"}
+    banner = ("DEMO MODE: keyword stand-in, not Claude" if demo else
+              "Claude Code chat session, not the API; not independent" if modes == {"claude-code-session"} else None)
     sub = "Northfield Services (fictional) - all data is synthetic"
     orig = f[f["row_type"] == "original"]
 
@@ -125,7 +127,7 @@ def main():
     fig = page("4. Value: hours and cost saved", sub, banner)
     tile(fig, 0.04, 0.80, f"{ev['Time saved']:.1f} h", f"saved on {int(ev['Enquiries scored'])} enquiries ({ev['Time saved %']:.0f}%)", GREEN)
     tile(fig, 0.30, 0.80, f"£{ev['Staff cost saved']:.0f}", "staff cost saved (assumed £18/h)", GREEN)
-    tile(fig, 0.56, 0.80, f"£{ev['AI cost']:.2f}", "AI cost" + (" (demo mode)" if demo else ""), BLUE)
+    tile(fig, 0.56, 0.80, f"£{ev['AI cost']:.2f}", "AI cost" + (" (no API billing)" if modes != {"claude"} else ""), BLUE)
     ax = fig.add_axes([0.07, 0.12, 0.30, 0.52])
     ax.bar(["Manual", "AI + human\nreview"], [ev["Manual triage time"], ev["Time with AI + human review"]], color=[GREY, BLUE], width=0.5)
     label_bars(ax, "{:.1f}", " h"); ax.set_ylabel("Triage hours"); ax.set_title("Triage time", loc="left", fontsize=13)

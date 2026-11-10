@@ -9,7 +9,8 @@ run_all.py - run the whole local pipeline, in order, from a clean start.
   6 evaluate        accuracy vs the answer key, time and money saved, CSVs for Power BI
   7 report images   draw the four report pages
 
-Run:  python src/run_all.py
+Run:  python src/run_all.py            (keyword stand-in if no API key)
+      python src/run_all.py --session  (use the saved Claude-in-chat triage answers)
 """
 import subprocess
 import sys
@@ -30,7 +31,10 @@ STEPS = [
 
 if __name__ == "__main__":
     start = time.time()
-    for title, cmd in STEPS:
+    steps = list(STEPS)
+    if "--session" in sys.argv:  # use the Claude-in-chat answers instead of the keyword stand-in
+        steps[3] = ("4. AI triage (answers from a Claude Code chat session)", ["import_triage.py"])
+    for title, cmd in steps:
         print(f"\n{'=' * 8} {title} {'=' * 8}")
         result = subprocess.run([sys.executable, str(SRC / cmd[0])] + cmd[1:], cwd=SRC)
         if result.returncode != 0:

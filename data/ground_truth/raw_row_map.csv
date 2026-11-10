@@ -106,7 +106,7 @@ raw_row,enquiry_id,row_type,issue_tags
 105,NF-2025-0186,original,date:two_digit_year|channel:blank|phone:blank|category:inconsistent_wording|message:stray_whitespace
 106,NF-2025-0089,original,date:uk_slash_format|phone:blank
 107,NF-2025-0102,original,date:uk_slash_format|phone:lost_leading_zero|category:inconsistent_wording|status:inconsistent_wording|postcode:only_in_message_text
-108,NF-2025-0149,original,date:uk_slash_format|urgency:blank|phone:only_in_message_text|postcode:only_in_message_text|structure:name_email_swapped
+108,NF-2025-0149,original,date:uk_slash_format|urgency:blank|postcode:only_in_message_text|phone:only_in_message_text|structure:name_email_swapped
 109,NF-2025-0030,original,email:blank|postcode:placeholder|urgency:inconsistent_wording|status:inconsistent_wording
 110,NF-2025-0103,original,date:text_month|channel:inconsistent_wording|phone:plus44|postcode:invalid|urgency:inconsistent_wording|status:inconsistent_wording
 111,NF-2025-0239,original,date:excel_serial_number|channel:inconsistent_wording|name:surname_first|urgency:inconsistent_wording|status:hidden_blank

@@ -1,0 +1,342 @@
+{
+ "water is pouring through my bedroom ceiling at [address] from the flat above and it is getting worse": {
+  "category": "Housing Repairs",
+  "urgency": "High",
+  "summary": "Water is pouring through the bedroom ceiling from the flat above and getting worse.",
+  "postcode": "",
+  "requested_action": "Stop the leak and repair the ceiling",
+  "confidence": 0.88,
+  "needs_human_review": false,
+  "reason": "Active leak that is worsening, so high urgency; a repair issue."
+ },
+ "an old sofa has been dumped in the alley behind [address] for over a week": {
+  "category": "Waste",
+  "urgency": "Medium",
+  "summary": "An old sofa has been dumped in an alley for over a week.",
+  "postcode": "",
+  "requested_action": "Remove the dumped sofa",
+  "confidence": 0.85,
+  "needs_human_review": false,
+  "reason": "Fly-tipped bulky waste, a nuisance but not dangerous."
+ },
+ "missed bin collections three weeks in a row at [address] and the bins are overflowing": {
+  "category": "Waste",
+  "urgency": "Medium",
+  "summary": "Bin collections missed three weeks running and bins are overflowing.",
+  "postcode": "",
+  "requested_action": "Collect the missed bins",
+  "confidence": 0.92,
+  "needs_human_review": false,
+  "reason": "Repeated missed collections with overflow, so a clear problem needing action soon."
+ },
+ "the front door lock at [address] is sticking and im worried it will jam shut": {
+  "category": "Housing Repairs",
+  "urgency": "Medium",
+  "summary": "Front door lock is sticking and may jam shut.",
+  "postcode": "",
+  "requested_action": "Repair or replace the door lock",
+  "confidence": 0.8,
+  "needs_human_review": false,
+  "reason": "Security and access risk if it jams, but not yet failed."
+ },
+ "dogs next door to [address] bark for hours every day while the owners are out": {
+  "category": "Noise",
+  "urgency": "Medium",
+  "summary": "Neighbour's dogs bark for hours every day.",
+  "postcode": "",
+  "requested_action": "Investigate the barking dogs",
+  "confidence": 0.9,
+  "needs_human_review": false,
+  "reason": "Ongoing daily disturbance."
+ },
+ "your website is confusing and i could not find the form for bulky waste": {
+  "category": "Complaints",
+  "urgency": "Low",
+  "summary": "Website is confusing and the bulky waste form could not be found.",
+  "postcode": "",
+  "requested_action": "Help find the bulky waste form",
+  "confidence": 0.6,
+  "needs_human_review": false,
+  "reason": "Mainly feedback about the website, though it could also be a bulky waste request."
+ },
+ "i can smell gas in the communal hallway at [address]": {
+  "category": "Safety",
+  "urgency": "High",
+  "summary": "Smell of gas in the communal hallway.",
+  "postcode": "",
+  "requested_action": "Investigate the gas smell immediately",
+  "confidence": 0.97,
+  "needs_human_review": false,
+  "reason": "Possible gas leak: serious risk to health and safety."
+ },
+ "rats have been seen around the overflowing bins at [address]": {
+  "category": "Waste",
+  "urgency": "Medium",
+  "summary": "Rats seen around overflowing bins.",
+  "postcode": "",
+  "requested_action": "Clear the bins and arrange pest control",
+  "confidence": 0.75,
+  "needs_human_review": false,
+  "reason": "Waste problem with a public health angle; could also be treated as a safety issue."
+ },
+ "i reported a repair six weeks ago and nobody has been in touch this is my second chaser": {
+  "category": "Complaints",
+  "urgency": "Medium",
+  "summary": "A repair reported six weeks ago has had no response; second chaser.",
+  "postcode": "",
+  "requested_action": "Respond and progress the repair",
+  "confidence": 0.8,
+  "needs_human_review": false,
+  "reason": "Complaint about no follow-up on an existing repair."
+ },
+ "a drill starts at am every day at the building site by [address] i work nights and cannot sleep": {
+  "category": "Noise",
+  "urgency": "Medium",
+  "summary": "Early-morning drilling every day from a building site disturbs a night worker.",
+  "postcode": "",
+  "requested_action": "Investigate the construction noise",
+  "confidence": 0.9,
+  "needs_human_review": false,
+  "reason": "Daily disturbance affecting sleep."
+ },
+ "i would like to set up a direct debit for my council tax at [address]": {
+  "category": "Billing",
+  "urgency": "Low",
+  "summary": "Wants to set up a direct debit for council tax.",
+  "postcode": "",
+  "requested_action": "Set up the direct debit",
+  "confidence": 0.95,
+  "needs_human_review": false,
+  "reason": "Routine billing request."
+ },
+ "my boiler at [address] stopped working two days ago and we have no hot water please send an engineer": {
+  "category": "Housing Repairs",
+  "urgency": "Medium",
+  "summary": "Boiler broken for two days, no hot water.",
+  "postcode": "",
+  "requested_action": "Send an engineer to fix the boiler",
+  "confidence": 0.9,
+  "needs_human_review": false,
+  "reason": "Loss of hot water for two days, needs fixing soon; no vulnerable person mentioned."
+ },
+ "my bill says i owe arrears but i paid in full last month i have the receipt": {
+  "category": "Billing",
+  "urgency": "Medium",
+  "summary": "Bill shows arrears but resident says they paid in full and has a receipt.",
+  "postcode": "",
+  "requested_action": "Check the account and correct the bill",
+  "confidence": 0.9,
+  "needs_human_review": false,
+  "reason": "Billing dispute with proof of payment."
+ },
+ "this is my third formal complaint if i do not get a reply within hours i will go to the ombudsman and my mp": {
+  "category": "Complaints",
+  "urgency": "High",
+  "summary": "Third formal complaint; threatens the Ombudsman and MP if no reply in 48 hours.",
+  "postcode": "",
+  "requested_action": "Reply within 48 hours",
+  "confidence": 0.85,
+  "needs_human_review": false,
+  "reason": "Repeated complaint with an explicit threat to escalate."
+ },
+ "exposed electrical wires are hanging from the ceiling in the stairwell at [address]": {
+  "category": "Safety",
+  "urgency": "High",
+  "summary": "Exposed electrical wires hanging in the stairwell.",
+  "postcode": "",
+  "requested_action": "Make the wires safe urgently",
+  "confidence": 0.97,
+  "needs_human_review": false,
+  "reason": "Electrical hazard to anyone using the stairs."
+ },
+ "flytipped rubbish including broken glass and needles has been left in the play area near [address]": {
+  "category": "Waste",
+  "urgency": "High",
+  "summary": "Fly-tipped rubbish including broken glass and needles in a children's play area.",
+  "postcode": "",
+  "requested_action": "Clear the hazardous waste",
+  "confidence": 0.7,
+  "needs_human_review": false,
+  "reason": "Needles and glass where children play are a health risk; could also be classed as Safety."
+ },
+ "no heating or hot water at [address] for four days i have a baby and the temperature is dropping": {
+  "category": "Housing Repairs",
+  "urgency": "High",
+  "summary": "No heating or hot water for four days with a baby in the home.",
+  "postcode": "",
+  "requested_action": "Restore heating and hot water urgently",
+  "confidence": 0.92,
+  "needs_human_review": false,
+  "reason": "Vulnerable person (baby) and a prolonged outage."
+ },
+ "there is a small crack in the bathroom tiles at [address] it is not leaking but i would like it fixed": {
+  "category": "Housing Repairs",
+  "urgency": "Low",
+  "summary": "Small crack in bathroom tiles, not leaking.",
+  "postcode": "",
+  "requested_action": "Repair the cracked tiles",
+  "confidence": 0.95,
+  "needs_human_review": false,
+  "reason": "Minor cosmetic repair."
+ },
+ "violent shouting and banging from the flat next to [address] most nights i am scared for the children living there": {
+  "category": "Noise",
+  "urgency": "High",
+  "summary": "Violent shouting and banging from next door most nights; fear for children there.",
+  "postcode": "",
+  "requested_action": "Investigate and consider a safeguarding referral",
+  "confidence": 0.6,
+  "needs_human_review": false,
+  "reason": "Possible violence and children at risk; could be classed as Safety or Noise."
+ },
+ "i am unhappy with how my housing application was handled nobody explained the decision": {
+  "category": "Complaints",
+  "urgency": "Medium",
+  "summary": "Unhappy with how a housing application was handled and no explanation given.",
+  "postcode": "",
+  "requested_action": "Explain the decision and review the handling",
+  "confidence": 0.85,
+  "needs_human_review": false,
+  "reason": "Complaint about service handling."
+ },
+ "i received a final demand and a court summons for council tax i already paid the hearing is next week": {
+  "category": "Billing",
+  "urgency": "High",
+  "summary": "Received a final demand and court summons for council tax already paid; hearing next week.",
+  "postcode": "",
+  "requested_action": "Correct the account and stop court action",
+  "confidence": 0.9,
+  "needs_human_review": false,
+  "reason": "Imminent legal deadline."
+ },
+ "there is a large pothole outside [address] a cyclist fell off this morning": {
+  "category": "Safety",
+  "urgency": "High",
+  "summary": "Large pothole outside; a cyclist fell off this morning.",
+  "postcode": "",
+  "requested_action": "Inspect and repair the pothole",
+  "confidence": 0.65,
+  "needs_human_review": false,
+  "reason": "A road hazard that has already caused an injury or near-injury."
+ },
+ "loud parties in the flat below [address] go on past midnight three nights this week": {
+  "category": "Noise",
+  "urgency": "Medium",
+  "summary": "Loud parties past midnight three nights this week.",
+  "postcode": "",
+  "requested_action": "Investigate the late-night noise",
+  "confidence": 0.9,
+  "needs_human_review": false,
+  "reason": "Repeated disturbance at night."
+ },
+ "the handrail on the stairs at [address] has come away from the wall and an elderly resident nearly fell": {
+  "category": "Safety",
+  "urgency": "High",
+  "summary": "Stair handrail has come off the wall; an elderly resident nearly fell.",
+  "postcode": "",
+  "requested_action": "Repair the handrail urgently",
+  "confidence": 0.95,
+  "needs_human_review": false,
+  "reason": "Falls risk for vulnerable residents."
+ },
+ "our recycling bin at [address] was not emptied this week": {
+  "category": "Waste",
+  "urgency": "Low",
+  "summary": "Recycling bin not emptied this week.",
+  "postcode": "",
+  "requested_action": "Collect the recycling",
+  "confidence": 0.95,
+  "needs_human_review": false,
+  "reason": "Single missed collection."
+ },
+ "i have been charged twice for my november council tax payment please refund the extra amount": {
+  "category": "Billing",
+  "urgency": "Medium",
+  "summary": "Charged twice for November council tax and wants a refund.",
+  "postcode": "",
+  "requested_action": "Refund the duplicate payment",
+  "confidence": 0.9,
+  "needs_human_review": false,
+  "reason": "Billing error needing correction."
+ },
+ "the neighbour near [address] plays loud music most saturday afternoons not late but it is annoying": {
+  "category": "Noise",
+  "urgency": "Low",
+  "summary": "Neighbour plays loud music on Saturday afternoons; not late.",
+  "postcode": "",
+  "requested_action": "Log the noise concern",
+  "confidence": 0.92,
+  "needs_human_review": false,
+  "reason": "Mild, daytime disturbance."
+ },
+ "could i order a replacement green bin for [address] ours was damaged": {
+  "category": "Waste",
+  "urgency": "Low",
+  "summary": "Wants a replacement green bin because theirs was damaged.",
+  "postcode": "",
+  "requested_action": "Supply a replacement bin",
+  "confidence": 0.95,
+  "needs_human_review": false,
+  "reason": "Routine request."
+ },
+ "can you send me a copy of my latest rent statement for [address]": {
+  "category": "Billing",
+  "urgency": "Low",
+  "summary": "Asks for a copy of the latest rent statement.",
+  "postcode": "",
+  "requested_action": "Send the rent statement",
+  "confidence": 0.95,
+  "needs_human_review": false,
+  "reason": "Routine request."
+ },
+ "i have lost my job and cannot pay my rent this month what support is available": {
+  "category": "Billing",
+  "urgency": "Medium",
+  "summary": "Lost their job and cannot pay rent this month; asks what support exists.",
+  "postcode": "",
+  "requested_action": "Advise on financial support",
+  "confidence": 0.85,
+  "needs_human_review": false,
+  "reason": "Financial hardship needing timely help, no immediate danger stated."
+ },
+ "the street light outside [address] has been out for a week and the pavement is very dark": {
+  "category": "Safety",
+  "urgency": "Medium",
+  "summary": "Street light outside has been out for a week; pavement is very dark.",
+  "postcode": "",
+  "requested_action": "Repair the street light",
+  "confidence": 0.75,
+  "needs_human_review": false,
+  "reason": "Public lighting fault, a moderate safety risk."
+ },
+ "the adviser i spoke to on monday was rude i would like this feedback passed on": {
+  "category": "Complaints",
+  "urgency": "Low",
+  "summary": "An adviser was rude; wants feedback passed on.",
+  "postcode": "",
+  "requested_action": "Pass the feedback to the adviser's manager",
+  "confidence": 0.92,
+  "needs_human_review": false,
+  "reason": "Service feedback with no urgent harm."
+ },
+ "the kitchen cabinet door at [address] has come off its hinge could someone repair it when convenient": {
+  "category": "Housing Repairs",
+  "urgency": "Low",
+  "summary": "Kitchen cabinet door has come off its hinge.",
+  "postcode": "",
+  "requested_action": "Repair the cabinet door",
+  "confidence": 0.95,
+  "needs_human_review": false,
+  "reason": "Minor repair."
+ },
+ "a fire door at [address] is propped open with a wedge and the fire alarm has been beeping for days": {
+  "category": "Safety",
+  "urgency": "High",
+  "summary": "Fire door propped open and the fire alarm has been beeping for days.",
+  "postcode": "",
+  "requested_action": "Fix the fire door and alarm urgently",
+  "confidence": 0.93,
+  "needs_human_review": false,
+  "reason": "Fire safety defect."
+ }
+}

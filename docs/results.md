@@ -1,24 +1,24 @@
 # Results
 
-> **READ THIS FIRST - these numbers come from DEMO MODE.** The "AI" here is a simple keyword matcher, not Claude.
-> The synthetic enquiries were written from a small set of templates, so a keyword matcher scores very well on them.
-> These figures prove the *pipeline and measurement work*. They do **not** show how Claude, or any AI, would do on real, messier enquiries.
-> Re-run with a real API key (`python src/triage.py --redo`, then `python src/evaluate.py`) to get Claude's numbers.
+> **READ THIS FIRST - the triage here was done by Claude in a Claude Code chat session, NOT by the Claude API.**
+> Claude read each *distinct* masked message once and its answer was applied to every copy of that wording.
+> Limits: (1) the same assistant wrote the synthetic data and the triage, so this is **not an independent test**; (2) the API code path in `src/triage.py` is still unproven;
+> (3) the synthetic enquiries come from about 34 templates, which is far easier than real enquiries. Treat these as a best case.
 
 ## Accuracy against the answer key
 
 | enquiries | category_right | category_accuracy_pct | urgency_right | urgency_accuracy_pct | both_right |
 |---|---|---|---|---|---|
-| 300 | 291 | 97.0 | 297 | 99.0 | 291 |
+| 300 | 297 | 99.0 | 294 | 98.0 | 294 |
 
 ### By category
 
 | category | enquiries | correct | accuracy_pct |
 |---|---|---|---|
-| Complaints | 37 | 31 | 83.8 |
 | Waste | 58 | 56 | 96.6 |
 | Housing Repairs | 79 | 78 | 98.7 |
 | Billing | 48 | 48 | 100.0 |
+| Complaints | 37 | 37 | 100.0 |
 | Noise | 48 | 48 | 100.0 |
 | Safety | 30 | 30 | 100.0 |
 
@@ -27,7 +27,7 @@
 | true_urgency | ai_said_high | ai_said_medium | ai_said_low | ai_gave_none |
 |---|---|---|---|---|
 | High | 84 | 0 | 0 | 2 |
-| Medium | 0 | 126 | 0 | 0 |
+| Medium | 3 | 123 | 0 | 0 |
 | Low | 0 | 0 | 87 | 1 |
 
 ## Urgent cases missed (the most important number)
@@ -42,8 +42,8 @@
 
 | sent_to_person | enquiries | both_right_pct |
 |---|---|---|
-| 0 | 115 | 100.0 |
-| 1 | 185 | 95.1 |
+| 0 | 199 | 100.0 |
+| 1 | 101 | 94.1 |
 
 `sent_to_person = 1` are the cases routed to a person. The `0` row is what the AI handled with only a skim: that error rate is what a manager must be willing to accept.
 
@@ -61,19 +61,16 @@
 |---|---|---|---|---|---|---|
 | 29 | Housing Repairs |  | High |  | 1 |  |
 | 284 | Waste |  | High |  | 1 |  |
-| 11 | Complaints | Housing Repairs | Medium | Medium | 1 | I reported a repair six weeks ago and nobody has been in touch. This is my second chaser.  |
-| 22 | Complaints | Housing Repairs | Medium | Medium | 1 | Hi, I reported a repair six weeks ago and nobody has been in touch. This is my second chas |
 | 37 | Waste |  | Low |  | 1 |  |
-| 98 | Complaints | Housing Repairs | Medium | Medium | 1 | I reported a repair six weeks ago and nobody has been in touch. This is my second chaser.  |
-| 185 | Complaints | Housing Repairs | Medium | Medium | 1 | Hi, I reported a repair six weeks ago and nobody has been in touch. This is my second chas |
-| 232 | Complaints | Housing Repairs | Medium | Medium | 1 | Hi, I reported a repair six weeks ago and nobody has been in touch. This is my second chas |
-| 320 | Complaints | Housing Repairs | Medium | Medium | 1 | Hello, I reported a repair six weeks ago and nobody has been in touch. This is my second c |
+| 48 | Safety | Safety | Medium | High | 1 | There is a large pothole outside [ADDRESS]. A cyclist fell off this morning. Many thanks,  |
+| 75 | Safety | Safety | Medium | High | 1 | To whom it may concern, There is a large pothole outside [ADDRESS], [POSTCODE]. A cyclist  |
+| 283 | Safety | Safety | Medium | High | 1 | There is a large pothole outside [ADDRESS]. A cyclist fell off this morning. My number is  |
 
 ## Cost
 
 | mode | model | enquiries | input_tokens | output_tokens | total_cost_gbp | cost_per_enquiry_gbp |
 |---|---|---|---|---|---|---|
-| demo | keyword-rules | 312 | 0 | 0 | 0.0 | 0.0 |
+| claude-code-session | claude-sonnet-5-5 (Claude Code session, not the API) | 312 |  |  | 0.0 | 0.0 |
 
 ## Time and money saved
 
@@ -88,20 +85,20 @@
 | Measure | Value |
 |---|---|
 | Enquiries | 300 |
-| Sent to a person | 185 (62%) |
+| Sent to a person | 101 (34%) |
 | Manual time | 20.0 h |
-| With AI + review | 7.1 h |
-| Time saved | 12.9 h (64%) |
-| Staff cost saved | £231.75 |
-| Scaled to 10,000 enquiries | about 429 h saved |
+| With AI + review | 5.0 h |
+| Time saved | 15.0 h (75%) |
+| Staff cost saved | £269.55 |
+| Scaled to 10,000 enquiries | about 499 h saved |
 
 ### How sensitive is the saving to the review-time assumption?
 
 | Minutes per reviewed case | Hours saved | % saved |
 |---|---|---|
-| 1 min | 16.0 h | 80% |
-| 2 min | 12.9 h | 64% |
-| 3 min | 9.8 h | 49% |
-| 4 min | 6.7 h | 34% |
+| 1 min | 16.7 h | 83% |
+| 2 min | 15.0 h | 75% |
+| 3 min | 13.3 h | 66% |
+| 4 min | 11.6 h | 58% |
 
 The review rate is high because the rules send *every* High-urgency and Safety case to a person. That is deliberate (a human decides anything urgent), and it is the main thing that limits the saving.

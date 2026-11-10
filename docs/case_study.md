@@ -20,32 +20,34 @@ A pipeline that deals with each of those three problems in turn:
 
 ## What the numbers say
 
-I tested three ways of doing the triage on the same 300 enquiries, scored against the known answers:
+I tested several ways of doing the triage on the same 300 enquiries, scored against the known answers:
 
-| | Keyword matcher | Claude in a chat | **Claude API (real run)** |
-|---|---|---|---|
-| Category right | 97% | 99% | **84%** |
-| Urgency right | 99% | 98% | **96%** |
-| Urgent enquiries missed without a person seeing them | 0 of 86 | 0 of 86 | **0 of 86** |
-| Sent to a person | 62% | 34% | **39%** |
-| Estimated triage time saved | 64% | 75% | **73%** |
+| | Keyword matcher | Claude in a chat | Claude API, first prompt | **Claude API, improved prompt** |
+|---|---|---|---|---|
+| Category right | 97% | 99% | 84% | **98%** |
+| Urgency right | 99% | 98% | 96% | **93%** |
+| Urgent enquiries missed without a person seeing them | 0 of 86 | 0 of 86 | 0 of 86 | **0 of 86** |
+| Sent to a person | 62% | 34% | 39% | **36%** |
+| Estimated triage time saved | 64% | 75% | 73% | **74%** |
 
-The real run is the one that counts, and it scored lower than my earlier tests. That is useful: the earlier tests were not independent, and they flattered the result. Of the cases the AI handled without a person, about 5% were wrong. None were urgent, but the AI was confident about them, which shows why you cannot trust the AI's confidence on its own.
+The two real-API columns are the ones that count. The first prompt got the category wrong 16% of the time, mostly by calling serious home repairs and neighbour disputes "Safety". I rewrote the prompt with clearer rules and added a rule that sends two-category cases to a person. Category accuracy rose to 98%, but I tuned it on the same 300 enquiries, so I also tested both prompts on 60 new messages I'd written and labelled in advance: 87.5% to 96.4%. The improvement held up, though that set is small and I wrote it myself.
+
+The improved prompt did **not** improve urgency (it slipped from 96% to 93%), mostly by mixing up Low and Medium, which is a matter of policy more than prompting. None of the real-API runs missed an urgent case without a person seeing it.
 
 Data quality: consistency rose from 65% to 100%, and the clean-up introduced 1 wrong value in about 3,300 cells.
 
-**Cautions.** The enquiries are synthetic and template-based, so real ones will be harder. The "human reviewer" is simulated and knows the answers. The time saving rests on assumptions (4 minutes manual triage, 2 minutes to review an AI suggestion, £18 an hour) and falls sharply if review takes longer. The real run cost about £0.41 on assumed prices.
+**Cautions.** The enquiries are synthetic and template-based, so real ones will be harder. The "human reviewer" is simulated and knows the answers. The time saving rests on assumptions (4 minutes manual triage, 2 minutes to review an AI suggestion, £18 an hour) and falls sharply if review takes longer. The real runs cost about £1.3 in total on assumed prices.
 
 ## What I learned
 
 - Clean data matters more than clever AI. Most of the effort went into making the data trustworthy.
 - "Human in the loop" has a cost. Sending every urgent case to a person is the safe choice, and it is also what limits the saving.
 - A result without its assumptions is just a claim. Every figure here comes with the assumption behind it.
-- Testing against a known answer key found real flaws: a mistyped postcode that still looked valid slipped through, and my own leak check had missed a street name left unmasked in lower-case text until I widened it, and the first real AI call crashed on a response format my demo mode could never have shown.
+- Testing against a known answer key found real flaws: a mistyped postcode that still looked valid slipped through, and my own leak check had missed a street name left unmasked in lower-case text until I widened it, the first real AI call crashed on a response format my demo mode could never have shown, and tuning a prompt on the same data I scored it on gave a flattering number until I tested on messages it hadn't seen.
 
 ## What I would do next
 
-Improve the prompt and the category scheme (a second label for overlapping cases), test on a harder dataset written by someone else, finish the Power BI report, and run the whole thing on Microsoft Fabric, which many UK employers use. Then repeat with real (properly protected) data under a data-protection review.
+Test on a harder dataset written by someone else, try a larger model on the ambiguous cases, finish the Power BI report, and run the whole thing on Microsoft Fabric, which many UK employers use. Then repeat with real (properly protected) data under a data-protection review.
 
 ## How it was built
 

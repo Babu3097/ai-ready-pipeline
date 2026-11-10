@@ -145,3 +145,14 @@ Order from CLAUDE.md: terminal and VS Code -> Python basics -> pandas -> SQL -> 
 - **Bugs the real run found:** the API reply can start with a "thinking" block (my code crashed until I read only the text blocks); earlier, the personal-detail masking missed lower-case text.
 - **New words:** *thinking block* (the model's reasoning, returned before the answer); *silent error* (a mistake nobody reviewed); *label ambiguity* (the category scheme itself overlaps, e.g. Safety vs Housing Repairs).
 - **New questions to answer in your own words:** (9) Why is Claude's confidence not enough to decide who reviews a case? (10) Why did the real run score lower than the chat-session run? (11) What would you change to reduce the "Safety" over-use?
+
+
+---
+
+## Update: improving the prompt (v1 to v2)
+
+- **What I did:** wrote clearer category rules, a sharper urgency guide, a `secondary_category` field and a "two plausible categories means a person decides" rule. Tested on a **held-out set** of 60 new messages written before the change.
+- **Result:** category 84% to 98% on the 300 (inflated: tuned on the same data); 87.5% to 96.4% on the held-out set. Urgency did not improve. Zero urgent cases missed without a person seeing them.
+- **New words:** *prompt version* (keeping v1 so you can compare); *held-out set* (test data you don't tune on); *tuning on the test set* (fitting your changes to the same data you score, which inflates results); *secondary category*; *calibration* (making the AI's "Medium" mean what your organisation means).
+- **Mistakes I made and fixed:** forgot to rebuild the database after a schema change (the run crashed on its first save; I caught it by reading the log, not trusting "completed"); my cost estimate ignored the longer prompt.
+- **New questions to answer in your own words:** (12) Why test on messages you wrote *before* changing the prompt? (13) Why did urgency not improve when category did? (14) Why does a longer prompt cost more on every call?

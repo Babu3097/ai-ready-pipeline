@@ -37,30 +37,36 @@ Messy legacy sheet ─► 1 Clean & score (Python) ─► 2 SQL tables (SQLite /
 
 ## Results
 
-Three triage runs on the same 300 synthetic enquiries, scored against the same answer key.
+Four triage runs on the same 300 synthetic enquiries, scored against the same answer key. Run D is the current default.
 
-| | A. Keyword stand-in | B. Claude in a chat session | **C. Claude API (Haiku 5.5)** |
-|---|---|---|---|
-| Category accuracy | 97% | 99% | **84%** |
-| Urgency accuracy | 99% | 98% | **96%** |
-| Urgent cases missed without a person seeing them (of 86) | 0 | 0 | **0** |
-| Enquiries sent to a person | 62% | 34% | **39%** |
-| Accuracy of cases handled with only a skim | 100% | 100% | **95%** |
-| Estimated triage time saved | 64% | 75% | **73%** |
-| Cost | £0 | £0 | **about £0.41** (312 calls; price figures assumed, check your Console) |
+| | A. Keyword stand-in | B. Claude in a chat | C. Claude API, prompt v1 | **D. Claude API, prompt v2** |
+|---|---|---|---|---|
+| Category accuracy | 97% | 99% | 84% | **98%** |
+| Urgency accuracy | 99% | 98% | 96% | **93%** |
+| Urgent cases missed without a person seeing them (of 86) | 0 | 0 | 0 | **0** |
+| Sent to a person | 62% | 34% | 39% | **36%** |
+| Accuracy of cases handled with only a skim | 100% | 100% | 95% | **93%** |
+| Estimated triage time saved | 64% | 75% | 73% | **74%** |
+| Cost | £0 | £0 | about £0.41 | **about £0.63** |
 
-**Run C is the one to quote.** It runs this project's own code (`src/triage.py`) against the real Claude API on masked text only. Runs A and B are kept as comparisons: A is a keyword matcher, and B was Claude reading the data in a chat, written by the same assistant that wrote the data, so it was not independent and **overstated** what a real model scores. The real model scored 15 points lower on category.
+Runs C and D run this project's own code (`src/triage.py`) against the real Claude API (Haiku 5.5) on masked text only; **quote those**. Run A is a keyword matcher. Run B was Claude reading the data in a chat, written by the same assistant that wrote the data, so it was not independent and overstated what a real model scores. Costs use assumed token prices; check your Console.
 
-**Where Claude (run C) went wrong, and why**
-- **32 of 47 category misses are "Safety" used for High-urgency cases** the answer key files under Housing Repairs (water pouring through a ceiling), Waste (needles and glass in a play area) or Noise (violent shouting, children at risk). Reasonable people could label those Safety, so part of this is a weakness in forcing one label per enquiry. All 32 went to a person, because Safety cases are always reviewed, so nothing urgent was lost.
-- **10 of the 184 cases handled with only a skim were wrong (5.4%).** Seven are one message about a confusing website and a bulky-waste form (Claude said Waste, the key says Complaints); the others are minor urgency or category slips (for example, a double council-tax charge rated Low rather than Medium). None was urgent.
-- **3 empty messages** could not be triaged and went to a person, as designed.
+### Improving the prompt (v1 to v2) - and how I tried to keep it honest
 
-What this shows: the review rule worked (no urgent case slipped through), but a 5% silent error rate on easy data means real-world monitoring and a sample check of the un-reviewed cases would be essential.
+Prompt v2 adds clear category rules (for example "seriousness is shown by urgency, not by category, so a serious fault inside a home is Housing Repairs, not Safety"), a sharper urgency guide, a `secondary_category` field, and a code rule that sends any enquiry with two plausible categories to a person. Full prompt: `PROMPT_V2` in `src/triage.py`.
 
-**After a human review step** (a *simulated* reviewer who knows the answers, so a best case): category 97%, urgency 99%.
+- **On the 300 enquiries:** category 84% -> 98%. But v2 was written *after* I studied v1's mistakes on this same data, so this number is **inflated** (tuned-on data).
+- **On a held-out set** of 60 new messages written and labelled *before* v2 (`data/heldout/`): category 87.5% -> **96.4%**. This is the more trustworthy figure. Caveats: I saw v1's held-out mistakes before writing v2, the same assistant wrote the prompt and the labels, and 56 messages is small, so treat it as a signal.
+- **Urgency did not improve** (96% -> 93% on the 300; unchanged at 68% on the held-out set). Almost all the errors are Low-versus-Medium disagreements, and my own Low/Medium labels are subjective, so urgency scores here partly measure agreement with my taste.
+- **Urgent cases:** zero were missed without a person seeing them, in every real-API run. **Skimmed errors:** under v1, 8 of the 184 skimmed cases had the wrong category (mostly the website/bulky-waste message). Under v2, none did: all 14 skimmed errors (of 191) were Low-versus-Medium mix-ups, for example a repeated-chaser complaint rated Low instead of Medium.
+- **Ambiguous and vague messages** ("help", two issues in one message): 4 of 4 were routed to a person under both prompts.
+- **Trade-off:** v2 needs longer instructions, so it costs more per enquiry (about £0.002 versus £0.0013).
 
-**Value** (assumptions in `docs/results.md`): run C saves about **73% of triage time** (20.0 h -> 5.4 h on 300 enquiries) assuming 4 min manual, 0.5 min skim, 2 min review, £18/h, less about £0.41 of AI cost. The saving depends heavily on the review-time assumption (sensitivity table in the results). Triage time only, not fixing the issue.
+**Where the earlier prompt (v1) went wrong:** 32 of its 47 category errors were "Safety" used for High-urgency cases the key files elsewhere (water through a ceiling, needles in a play area, violent shouting). That is partly a weakness of forcing one label per enquiry; v2's rules and secondary-category field address it.
+
+**After a human review step** (a *simulated* reviewer who knows the answers, so a best case): category and urgency near 100%.
+
+**Value** (assumptions in `docs/results.md`): run D saves about **74% of triage time** (20.0 h -> 5.2 h on 300 enquiries) assuming 4 min manual, 0.5 min skim, 2 min review, £18/h, less about £0.63 of AI cost. The saving depends heavily on the review-time assumption (sensitivity table in the results). Triage time only, not fixing the issue.
 
 **Data quality** (330 raw rows -> 312 cleaned):
 
@@ -73,9 +79,9 @@ What this shows: the review rule worked (no urgent case slipped through), but a 
 
 Checked against the answer key: **1 wrong value in about 3,300 cleaned cells**. Anything untrustworthy was blanked and flagged, never guessed.
 
-**Two bugs found along the way (both fixed).** (1) The personal-detail masking missed street names in lower-case text, and my first leak check only covered the 300 original rows; I made the masking case-insensitive and widened the check to all 312 rows, which now finds no leaks. (2) The first real API call crashed because the reply started with a "thinking" block my code didn't expect; demo mode could never have shown that.
+**Bugs found along the way (all fixed).** (1) Personal-detail masking missed street names in lower-case text, and my first leak check only covered the 300 original rows; I made the masking case-insensitive and widened the check to all 312 rows, which now finds no leaks. (2) The first real API call crashed on a "thinking" block my code didn't expect; demo mode could never have shown that. (3) My cost estimate said £0.26 for a run that cost £0.63, because it ignored the longer prompt; it now scales with the prompt. (4) A database change was forgotten when the schema changed, so one run crashed on its first save; no money was lost, and the check that caught it was reading the run's log.
 
-**Still limited:** the data is synthetic and template-based (about 34 templates), so real enquiries will be harder; the reviewer is simulated; the time saving rests on assumptions. The raw API output is in `data/triage_api/ai_triage_claude_haiku.csv`.
+**Still limited:** synthetic, template-based data (about 34 templates), so real enquiries will be harder; a simulated reviewer; assumption-based time savings; one model and two prompts. Total real-API spend so far is about £1.3 on assumed prices. Raw output: `data/triage_api/` and `data/heldout/`.
 
 Full detail: [docs/results.md](docs/results.md) | [where it was wrong](docs/error_analysis.md) | [data quality report](data/clean/quality_report.md) | [example audit trail](docs/example_audit_trail.txt)
 
@@ -102,7 +108,8 @@ Or one step at a time:
 python src/generate_data.py    # messy data + answer key
 python src/data_quality.py     # clean, score, mask
 python src/load_sql.py         # build data/northfield.db
-python src/triage.py           # AI triage (real Claude with a key in .env, keyword stand-in without)
+python src/triage.py           # AI triage (real Claude prompt v2 with a key in .env, keyword stand-in without)
+python src/eval_heldout.py v2  # test a prompt on the 60 held-out messages (needs a key)
 python src/import_triage.py    # OR: load the Claude-in-chat answers instead
 python src/review_queue.py all # review queue, simulated reviewer, replies, audit log
 python src/evaluate.py         # results + CSVs for Power BI
@@ -145,7 +152,7 @@ docs/         results, error analysis, case study, video script, CV notes, scree
 
 ## What I would do next with real data
 
-1. Try a better prompt, allow a second category label for overlapping cases (e.g. Safety plus Housing), and test Sonnet where Haiku struggles.
+1. Test Sonnet on the ambiguous cases, and test the prompt on a dataset someone else wrote.
 2. Add a harder test set (typos, two issues in one message, very short messages).
 3. Sample the cases the AI handled *without* review every week to catch drift.
 4. Tune the confidence threshold against the cost of a missed urgent case.

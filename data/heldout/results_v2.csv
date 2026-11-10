@@ -1,0 +1,61 @@
+id,message,true_category,true_urgency,tag,ai_category,ai_urgency,confidence,secondary,review,why
+H01,"Hi my kitchen tap has been dripping for a week, its wasting water. Flat 4, 12 Mill Place. Thanks Dave Brown",Housing Repairs,Low,normal,Housing Repairs,Low,0.92,,0,
+H02,"mould all over the bedroom wall and my daughter has asthma, it keeps coming back. 33 Elm Close M12 4PQ",Housing Repairs,High,normal,Housing Repairs,High,0.85,,1,high urgency
+H03,Window in the living room wont close properly and its getting cold,Housing Repairs,Medium,normal,Housing Repairs,Low,0.9,,0,
+H04,The lift in our block has been broken for 3 weeks and I use a wheelchair so I'm stuck in my flat. Call me on 07700 900111,Housing Repairs,High,normal,Housing Repairs,High,0.9,,1,high urgency
+H05,"Mice in the kitchen, seen them every night. 9 Brook Road",Housing Repairs,Medium,normal,Housing Repairs,Medium,0.85,,0,
+H06,no hot water since this morning. 07700 900456 call me,Housing Repairs,Medium,normal,Housing Repairs,Medium,0.85,,0,
+H07,radiator in the hall is cold,Housing Repairs,Low,normal,Housing Repairs,Low,0.85,,0,
+H08,Ceiling in the bathroom has a big bulge and is dripping brown water. Im worried it will fall in,Housing Repairs,High,normal,Housing Repairs,High,0.8,Safety,1,"high urgency, two possible categories (Housing Repairs / Safety)"
+H09,Front door was kicked in by burglars last night and I cant lock the flat. Please fix it today. Regards Priya Shah,Housing Repairs,High,normal,Housing Repairs,High,0.85,Safety,1,"high urgency, two possible categories (Housing Repairs / Safety)"
+H10,garden fence blew down in the storm,Housing Repairs,Low,normal,Housing Repairs,Medium,0.6,Safety,1,"low confidence, two possible categories (Housing Repairs / Safety)"
+H11,"Cracked pavement slab outside my house, my mum tripped on it yesterday and hurt her wrist. 21 Dale Lane",Safety,Medium,normal,Safety,Medium,0.85,,1,safety issue
+H12,Strong smell of burning from the electrics cupboard in the corridor,Safety,High,normal,Safety,High,0.8,Housing Repairs,1,"high urgency, safety issue, two possible categories (Safety / Housing Repairs)"
+H13,Broken glass all over the stairwell and children play here,Safety,Medium,normal,Safety,High,0.65,Waste,1,"low confidence, high urgency, safety issue, two possible categories (Safety / Waste)"
+H14,"The communal door lock is broken so anyone can walk in at night, residents are worried",Safety,Medium,normal,Safety,Medium,0.6,Housing Repairs,1,"low confidence, safety issue, two possible categories (Safety / Housing Repairs)"
+H15,"Big tree branch hanging over the road after the storm, looks like it will fall on the parked cars",Safety,Medium,normal,Safety,High,0.85,,1,"high urgency, safety issue"
+H16,smoke alarm in my hallway keeps beeping,Safety,Low,normal,Housing Repairs,Medium,0.6,Safety,1,"low confidence, two possible categories (Housing Repairs / Safety)"
+H17,The footpath lights near the park are all out and women are scared to walk there at night,Safety,Medium,normal,Safety,Medium,0.85,,1,safety issue
+H18,Black ice on the steps outside the community centre and someone slipped,Safety,Medium,normal,Safety,High,0.85,,1,"high urgency, safety issue"
+H19,Carbon monoxide alarm went off in my flat tonight and the boiler smells odd. We have left the flat,Safety,High,normal,Safety,High,0.9,Housing Repairs,1,"high urgency, safety issue, two possible categories (Safety / Housing Repairs)"
+H20,Upstairs neighbour walks about in heavy shoes late at night and I can hear every step,Noise,Medium,normal,Noise,Low,0.85,,0,
+H21,Music from the pub next door is far too loud on friday and saturday until 2am,Noise,Medium,normal,Noise,Medium,0.85,,0,
+H22,car alarm went off for hours last night,Noise,Low,normal,Noise,Low,0.6,,1,low confidence
+H23,My neighbour is shouting threats at my family and banging on our door. I have called the police. I am scared,Noise,High,normal,Noise,High,0.85,Safety,1,"high urgency, two possible categories (Noise / Safety)"
+H24,Builders are working on sundays with really loud saws,Noise,Low,normal,Noise,Medium,0.85,,0,
+H25,dog barking all day next door while the owners are at work,Noise,Medium,normal,Noise,Medium,0.9,,0,
+H26,"loud party tonight still going at 3am, this is the third time this month",Noise,Medium,normal,Noise,Medium,0.9,,0,
+H27,The bin lorry comes at 5am and wakes the whole street up,Noise,Low,normal,Waste,Low,0.6,Noise,1,"low confidence, two possible categories (Waste / Noise)"
+H28,"Green bin not collected again, second week running",Waste,Low,normal,Waste,Medium,0.9,,0,
+H29,A mattress and a fridge have been dumped in the lane behind our houses,Waste,Medium,normal,Waste,Low,0.9,,0,
+H30,Which day is my bin day? I have just moved in to 15 Orchard Road,Waste,Low,normal,Waste,Low,0.95,,0,
+H31,Overflowing communal bins with flies and a horrible smell in this heat,Waste,Medium,normal,Waste,Medium,0.85,,0,
+H32,Someone has dumped sheets that look like asbestos in the car park off Mill Lane,Waste,High,normal,Waste,Medium,0.85,Safety,1,two possible categories (Waste / Safety)
+H33,need a new recycling box ours was stolen,Waste,Low,normal,Waste,Low,0.95,,0,
+H34,There is a dead fox in the road outside number 8,Waste,Low,normal,Waste,Low,0.65,Safety,1,"low confidence, two possible categories (Waste / Safety)"
+H35,My garden waste has not been collected since october,Waste,Medium,normal,Waste,Low,0.9,,0,
+H36,Syringes have been left in the bin store at our block and children use that path,Waste,High,normal,Waste,High,0.85,Safety,1,"high urgency, two possible categories (Waste / Safety)"
+H37,"I want to pay my council tax by direct debit instead, how do I do that",Billing,Low,normal,Billing,Low,0.95,,0,
+H38,Why has my rent gone up by 40 pounds a month? Nobody told me,Billing,Medium,normal,Billing,Low,0.8,Complaints,1,two possible categories (Billing / Complaints)
+H39,Bailiffs came to my door today about council tax but I have an agreed payment plan. Please stop them,Billing,High,normal,Billing,High,0.9,,1,high urgency
+H40,I think I am entitled to a single person discount. What do I need to do,Billing,Low,normal,Billing,Low,0.9,,0,
+H41,Got a letter saying I owe 1200 in rent arrears. I was in hospital for 2 months and could not pay,Billing,Medium,normal,Billing,Medium,0.8,,1,AI asked for review
+H42,can i have a statement for last year,Billing,Low,normal,Billing,Low,0.35,,1,low confidence
+H43,you took my payment twice this month,Billing,Medium,normal,Billing,Medium,0.9,,0,
+H44,My housing benefit stopped and I cannot pay my rent. I am going to be evicted on friday,Billing,High,normal,Billing,High,0.9,,1,high urgency
+H45,Is council tax due on an empty property,Billing,Low,normal,Billing,Low,0.85,,0,
+H46,My bill has my old address on it,Billing,Low,normal,Billing,Medium,0.75,,0,
+H47,Nobody has answered my emails in 3 weeks. Absolutely disgraceful service.,Complaints,Medium,normal,Complaints,Low,0.8,,0,
+H48,"The repair operative was very helpful and polite, thank you",Complaints,Low,normal,Complaints,Low,0.92,Housing Repairs,1,two possible categories (Complaints / Housing Repairs)
+H49,I have been passed from department to department for a month with no answer on my housing application. I am going to my councillor.,Complaints,Medium,normal,Complaints,High,0.85,,1,high urgency
+H50,I want to make a formal complaint about the way an officer treated me. He was shouting at me.,Complaints,Medium,normal,Complaints,Low,0.85,,1,AI asked for review
+H51,Your call centre hold time is 45 minutes every time,Complaints,Low,normal,Complaints,Low,0.85,,0,
+H52,This is the fourth time I have reported the broken lift. If nothing is done by Monday I will contact the press and my solicitor.,Complaints,High,normal,Complaints,High,0.6,Housing Repairs,1,"low confidence, high urgency, two possible categories (Complaints / Housing Repairs)"
+H53,I wasted my whole day waiting for an engineer who never came,Complaints,Medium,normal,Complaints,Low,0.6,Housing Repairs,1,"low confidence, two possible categories (Complaints / Housing Repairs)"
+H54,the form on your website crashes when I press submit,Complaints,Low,normal,Complaints,Low,0.7,,0,
+H55,A member of staff refused to give me his name,Complaints,Low,normal,Complaints,Low,0.55,,1,low confidence
+H56,I was told someone would ring me back and they never did,Complaints,Low,normal,Complaints,Low,0.35,,1,low confidence
+H57,My bin was not emptied and also the street light outside is out,Waste,Low,ambiguous,Waste,Medium,0.6,Safety,1,"low confidence, two possible categories (Waste / Safety)"
+H58,My council tax bill is wrong and I also want to complain about the rude person I spoke to on the phone,Billing,Medium,ambiguous,Billing,Medium,0.6,Complaints,1,"low confidence, two possible categories (Billing / Complaints)"
+H59,"Damp in my flat plus the neighbours noise at night, I cannot take it anymore",Housing Repairs,Medium,ambiguous,Housing Repairs,Medium,0.6,Noise,1,"low confidence, two possible categories (Housing Repairs / Noise)"
+H60,help,UNCLEAR,UNCLEAR,unclear,Complaints,Low,0.2,,1,low confidence

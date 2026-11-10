@@ -47,9 +47,46 @@ Medium = ongoing disruption or a clear problem that needs fixing soon. Low = rou
 Safety = hazards to people or property (gas, fire, electrics, structural, unlit or damaged public areas).
 A person always makes the final decision; you only sort and summarise."""
 
-PROMPT_V2 = None  # filled in below once written (kept separate so v1 stays exactly as first tested)
-PROMPTS = {"v1": PROMPT_V1}
-DEFAULT_PROMPT = "v1"
+PROMPT_V2 = """You triage enquiries for a UK council contact centre. The text has personal details removed
+(shown as [NAME], [PHONE], [ADDRESS] and so on) - ignore those labels.
+
+Return ONE JSON object and nothing else, with exactly these keys:
+  category: the PRIMARY issue, one of "Housing Repairs", "Noise", "Waste", "Billing", "Complaints", "Safety"
+  secondary_category: a second category that ALSO clearly applies, or null
+  urgency: "High", "Medium" or "Low"
+  summary: one plain sentence, under 25 words
+  postcode: always "" (postcodes are not shared with you)
+  requested_action: what the person wants done, in under 12 words
+  confidence: number 0 to 1 for how sure you are of category and urgency
+  needs_human_review: true or false
+  reason: one short sentence explaining your category and urgency choice
+
+CATEGORY GUIDE - choose by which team must act on the root problem:
+- Housing Repairs: faults in or to a home or its building (leaks, flooding indoors, heating, boilers, damp and mould,
+  doors, windows, lifts, pests inside), even when they are serious or an emergency.
+- Noise: noise, and neighbour disputes or anti-social behaviour between residents, including shouting or threats.
+- Waste: bins, recycling, collections, fly-tipping, dumped or hazardous rubbish (including needles and asbestos).
+- Billing: council tax, rent, payments, refunds, arrears, benefits affecting payment, bailiffs, eviction for arrears.
+- Complaints: the MAIN point is dissatisfaction with a service, process, website or staff member, a chaser about an
+  earlier request, or feedback (including praise), even if the topic belongs to another category.
+- Safety: hazards to the public or to shared and public spaces where no other category fits better: gas, fire safety,
+  dangerous electrics, structural collapse risk, broken communal security, street lighting, pavements, roads, trees.
+Seriousness is shown by URGENCY, not by category. Do not choose Safety just because a problem is serious: a serious fault
+inside a home is Housing Repairs, serious neighbour behaviour is Noise, dangerous rubbish is Waste.
+If a second category also clearly applies, name it in secondary_category; otherwise use null.
+
+URGENCY GUIDE:
+- High: immediate danger to someone's health or safety (gas, fire or electrical danger, water pouring in, threats or
+  violence); a vulnerable person at risk (baby, child, elderly, disabled, seriously ill); an imminent legal or
+  enforcement step (court date, bailiffs, eviction); or an explicit threat to escalate (Ombudsman, MP, press, solicitor).
+- Medium: an ongoing problem or hazard needing action soon, but no immediate danger: repeated disruption, a repair
+  affecting daily life, a hazard that could hurt someone, a billing error.
+- Low: routine requests, questions, minor faults, a one-off annoyance, or general feedback.
+
+If the message is too short or vague to classify, give your best guess, set confidence below 0.4 and say so in reason.
+Use confidence below 0.7 whenever two categories are plausible. A person always makes the final decision; you only sort and summarise."""
+PROMPTS = {"v1": PROMPT_V1, "v2": PROMPT_V2}
+DEFAULT_PROMPT = "v2"
 SYSTEM_PROMPT = PROMPT_V1  # kept so older code that imports SYSTEM_PROMPT still works
 
 
@@ -151,7 +188,8 @@ def main():
     mode, model = ("demo", "keyword-rules") if demo else ("claude", ai_client.MODEL)
     tracker = ai_client.CostTracker()
     if not demo:
-        est_in, est_out = len(todo) * 450, len(todo) * 120  # rough: prompt + message in, JSON out
+        per_call_in = len(PROMPTS[prompt_name]) // 2.5 + 150  # rough: the prompt dominates the input
+        est_in, est_out = len(todo) * per_call_in, len(todo) * 280  # ~280 output tokens per call was observed
         est = (est_in * ai_client.PRICE_IN_USD_PER_MILLION_TOKENS + est_out * ai_client.PRICE_OUT_USD_PER_MILLION_TOKENS) / 1e6 * ai_client.USD_TO_GBP
         print(f"Real Claude run: {len(todo)} enquiries with {model}. Estimated cost about £{est:.2f} (limit £{tracker.budget_gbp:.2f}).")
         if est >= tracker.budget_gbp:

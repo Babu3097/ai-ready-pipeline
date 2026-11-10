@@ -6,9 +6,11 @@ Only claim what is true *today*. This project was **built with AI assistance**; 
 
 ## CV line (true today)
 
-> Built an AI-assisted triage pipeline on synthetic council enquiries (Python, SQL, pandas, Claude API): cleaned 330 messy records to 312 (consistency 65% to 100%), masked personal data before AI use, and measured Claude's triage against a known answer key (84% category / 96% urgency accuracy; 0 of 86 urgent cases missed without human review; about £0.40 for 312 enquiries). Found and fixed two bugs in my own data masking and API handling. Built with AI assistance.
+> Built and evaluated an AI triage pipeline on synthetic council enquiries (Python, SQL, pandas, Claude API): cleaned 330 messy records to 312 (consistency 65% to 100%), masked personal data before AI use, and measured Claude against a known answer key. Improved category accuracy from 84% to 98% by rewriting the prompt (87.5% to 96.4% on a separate held-out set), with 0 of 86 urgent cases missed without human review at about £0.60 per 312 enquiries. Documented where it still fails. Built with AI assistance.
 
-Keep "synthetic" and "Built with AI assistance". Do not write "on Microsoft Fabric" or "Power BI report" yet. A shorter version for a tight CV: "Built and evaluated an AI triage pipeline (Python, SQL, Claude API) on synthetic council data: 96% urgency accuracy, 0 urgent cases missed without human review, with a documented 5% silent-error rate and fixes proposed."
+Keep "synthetic" and "Built with AI assistance". Do not write "on Microsoft Fabric" or "Power BI report" yet. A shorter version: "Built and evaluated a Claude-based triage pipeline on synthetic council data: category accuracy 84% to 98% after prompt redesign (96% on a held-out set), 0 urgent cases missed without human review, failures documented."
+
+**Say the held-out number first when asked.** The 98% was tuned on the same data; the 96.4% on unseen messages is the more honest figure.
 
 ## Upgrade the line when each thing is true
 
@@ -16,7 +18,6 @@ Keep "synthetic" and "Built with AI assistance". Do not write "on Microsoft Fabr
 |---|---|
 | Built and saved the Power BI report | "with a four-page Power BI report for contract managers" |
 | Run it in a Fabric trial | "prepared and ran the pipeline on Microsoft Fabric (Lakehouse, notebooks, SQL endpoint, Power BI)" |
-| Improved the prompt and re-measured | "improved category accuracy from 84% to X% by changing the prompt and label scheme" |
 | Rebuilt the pieces yourself | "then rebuilt the data-cleaning script and key SQL queries from scratch" |
 
 ## LinkedIn "Featured" description (short)

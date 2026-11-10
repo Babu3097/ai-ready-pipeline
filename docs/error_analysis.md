@@ -1,6 +1,39 @@
 # Where the triage was wrong, and why
 
-Three runs are described. **Run C (the real Claude API, Haiku 5.5) is the one to rely on.** Re-write this page from `docs/results.md` after any new run.
+Four runs are described. **Runs C and D (the real Claude API, Haiku 5.5) are the ones to rely on; D (prompt v2) is current.** Re-write this page from `docs/results.md` after any new run.
+
+
+## Run D: Claude API, prompt v2 (current), 311 calls, about £0.63
+
+Overall on the 300: category 98.0%, urgency 93.0%, 0 urgent cases missed without a person seeing them, 36% sent to a person. 50 enquiries got a second category, and any enquiry with two plausible categories goes to a person.
+
+| What | How many | Why | Was it caught? |
+|---|---|---|---|
+| Complaint chasers rated Low instead of Medium | 6 | Claude judged a chaser about an earlier request as routine. | No (skimmed), but a Low/Medium mix-up carries little risk. |
+| Medium Waste cases (dumped items, garden waste) rated Low | 5 | Claude saw them as nuisances. | No (skimmed), minor. |
+| Low Noise cases (daytime builders, a car alarm) rated Medium | 3 | Slightly over-cautious. | No (skimmed), minor, safe side. |
+| Safety-category cases labelled Housing Repairs, or Medium hazards rated High | 6 | Judgement calls on overlapping labels. | Yes, always reviewed. |
+| Empty messages | 3 | No text. | Yes. |
+
+**Serious silent errors: 0.** Every skimmed mistake is a Low/Medium mix-up (14 of 191). **Honest caveat:** v2 was written after studying v1's mistakes on these same 300 enquiries, so the 98% is inflated.
+
+### Held-out check (60 new messages, labelled before v2 was written)
+
+| | v1 | v2 |
+|---|---|---|
+| Category accuracy (56 clear messages) | 87.5% | **96.4%** |
+| Urgency accuracy | 67.9% | 67.9% |
+| Urgent cases missed (of 12) | 0 | 1, but a person saw it (asbestos-like dumping rated Medium) |
+| Skimmed errors | 6 of 27 | 8 of 24 (all Low/Medium) |
+| Vague or two-issue messages sent to a person (of 4) | 4 | 4 |
+
+The category gain holds on unseen messages. Urgency did not improve and Low/Medium errors are common: the held-out urgency labels are my own judgement, and the line between Low and Medium is blurry, so this mostly measures agreement with my taste. Caveats: I saw v1's held-out mistakes before writing v2, the same assistant wrote the prompt and the labels, and 56 messages is small.
+
+### What this suggests
+
+- Category was fixable with clearer rules, which is where the prompt can help most.
+- Urgency Low/Medium is a policy question (what counts as "soon"), not something a better prompt settles; a real council would define it and calibrate against reviewed cases.
+- Review rules that look only at High/Safety/confidence never inspect Low/Medium mistakes. That is acceptable risk for a pilot, but a weekly sample of skimmed cases would measure it.
 
 ## Run C: Claude API (`claude-haiku-5-5`), 312 calls, about £0.41
 

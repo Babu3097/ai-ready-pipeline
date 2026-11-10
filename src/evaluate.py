@@ -51,6 +51,7 @@ def build_fact_table(conn):
 def main():
     conn = db.connect()
     mode = [r[0] for r in conn.execute("SELECT DISTINCT mode FROM ai_triage")]
+    prompts = [r[0] for r in conn.execute("SELECT DISTINCT prompt_version FROM ai_triage WHERE prompt_version IS NOT NULL")]
     demo = mode == ["demo"]
     session = mode == ["claude-code-session"]
     results = db.run_sql_file(db.SQL_DIR / "evaluation_queries.sql", conn)
@@ -120,7 +121,7 @@ def main():
               "> Limits: (1) the same assistant wrote the synthetic data and the triage, so this is **not an independent test**; (2) the API code path in `src/triage.py` is still unproven;",
               "> (3) the synthetic enquiries come from about 34 templates, which is far easier than real enquiries. Treat these as a best case.\n"]
     else:
-        L += [f"Mode: **real Claude API** ({', '.join(mode)}). Synthetic, template-based data is easier than real enquiries, so treat these as a best case.\n"]
+        L += [f"Mode: **real Claude API** ({', '.join(mode)}, prompt {', '.join(prompts) or 'unknown'}). Synthetic, template-based data is easier than real enquiries, so treat these as a best case.\n"]
     L += ["## Accuracy against the answer key\n", md_table(*R["Q1"]), "",
           "### By category\n", md_table(*R["Q2"]), "",
           "### Urgency: what was true vs what the AI said\n", md_table(*R["Q3"]), "",

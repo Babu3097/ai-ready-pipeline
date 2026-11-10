@@ -70,7 +70,9 @@ CREATE TABLE ai_triage (
     input_tokens        INTEGER,
     output_tokens       INTEGER,
     cost_gbp            REAL,
-    created_at          TEXT
+    created_at          TEXT,
+    secondary_category  TEXT,      -- a second category the AI thinks also applies (prompt v2)
+    prompt_version      TEXT       -- which prompt produced this answer
 );
 
 -- What a person decided about a flagged enquiry.

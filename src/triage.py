@@ -15,10 +15,11 @@ Run:  python src/triage.py              (demo mode if there is no API key)
       python src/triage.py --limit 20   (only the first 20 not yet done)
       python src/triage.py --redo       (wipe earlier triage results first)
       python src/triage.py --demo       (force demo mode even if a key exists)
+      python src/triage.py --prompt v2  (choose a prompt version; see PROMPTS)
 """
 import json
 import sys
-from typing import Literal
+from typing import Literal, Optional
 
 from pydantic import BaseModel, Field, ValidationError
 
@@ -28,7 +29,7 @@ from ai_assist import KEYWORDS
 
 CONFIDENCE_THRESHOLD = 0.70
 
-SYSTEM_PROMPT = """You triage enquiries for a UK council contact centre. The text has personal details removed
+PROMPT_V1 = """You triage enquiries for a UK council contact centre. The text has personal details removed
 (shown as [NAME], [PHONE], [ADDRESS] and so on) - ignore those labels.
 
 Return ONE JSON object and nothing else, with exactly these keys:
@@ -46,6 +47,11 @@ Medium = ongoing disruption or a clear problem that needs fixing soon. Low = rou
 Safety = hazards to people or property (gas, fire, electrics, structural, unlit or damaged public areas).
 A person always makes the final decision; you only sort and summarise."""
 
+PROMPT_V2 = None  # filled in below once written (kept separate so v1 stays exactly as first tested)
+PROMPTS = {"v1": PROMPT_V1}
+DEFAULT_PROMPT = "v1"
+SYSTEM_PROMPT = PROMPT_V1  # kept so older code that imports SYSTEM_PROMPT still works
+
 
 class Triage(BaseModel):
     """The exact shape we accept back. Anything else is rejected."""
@@ -57,6 +63,7 @@ class Triage(BaseModel):
     confidence: float = Field(ge=0, le=1)
     needs_human_review: bool
     reason: str = Field(max_length=400)
+    secondary_category: Optional[Literal["Housing Repairs", "Noise", "Waste", "Billing", "Complaints", "Safety"]] = None
 
 
 # ---------------- demo stand-in (NOT an AI; simple keyword rules) ----------------
@@ -94,12 +101,12 @@ def demo_triage(masked: str) -> dict:
 
 # ---------------- real Claude call ----------------
 
-def claude_triage(masked: str, tracker):
+def claude_triage(masked: str, tracker, prompt: str = None):
     """Ask Claude; validate; retry once. Returns (dict or None, error text)."""
     last_error = ""
     for attempt in (1, 2):
         try:
-            reply = ai_client.ask_claude(masked, system=SYSTEM_PROMPT, max_tokens=600, tracker=tracker)
+            reply = ai_client.ask_claude(masked, system=PROMPTS[prompt or DEFAULT_PROMPT], max_tokens=600, tracker=tracker)
             start, end = reply.find("{"), reply.rfind("}") + 1
             return Triage(**json.loads(reply[start:end])).model_dump(), ""
         except (json.JSONDecodeError, ValidationError, ValueError) as e:
@@ -113,6 +120,8 @@ def apply_review_rules(result: dict):
     if result["confidence"] < CONFIDENCE_THRESHOLD: reasons.append("low confidence")
     if result["urgency"] == "High": reasons.append("high urgency")
     if result["category"] == "Safety": reasons.append("safety issue")
+    sec = result.get("secondary_category")
+    if sec and sec != result["category"]: reasons.append(f"two possible categories ({result['category']} / {sec})")
     if result["needs_human_review"] and not reasons: reasons.append("AI asked for review")
     return bool(reasons), ", ".join(reasons)
 
@@ -120,6 +129,7 @@ def apply_review_rules(result: dict):
 def main():
     args = sys.argv[1:]
     force_demo = "--demo" in args
+    prompt_name = args[args.index("--prompt") + 1] if "--prompt" in args else DEFAULT_PROMPT
     limit = int(args[args.index("--limit") + 1]) if "--limit" in args else None
     demo = force_demo or ai_client.is_demo()
     conn = db.connect()
@@ -161,7 +171,7 @@ def main():
             result = demo_triage(masked)
         else:
             try:
-                result, error = claude_triage(masked, tracker)
+                result, error = claude_triage(masked, tracker, prompt_name)
             except ai_client.BudgetExceeded as e:
                 print(e)
                 break
@@ -180,11 +190,13 @@ def main():
         cost = ((in_t * ai_client.PRICE_IN_USD_PER_MILLION_TOKENS + out_t * ai_client.PRICE_OUT_USD_PER_MILLION_TOKENS)
                 / 1e6 * ai_client.USD_TO_GBP)
         conn.execute("""INSERT INTO ai_triage (raw_row, category, urgency, summary, postcode, requested_action, confidence,
-                        needs_human_review, reason, mode, model, input_tokens, output_tokens, cost_gbp, created_at)
-                        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                        needs_human_review, reason, mode, model, input_tokens, output_tokens, cost_gbp, created_at,
+                        secondary_category, prompt_version)
+                        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
                      (raw_row, result["category"], result["urgency"], result["summary"], postcode,
                       result["requested_action"], result["confidence"], int(needs), result["reason"],
-                      mode, model, in_t, out_t, cost, db.now()))
+                      mode, model, in_t, out_t, cost, db.now(), result.get("secondary_category"),
+                      None if demo else (prompt_name)))
         db.audit(conn, raw_row, "ai", "triaged",
                  f"category={result['category']}; urgency={result['urgency']}; confidence={result['confidence']}; mode={mode}")
         if needs:

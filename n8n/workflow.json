@@ -1,0 +1,468 @@
+{
+  "name": "Northfield - AI triage with human review (DRAFT, untested)",
+  "nodes": [
+    {
+      "id": "n1",
+      "name": "New enquiry (webhook)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "northfield-new-enquiry",
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "new-enquiry",
+        "responseMode": "onReceived",
+        "options": {}
+      }
+    },
+    {
+      "id": "n2",
+      "name": "Mask personal details",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "parameters": {
+        "jsCode": "// Hide personal details BEFORE anything is sent to Claude\nconst body = $input.first().json.body || $input.first().json;\nlet text = String(body.message || '');\nconst name = String(body.name || '');\ntext = text.replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}/g, '[EMAIL]');\ntext = text.replace(/\\b[A-Z]{2}\\s?\\d{2}\\s?\\d{2}\\s?\\d{2}\\s?[A-D]\\b/g, '[NI_NUMBER]');\ntext = text.replace(/\\b[A-Z]{1,2}\\d[A-Z\\d]?\\s?\\d[A-Z]{2}\\b/g, '[POSTCODE]');\ntext = text.replace(/\\b\\d{1,4}[A-Za-z]?\\s+(?:[A-Z][a-z]+\\s){1,2}(?:Street|Road|Avenue|Lane|Close|Drive|Way|Court|Gardens|Crescent|Terrace|Grove|Place)\\b/g, '[ADDRESS]');\ntext = text.replace(/\\+?\\(?\\d[\\d\\s\\-().]{8,}\\d/g, m => (m.replace(/\\D/g, '').length >= 10 ? '[PHONE]' : m));\ntext = text.replace(/\\b((?:kind regards|regards|many thanks|thanks|thank you|cheers|my name is)[, ]+)([A-Z][a-zA-Z'-]+(?:\\s[A-Z][a-zA-Z'-]+){0,2})/gi, '$1[NAME]');\nname.split(/[\\s,]+/).filter(t => t.length >= 3).forEach(t => { text = text.split(t).join('[NAME]'); });\nreturn [{ json: { case_ref: body.case_ref || ('NF-' + Date.now()), received: new Date().toISOString(), masked_message: text } }];\n"
+      }
+    },
+    {
+      "id": "n3",
+      "name": "Ask Claude",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        440,
+        0
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ model: 'claude-haiku-5-5', max_tokens: 300, system: \"You triage enquiries for a UK council contact centre. The text has personal details removed\\n(shown as [NAME], [PHONE], [ADDRESS] and so on) - ignore those labels.\\n\\nReturn ONE JSON object and nothing else, with exactly these keys:\\n  category: one of \\\"Housing Repairs\\\", \\\"Noise\\\", \\\"Waste\\\", \\\"Billing\\\", \\\"Complaints\\\", \\\"Safety\\\"\\n  urgency: \\\"High\\\", \\\"Medium\\\" or \\\"Low\\\"\\n  summary: one plain sentence, under 25 words\\n  postcode: always \\\"\\\" (postcodes are not shared with you)\\n  requested_action: what the person wants done, in under 12 words\\n  confidence: number 0 to 1 for how sure you are of category and urgency\\n  needs_human_review: true or false\\n  reason: one short sentence explaining your category and urgency choice\\n\\nUrgency guide: High = risk to health or safety, vulnerable people, a legal or court deadline, or a threat to escalate.\\nMedium = ongoing disruption or a clear problem that needs fixing soon. Low = routine request or minor issue.\\nSafety = hazards to people or property (gas, fire, electrics, structural, unlit or damaged public areas).\\nA person always makes the final decision; you only sort and summarise.\", messages: [{ role: 'user', content: $json.masked_message }] }) }}",
+        "options": {}
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "REPLACE_ME",
+          "name": "Anthropic API key (header x-api-key)"
+        }
+      }
+    },
+    {
+      "id": "n4",
+      "name": "Validate and decide review",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        660,
+        0
+      ],
+      "parameters": {
+        "jsCode": "// Check Claude's JSON and let CODE (not the AI) decide whether a person must review it\nconst ctx = $('Mask personal details').first().json;\nconst reply = $input.first().json;\nlet parsed = null, error = '';\ntry {\n  const raw = reply.content[0].text;\n  parsed = JSON.parse(raw.slice(raw.indexOf('{'), raw.lastIndexOf('}') + 1));\n  const cats = ['Housing Repairs','Noise','Waste','Billing','Complaints','Safety'];\n  if (!cats.includes(parsed.category)) throw new Error('bad category');\n  if (!['High','Medium','Low'].includes(parsed.urgency)) throw new Error('bad urgency');\n  if (typeof parsed.confidence !== 'number' || parsed.confidence < 0 || parsed.confidence > 1) throw new Error('bad confidence');\n} catch (e) { parsed = null; error = String(e); }\nconst reasons = [];\nif (!parsed) reasons.push('AI output invalid: ' + error);\nelse {\n  if (parsed.confidence < 0.7) reasons.push('low confidence');\n  if (parsed.urgency === 'High') reasons.push('high urgency');\n  if (parsed.category === 'Safety') reasons.push('safety issue');\n}\nreturn [{ json: {\n  case_ref: ctx.case_ref, received: ctx.received,\n  ai_category: parsed ? parsed.category : '', ai_urgency: parsed ? parsed.urgency : '',\n  summary: parsed ? parsed.summary : '', requested_action: parsed ? parsed.requested_action : '',\n  confidence: parsed ? parsed.confidence : '', why_flagged: reasons.join(', ') || 'routine - still needs manager sign-off in this pilot',\n  decision: '', final_category: '', final_urgency: '', reviewer: '', notes: ''\n} }];\n"
+      }
+    },
+    {
+      "id": "n5",
+      "name": "Add to review queue",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        880,
+        -80
+      ],
+      "parameters": {
+        "resource": "sheet",
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "REPLACE_WITH_YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Review queue",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "case_ref": "={{ $json.case_ref }}",
+            "received": "={{ $json.received }}",
+            "ai_category": "={{ $json.ai_category }}",
+            "ai_urgency": "={{ $json.ai_urgency }}",
+            "summary": "={{ $json.summary }}",
+            "requested_action": "={{ $json.requested_action }}",
+            "confidence": "={{ $json.confidence }}",
+            "why_flagged": "={{ $json.why_flagged }}",
+            "decision": "={{ $json.decision }}",
+            "final_category": "={{ $json.final_category }}",
+            "final_urgency": "={{ $json.final_urgency }}",
+            "reviewer": "={{ $json.reviewer }}",
+            "notes": "={{ $json.notes }}"
+          },
+          "matchingColumns": [],
+          "schema": []
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "REPLACE_ME",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "id": "n6",
+      "name": "Audit: AI triaged",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        880,
+        80
+      ],
+      "parameters": {
+        "resource": "sheet",
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "REPLACE_WITH_YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Audit log",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "timestamp": "={{ $now.toISO() }}",
+            "case_ref": "={{ $json.case_ref }}",
+            "actor": "ai",
+            "action": "triaged",
+            "detail": "={{ 'category=' + $json.ai_category + '; urgency=' + $json.ai_urgency + '; confidence=' + $json.confidence }}"
+          },
+          "matchingColumns": [],
+          "schema": []
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "REPLACE_ME",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "id": "n7",
+      "name": "Manager updated a row",
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        400
+      ],
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "REPLACE_WITH_YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Review queue",
+          "mode": "name"
+        },
+        "event": "rowUpdate",
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "REPLACE_ME",
+          "name": "Google Sheets Trigger account"
+        }
+      }
+    },
+    {
+      "id": "n8",
+      "name": "Was it rejected?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        220,
+        400
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.decision }}",
+              "operation": "equals",
+              "value2": "rejected"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "n9",
+      "name": "Audit: rejected, no reply",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        440,
+        520
+      ],
+      "parameters": {
+        "resource": "sheet",
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "REPLACE_WITH_YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Audit log",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "timestamp": "={{ $now.toISO() }}",
+            "case_ref": "={{ $json.case_ref }}",
+            "actor": "human",
+            "action": "decision_rejected",
+            "detail": "={{ 'reviewer=' + $json.reviewer + '; notes=' + $json.notes }}"
+          },
+          "matchingColumns": [],
+          "schema": []
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "REPLACE_ME",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "id": "n10",
+      "name": "Draft the reply",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        320
+      ],
+      "parameters": {
+        "jsCode": "// Draft the reply (only reached for approved/edited cases)\nconst r = $input.first().json;\nconst cat = r.decision === 'edited' ? r.final_category : r.ai_category;\nconst urg = r.decision === 'edited' ? r.final_urgency : r.ai_urgency;\nconst times = { High: 'within 4 working hours', Medium: 'within 3 working days', Low: 'within 10 working days' };\nconst lines = {\n  'Housing Repairs': 'We have logged your repair request. An engineer will contact you to arrange a visit.',\n  'Noise': 'We have logged your noise report and our environmental team will look into it.',\n  'Waste': 'We have logged your waste and recycling report and passed it to the collections team.',\n  'Billing': 'We have passed your billing query to our accounts team.',\n  'Complaints': 'We are sorry you have had a poor experience. Your complaint has been logged.',\n  'Safety': 'Thank you for reporting this hazard. We are acting on it.'\n};\nlet text = `Dear resident,\\n\\nRe: case ${r.case_ref}\\n\\n${lines[cat]} You can expect to hear from us ${times[urg]}.\\n`;\nif (cat === 'Safety' || urg === 'High') text += '\\nIf anyone is in immediate danger, please call 999.\\n';\ntext += '\\nKind regards,\\nNorthfield Services (fictional)';\nreturn [{ json: { ...r, reply_text: text, final_category_used: cat, final_urgency_used: urg } }];\n"
+      }
+    },
+    {
+      "id": "n11",
+      "name": "Send reply (to my own email)",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        660,
+        320
+      ],
+      "parameters": {
+        "fromEmail": "REPLACE_WITH_YOUR_EMAIL",
+        "toEmail": "REPLACE_WITH_YOUR_EMAIL",
+        "subject": "={{ 'DEMO reply for case ' + $json.case_ref }}",
+        "emailFormat": "text",
+        "text": "={{ $json.reply_text }}",
+        "options": {}
+      },
+      "credentials": {
+        "smtp": {
+          "id": "REPLACE_ME",
+          "name": "SMTP account"
+        }
+      }
+    },
+    {
+      "id": "n12",
+      "name": "Audit: human decision + reply",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        880,
+        320
+      ],
+      "parameters": {
+        "resource": "sheet",
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "REPLACE_WITH_YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Audit log",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "timestamp": "={{ $now.toISO() }}",
+            "case_ref": "={{ $json.case_ref }}",
+            "actor": "human",
+            "action": "decision_approved_or_edited",
+            "detail": "={{ 'reviewer=' + $json.reviewer + '; category=' + $json.final_category_used + '; urgency=' + $json.final_urgency_used + '; reply emailed (demo, to own address)' }}"
+          },
+          "matchingColumns": [],
+          "schema": []
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "REPLACE_ME",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "New enquiry (webhook)": {
+      "main": [
+        [
+          {
+            "node": "Mask personal details",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mask personal details": {
+      "main": [
+        [
+          {
+            "node": "Ask Claude",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ask Claude": {
+      "main": [
+        [
+          {
+            "node": "Validate and decide review",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate and decide review": {
+      "main": [
+        [
+          {
+            "node": "Add to review queue",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Audit: AI triaged",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Manager updated a row": {
+      "main": [
+        [
+          {
+            "node": "Was it rejected?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Was it rejected?": {
+      "main": [
+        [
+          {
+            "node": "Audit: rejected, no reply",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Draft the reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Draft the reply": {
+      "main": [
+        [
+          {
+            "node": "Send reply (to my own email)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send reply (to my own email)": {
+      "main": [
+        [
+          {
+            "node": "Audit: human decision + reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

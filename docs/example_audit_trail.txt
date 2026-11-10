@@ -1,0 +1,20 @@
+Audit trail for one synthetic test enquiry
+
+2026-11-10 09:20:56  system  enquiry_received     web form submission (synthetic test)
+2026-11-10 09:20:56  ai      triaged              category=Safety; urgency=High; confidence=0.67
+2026-11-10 09:20:56  system  queued_for_review    low confidence, high urgency, safety issue
+2026-11-10 09:20:56  human   decision_approved    reviewer=SIMULATED-REVIEWER
+2026-11-10 09:20:56  system  reply_sent           demo: draft not emailed
+
+Draft reply:
+
+Dear Test Person,
+
+Re: case NF-TEST-0001
+
+Thank you for reporting this hazard. We take safety issues very seriously and are acting on it. You can expect to hear from us within 4 working hours.
+
+If anyone is in immediate danger, please call 999.
+
+Kind regards,
+Northfield Services (fictional)

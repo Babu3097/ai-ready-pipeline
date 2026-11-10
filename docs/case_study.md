@@ -20,26 +20,32 @@ A pipeline that deals with each of those three problems in turn:
 
 ## What the numbers say
 
-| | Keyword stand-in | Claude (in a chat session) |
-|---|---|---|
-| Urgent enquiries missed without a person seeing them | 0 of 86 | 0 of 86 |
-| Enquiries sent to a person | 62% | 34% |
-| Estimated triage time saved | about 64% | about 75% |
+I tested three ways of doing the triage on the same 300 enquiries, scored against the known answers:
 
-Data quality: consistency rose from 65% to 100%, and the clean-up introduced 1 wrong value in about 3,300 cells (a mistyped postcode that still looked valid).
+| | Keyword matcher | Claude in a chat | **Claude API (real run)** |
+|---|---|---|---|
+| Category right | 97% | 99% | **84%** |
+| Urgency right | 99% | 98% | **96%** |
+| Urgent enquiries missed without a person seeing them | 0 of 86 | 0 of 86 | **0 of 86** |
+| Sent to a person | 62% | 34% | **39%** |
+| Estimated triage time saved | 64% | 75% | **73%** |
 
-**An important caution.** Neither run used the Claude API. One is a simple keyword matcher; the other is Claude reading each distinct message once in a chat, on data the same assistant wrote, so it isn't an independent test. The enquiries are easy and template-based. These results show the pipeline and the measurement work; they do not show how an AI would perform on real enquiries. The time saving also rests on assumptions (4 minutes manual triage, 2 minutes to review an AI suggestion, £18 an hour), and falls sharply if review takes longer.
+The real run is the one that counts, and it scored lower than my earlier tests. That is useful: the earlier tests were not independent, and they flattered the result. Of the cases the AI handled without a person, about 5% were wrong. None were urgent, but the AI was confident about them, which shows why you cannot trust the AI's confidence on its own.
+
+Data quality: consistency rose from 65% to 100%, and the clean-up introduced 1 wrong value in about 3,300 cells.
+
+**Cautions.** The enquiries are synthetic and template-based, so real ones will be harder. The "human reviewer" is simulated and knows the answers. The time saving rests on assumptions (4 minutes manual triage, 2 minutes to review an AI suggestion, £18 an hour) and falls sharply if review takes longer. The real run cost about £0.41 on assumed prices.
 
 ## What I learned
 
 - Clean data matters more than clever AI. Most of the effort went into making the data trustworthy.
 - "Human in the loop" has a cost. Sending every urgent case to a person is the safe choice, and it is also what limits the saving.
 - A result without its assumptions is just a claim. Every figure here comes with the assumption behind it.
-- Testing against a known answer key found real flaws: a mistyped postcode that still looked valid slipped through, and my own leak check had missed a street name left unmasked in lower-case text until I widened it.
+- Testing against a known answer key found real flaws: a mistyped postcode that still looked valid slipped through, and my own leak check had missed a street name left unmasked in lower-case text until I widened it, and the first real AI call crashed on a response format my demo mode could never have shown.
 
 ## What I would do next
 
-Run the same pipeline with a real AI model on a harder test set, compare it to the baseline, finish the Power BI report, and run the whole thing on Microsoft Fabric, which many UK employers use. Then repeat with real (properly protected) data under a data-protection review.
+Improve the prompt and the category scheme (a second label for overlapping cases), test on a harder dataset written by someone else, finish the Power BI report, and run the whole thing on Microsoft Fabric, which many UK employers use. Then repeat with real (properly protected) data under a data-protection review.
 
 ## How it was built
 

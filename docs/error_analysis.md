@@ -1,6 +1,29 @@
 # Where the triage was wrong, and why
 
-Two runs are described. Neither is the Claude API. Re-write this page from `docs/results.md` after any new run.
+Three runs are described. **Run C (the real Claude API, Haiku 5.5) is the one to rely on.** Re-write this page from `docs/results.md` after any new run.
+
+## Run C: Claude API (`claude-haiku-5-5`), 312 calls, about £0.41
+
+Overall: category 84.3%, urgency 96.3%, 0 urgent cases missed without a person seeing them, 39% sent to a person.
+
+| What | How many | Why | Was it caught? |
+|---|---|---|---|
+| **Safety** chosen for a High-urgency case the key files elsewhere: water through a ceiling (Housing Repairs), needles and glass in a play area (Waste), violent shouting with children at risk (Noise) | 32 | Claude treats real risk to people as "Safety". Reasonable people could agree; the single-label scheme forces a choice between overlapping categories. | Yes. Safety cases always go to a person. |
+| "Confusing website / can't find the bulky-waste form" labelled Waste, key says Complaints | 7 | Genuinely ambiguous: part complaint, part waste request. Claude's confidence was 0.80-0.85, high for an ambiguous message. | **No.** Handled with only a skim. |
+| Complaint about a repair with no follow-up labelled Housing Repairs | 5 | The message mentions a repair and complains about service. | 4 of 5 yes (low confidence or review); 1 slipped through. |
+| Pothole with a cyclist fall rated High, key says Medium | 4 | Judgement call, safe side. | Yes. |
+| Council-tax double charge rated Low (key: Medium); dumped sofa rated Low (key: Medium) | 2 | Claude judged them routine. | **No.** |
+| Medium Waste cases rated High | 2 | Over-cautious. | Yes. |
+| Empty messages | 3 | No text to triage. | Yes. |
+
+**The number to worry about:** of the 184 enquiries handled with only a skim, 10 were wrong (5.4%). None was urgent. All were ambiguous or low-stakes, but Claude reported 0.80-0.95 confidence on them, so **confidence alone is not a reliable guard**. That is the argument for sampling un-reviewed cases every week.
+
+**Possible fixes (not yet tried):** allow a secondary category for overlapping cases; add examples of the tricky cases to the prompt; send any message that touches two categories to a person; try a larger model on the ambiguous ones.
+
+## Why run C is lower than runs A and B
+
+- Run A (keyword stand-in) and run B (me, in a chat) both scored 97-99% on category. A was tuned to the same wording the templates use. B was not independent: the same assistant wrote the data and did the triage, and it read 35 distinct messages once rather than 312 one at a time. Real model, real API, no inside knowledge: 84%.
+- Lesson: a score you can't separate from how the data was made isn't worth much. Quote the independent run.
 
 ## Run B: Claude in a Claude Code chat session (current `docs/results.md`)
 

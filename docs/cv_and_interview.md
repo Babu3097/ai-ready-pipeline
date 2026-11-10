@@ -6,17 +6,17 @@ Only claim what is true *today*. This project was **built with AI assistance**; 
 
 ## CV line (true today)
 
-> Built an AI-assisted triage pipeline on synthetic council enquiries (Python, SQL, pandas, Claude API with a no-key demo mode): cleaned 330 messy records to 312 with consistency up from 65% to 100%, masked personal data before AI use, routed all urgent/safety cases to human review, and estimated a 64-75% triage-time saving under stated assumptions. Built with AI assistance.
+> Built an AI-assisted triage pipeline on synthetic council enquiries (Python, SQL, pandas, Claude API): cleaned 330 messy records to 312 (consistency 65% to 100%), masked personal data before AI use, and measured Claude's triage against a known answer key (84% category / 96% urgency accuracy; 0 of 86 urgent cases missed without human review; about £0.40 for 312 enquiries). Found and fixed two bugs in my own data masking and API handling. Built with AI assistance.
 
-Use "estimated" and keep "Built with AI assistance". Do not write "on Microsoft Fabric", "Power BI report" or "X% AI accuracy" yet. The accuracy figures so far come from a keyword stand-in and a chat session on data the same assistant wrote, not the API.
+Keep "synthetic" and "Built with AI assistance". Do not write "on Microsoft Fabric" or "Power BI report" yet. A shorter version for a tight CV: "Built and evaluated an AI triage pipeline (Python, SQL, Claude API) on synthetic council data: 96% urgency accuracy, 0 urgent cases missed without human review, with a documented 5% silent-error rate and fixes proposed."
 
 ## Upgrade the line when each thing is true
 
 | When you have... | You can add |
 |---|---|
-| Run it with a real Claude key | "category accuracy X% / N urgent cases missed (of 86), measured against a known answer key" (use the real numbers from `docs/results.md`) |
 | Built and saved the Power BI report | "with a four-page Power BI report for contract managers" |
 | Run it in a Fabric trial | "prepared and ran the pipeline on Microsoft Fabric (Lakehouse, notebooks, SQL endpoint, Power BI)" |
+| Improved the prompt and re-measured | "improved category accuracy from 84% to X% by changing the prompt and label scheme" |
 | Rebuilt the pieces yourself | "then rebuilt the data-cleaning script and key SQL queries from scratch" |
 
 ## LinkedIn "Featured" description (short)
@@ -31,7 +31,7 @@ Use "estimated" and keep "Built with AI assistance". Do not write "on Microsoft 
 
 **Don't say:**
 - That you wrote the code unaided.
-- That the AI is "97%" or "99% accurate". Those figures came from a keyword stand-in and a Claude chat session on easy synthetic data the same assistant wrote.
+- That the AI is "97%" or "99% accurate". Those were the keyword stand-in and a chat-session run. The real API result is 84% category / 96% urgency, on easy synthetic data.
 - That it runs on Fabric or that a Power BI report exists, until it does.
 
 ## Talking points for phases 3 to 9
@@ -42,7 +42,7 @@ Use "estimated" and keep "Built with AI assistance". Do not write "on Microsoft 
 3. "Writing the same queries for the Fabric SQL endpoint showed me where SQLite and T-SQL differ."
 
 **Phase 4 - AI triage**
-1. "The AI must return JSON in an exact shape. It's validated, retried once, and failures go to a person."
+1. "The AI must return JSON in an exact shape. It's validated, retried once, and failures go to a person. The first real call crashed because the reply included a 'thinking' block my demo mode never produced, which is why I test with the real thing."
 2. "Code, not the AI, decides when a human must review: low confidence, high urgency, or safety. The AI can't talk its way out of it."
 3. "Only masked text is sent, and a cost guard stops the run before £2."
 

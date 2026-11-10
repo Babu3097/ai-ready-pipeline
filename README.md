@@ -28,28 +28,39 @@ Messy legacy sheet ─► 1 Clean & score (Python) ─► 2 SQL tables (SQLite /
 | 1 | Messy synthetic data + answer key | **Done and tested** |
 | 2 | Data clean-up, scoring, PII masking | **Done and tested** |
 | 3 | SQL tables, loader, 9 manager queries | **Done and tested** |
-| 4 | AI triage (pydantic, retry, cost guard) | **Tested with the keyword stand-in and with Claude-in-chat answers**; the Claude **API** path is written but has never been run |
+| 4 | AI triage (pydantic, retry, cost guard) | **Done and tested with the real Claude API** (312 enquiries, about £0.41), plus the keyword stand-in and a chat-session run for comparison |
 | 5 | Human review loop + audit log | **Local version tested**; the n8n workflow is drafted, **not run** (no Docker or Google account here) |
-| 6 | Evaluation vs answer key, time saved | **Done**; numbers are from the stand-in and the chat session (see warning below) |
+| 6 | Evaluation vs answer key, time saved | **Done** on the real API run (see Results) |
 | 7 | Power BI report | **Not built.** Data model, DAX and page designs are ready (`powerbi/BUILD_GUIDE.md`); the four pages are drawn in Python as previews, not Power BI |
 | 8 | Microsoft Fabric edition | **Prepared, not run.** Notebooks, T-SQL and a step-by-step guide are in `fabric/` |
 | 9 | Packaging | README, case study, video script and CV notes done; **video not recorded** |
 
 ## Results
 
-Two triage runs, both on the same 300 synthetic enquiries, scored against the same answer key. **Neither is the Claude API.**
+Three triage runs on the same 300 synthetic enquiries, scored against the same answer key.
 
-| | A. Keyword stand-in (demo mode) | B. Claude in a Claude Code chat session |
-|---|---|---|
-| Category accuracy | 97% | 99% |
-| Urgency accuracy | 99% | 98% |
-| Urgent cases missed without a person seeing them (of 86) | 0 | 0 |
-| Enquiries sent to a person | 62% | 34% |
-| Estimated triage time saved | 64% | 75% |
+| | A. Keyword stand-in | B. Claude in a chat session | **C. Claude API (Haiku 5.5)** |
+|---|---|---|---|
+| Category accuracy | 97% | 99% | **84%** |
+| Urgency accuracy | 99% | 98% | **96%** |
+| Urgent cases missed without a person seeing them (of 86) | 0 | 0 | **0** |
+| Enquiries sent to a person | 62% | 34% | **39%** |
+| Accuracy of cases handled with only a skim | 100% | 100% | **95%** |
+| Estimated triage time saved | 64% | 75% | **73%** |
+| Cost | £0 | £0 | **about £0.41** (312 calls; price figures assumed, check your Console) |
 
-> **How to read this.** Run A is a keyword matcher. Run B is Claude reading each *distinct* masked message once, from the text only (the answer key was not looked at), with its answer applied to every copy of that wording (`src/import_triage.py`). B is **not independent**: the same assistant that wrote the synthetic data did the triage. The data also comes from about 34 templates, which is far easier than real enquiries. And the Claude **API** code path (`src/triage.py`) has still never been run. These numbers show the pipeline and measurement work; they are a best case, not proof of real-world accuracy.
+**Run C is the one to quote.** It runs this project's own code (`src/triage.py`) against the real Claude API on masked text only. Runs A and B are kept as comparisons: A is a keyword matcher, and B was Claude reading the data in a chat, written by the same assistant that wrote the data, so it was not independent and **overstated** what a real model scores. The real model scored 15 points lower on category.
 
-What run B got "wrong" is informative: besides 3 blank messages (sent to a person, as designed), the only disagreements were 3 enquiries about a pothole where a cyclist fell. It labelled them High urgency; the answer key says Medium. That is a safe-side disagreement, and a reasonable one, which is the kind of judgement call a human reviewer settles.
+**Where Claude (run C) went wrong, and why**
+- **32 of 47 category misses are "Safety" used for High-urgency cases** the answer key files under Housing Repairs (water pouring through a ceiling), Waste (needles and glass in a play area) or Noise (violent shouting, children at risk). Reasonable people could label those Safety, so part of this is a weakness in forcing one label per enquiry. All 32 went to a person, because Safety cases are always reviewed, so nothing urgent was lost.
+- **10 of the 184 cases handled with only a skim were wrong (5.4%).** Seven are one message about a confusing website and a bulky-waste form (Claude said Waste, the key says Complaints); the others are minor urgency or category slips (for example, a double council-tax charge rated Low rather than Medium). None was urgent.
+- **3 empty messages** could not be triaged and went to a person, as designed.
+
+What this shows: the review rule worked (no urgent case slipped through), but a 5% silent error rate on easy data means real-world monitoring and a sample check of the un-reviewed cases would be essential.
+
+**After a human review step** (a *simulated* reviewer who knows the answers, so a best case): category 97%, urgency 99%.
+
+**Value** (assumptions in `docs/results.md`): run C saves about **73% of triage time** (20.0 h -> 5.4 h on 300 enquiries) assuming 4 min manual, 0.5 min skim, 2 min review, £18/h, less about £0.41 of AI cost. The saving depends heavily on the review-time assumption (sensitivity table in the results). Triage time only, not fixing the issue.
 
 **Data quality** (330 raw rows -> 312 cleaned):
 
@@ -60,11 +71,11 @@ What run B got "wrong" is informative: besides 3 blank messages (sent to a perso
 | Validity | 95.5% | 100% |
 | Consistency | 64.9% | 100% |
 
-Checked against the answer key: **1 wrong value in about 3,300 cleaned cells**. Anything untrustworthy was blanked and flagged, never guessed. Validity and consistency reach 100% by design; the cost shows in completeness.
+Checked against the answer key: **1 wrong value in about 3,300 cleaned cells**. Anything untrustworthy was blanked and flagged, never guessed.
 
-**A bug the leak check found (and I fixed).** Repeat submissions were lower-cased by the generator, and the personal-detail masking only caught capitalised names and addresses, so a street name slipped through. My first leak check only covered the 300 original rows and missed it. I made the masking case-insensitive and widened the check to all 312 rows; it now finds no leaks.
+**Two bugs found along the way (both fixed).** (1) The personal-detail masking missed street names in lower-case text, and my first leak check only covered the 300 original rows; I made the masking case-insensitive and widened the check to all 312 rows, which now finds no leaks. (2) The first real API call crashed because the reply started with a "thinking" block my code didn't expect; demo mode could never have shown that.
 
-**Value** (assumptions in `docs/results.md`): run B saves about **75% of triage time** (20.0 h -> 5.0 h on 300 enquiries) assuming 4 min manual, 0.5 min skim, 2 min review, £18/h. The saving depends heavily on the review-time assumption (see the sensitivity table in the results). Triage time only, not fixing the issue.
+**Still limited:** the data is synthetic and template-based (about 34 templates), so real enquiries will be harder; the reviewer is simulated; the time saving rests on assumptions. The raw API output is in `data/triage_api/ai_triage_claude_haiku.csv`.
 
 Full detail: [docs/results.md](docs/results.md) | [where it was wrong](docs/error_analysis.md) | [data quality report](data/clean/quality_report.md) | [example audit trail](docs/example_audit_trail.txt)
 
@@ -91,7 +102,7 @@ Or one step at a time:
 python src/generate_data.py    # messy data + answer key
 python src/data_quality.py     # clean, score, mask
 python src/load_sql.py         # build data/northfield.db
-python src/triage.py           # AI triage (keyword stand-in without a key)
+python src/triage.py           # AI triage (real Claude with a key in .env, keyword stand-in without)
 python src/import_triage.py    # OR: load the Claude-in-chat answers instead
 python src/review_queue.py all # review queue, simulated reviewer, replies, audit log
 python src/evaluate.py         # results + CSVs for Power BI
@@ -125,8 +136,8 @@ docs/         results, error analysis, case study, video script, CV notes, scree
 
 ## Limitations
 
-- Synthetic, template-based data: real enquiries are harder. Real-world accuracy will be lower.
-- The AI results are from a keyword stand-in and a Claude chat session on data the same assistant wrote. The Claude API path is unproven.
+- Synthetic, template-based data: real enquiries are harder. Real-world accuracy will probably be lower.
+- The real-Claude results are on synthetic, template-based data, so real enquiries will be harder. Only one model (Haiku 5.5) and one prompt were tried.
 - The reviewer in the demo is simulated and knows the answers (a best case).
 - Time-saved figures rest on assumptions, not measurement in a real contact centre.
 - Dates are read day-first (UK). Postcodes are checked for shape and a real area, not against a full postcode database (this caused the one wrong value).
@@ -134,11 +145,12 @@ docs/         results, error analysis, case study, video script, CV notes, scree
 
 ## What I would do next with real data
 
-1. Run the Claude API (`python src/triage.py`) and compare it with the baseline and the chat-session run.
+1. Try a better prompt, allow a second category label for overlapping cases (e.g. Safety plus Housing), and test Sonnet where Haiku struggles.
 2. Add a harder test set (typos, two issues in one message, very short messages).
 3. Sample the cases the AI handled *without* review every week to catch drift.
 4. Tune the confidence threshold against the cost of a missed urgent case.
 5. Complete the Power BI report and the Fabric run, with real screenshots.
+6. Re-test on a harder dataset that someone else wrote.
 
 ## Built with AI assistance
 

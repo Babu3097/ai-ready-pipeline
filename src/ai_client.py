@@ -81,7 +81,11 @@ def ask_claude(prompt: str, system: str = "", max_tokens: int = 300,
     )
     if tracker:
         tracker.add(response.usage.input_tokens, response.usage.output_tokens)
-    return response.content[0].text
+    # The reply can start with a "thinking" block; we only want the text blocks.
+    text = "".join(b.text for b in response.content if getattr(b, "type", "") == "text")
+    if not text:
+        raise ValueError(f"Claude returned no text (stop reason: {response.stop_reason})")
+    return text
 
 
 if __name__ == "__main__":

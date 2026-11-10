@@ -133,3 +133,15 @@ Add your real hours in the table at the top of this file. Time so far on this pr
 ### Next: learn from scratch, then rebuild
 
 Order from CLAUDE.md: terminal and VS Code -> Python basics -> pandas -> SQL -> APIs/JSON/Claude -> n8n -> Power BI/DAX/Fabric. Then rewrite `data_quality.py`, the Claude call in `triage.py`, three SQL queries and one Power BI page yourself.
+
+
+---
+
+## Update: the real Claude API run
+
+- **What happened:** ran `src/triage.py` against the real Claude API (Haiku 5.5) on all 312 enquiries. About £0.41 on assumed prices (check the Console for the real figure).
+- **Result:** 84% category, 96% urgency, 0 of 86 urgent cases missed without a person seeing them. About 5% of the cases handled without review were wrong.
+- **Lesson:** the keyword stand-in and my chat-session run both scored 97-99%. Neither was a fair test. Always report the independent run.
+- **Bugs the real run found:** the API reply can start with a "thinking" block (my code crashed until I read only the text blocks); earlier, the personal-detail masking missed lower-case text.
+- **New words:** *thinking block* (the model's reasoning, returned before the answer); *silent error* (a mistake nobody reviewed); *label ambiguity* (the category scheme itself overlaps, e.g. Safety vs Housing Repairs).
+- **New questions to answer in your own words:** (9) Why is Claude's confidence not enough to decide who reviews a case? (10) Why did the real run score lower than the chat-session run? (11) What would you change to reduce the "Safety" over-use?

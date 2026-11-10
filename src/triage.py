@@ -99,7 +99,7 @@ def claude_triage(masked: str, tracker):
     last_error = ""
     for attempt in (1, 2):
         try:
-            reply = ai_client.ask_claude(masked, system=SYSTEM_PROMPT, max_tokens=300, tracker=tracker)
+            reply = ai_client.ask_claude(masked, system=SYSTEM_PROMPT, max_tokens=600, tracker=tracker)
             start, end = reply.find("{"), reply.rfind("}") + 1
             return Triage(**json.loads(reply[start:end])).model_dump(), ""
         except (json.JSONDecodeError, ValidationError, ValueError) as e:

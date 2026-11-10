@@ -3,3 +3,4 @@ faker
 pydantic
 anthropic
 python-dotenv
+matplotlib

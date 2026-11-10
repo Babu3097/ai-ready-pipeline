@@ -80,7 +80,7 @@ raw_row,enquiry_id,row_type,issue_tags
 79,NF-2025-0230,original,case_ref:spaces|date:excel_serial_number|email:case_or_spaces|phone:no_spaces|urgency:inconsistent_wording
 80,NF-2025-0283,original,channel:hidden_blank
 81,NF-2025-0107,original,phone:plus44|urgency:blank
-82,NF-2025-0196,original,date:partial|status:inconsistent_wording|email:only_in_message_text|phone:only_in_message_text
+82,NF-2025-0196,original,date:partial|status:inconsistent_wording|phone:only_in_message_text|email:only_in_message_text
 83,NF-2025-0271,original,channel:inconsistent_wording|postcode:case_or_spacing|category:inconsistent_wording|urgency:blank
 84,NF-2025-0020,original,channel:inconsistent_wording|phone:plus44|urgency:blank
 85,NF-2025-0141,original,date:uk_slash_format|email:invalid|phone:no_spaces|urgency:blank
@@ -106,7 +106,7 @@ raw_row,enquiry_id,row_type,issue_tags
 105,NF-2025-0186,original,date:two_digit_year|channel:blank|phone:blank|category:inconsistent_wording|message:stray_whitespace
 106,NF-2025-0089,original,date:uk_slash_format|phone:blank
 107,NF-2025-0102,original,date:uk_slash_format|phone:lost_leading_zero|category:inconsistent_wording|status:inconsistent_wording|postcode:only_in_message_text
-108,NF-2025-0149,original,date:uk_slash_format|urgency:blank|postcode:only_in_message_text|phone:only_in_message_text|structure:name_email_swapped
+108,NF-2025-0149,original,date:uk_slash_format|urgency:blank|phone:only_in_message_text|postcode:only_in_message_text|structure:name_email_swapped
 109,NF-2025-0030,original,email:blank|postcode:placeholder|urgency:inconsistent_wording|status:inconsistent_wording
 110,NF-2025-0103,original,date:text_month|channel:inconsistent_wording|phone:plus44|postcode:invalid|urgency:inconsistent_wording|status:inconsistent_wording
 111,NF-2025-0239,original,date:excel_serial_number|channel:inconsistent_wording|name:surname_first|urgency:inconsistent_wording|status:hidden_blank
@@ -132,7 +132,7 @@ raw_row,enquiry_id,row_type,issue_tags
 131,NF-2025-0256,original,email:invalid|postcode:placeholder|handling_mins:has_units
 132,NF-2025-0270,original,date:uk_slash_format|phone:lost_leading_zero|postcode:case_or_spacing|category:hidden_blank|urgency:inconsistent_wording|status:inconsistent_wording|email:only_in_message_text
 133,NF-2025-0074,original,case_ref:spaces|channel:hidden_blank|phone:placeholder|urgency:inconsistent_wording
-134,NF-2025-0044,original,date:partial|postcode:placeholder|category:inconsistent_wording|urgency:blank|email:only_in_message_text|phone:only_in_message_text
+134,NF-2025-0044,original,date:partial|postcode:placeholder|category:inconsistent_wording|urgency:blank|phone:only_in_message_text|email:only_in_message_text
 135,NF-2025-0100,original,date:uk_slash_format|phone:no_spaces|urgency:blank
 136,NF-2025-0112,original,date:excel_serial_number|channel:inconsistent_wording|phone:invalid|category:inconsistent_wording|urgency:blank|structure:name_email_swapped
 137,NF-2025-0129,original,channel:inconsistent_wording|phone:plus44|urgency:blank|handling_mins:has_units
@@ -247,7 +247,7 @@ raw_row,enquiry_id,row_type,issue_tags
 246,,blank_row,structure:blank_row
 247,NF-2025-0261,original,case_ref:lowercase|channel:inconsistent_wording
 248,NF-2025-0201,original,date:uk_slash_format|name:blank|phone:plus44|handling_mins:has_units
-249,NF-2025-0205,original,date:text_month|urgency:inconsistent_wording|status:inconsistent_wording|email:only_in_message_text|phone:only_in_message_text
+249,NF-2025-0205,original,date:text_month|urgency:inconsistent_wording|status:inconsistent_wording|phone:only_in_message_text|email:only_in_message_text
 250,NF-2025-0268,original,date:uk_slash_format|email:hidden_blank|phone:plus44_no_spaces|category:inconsistent_wording|urgency:inconsistent_wording|postcode:only_in_message_text
 251,NF-2025-0010,original,date:uk_slash_format|name:case|phone:placeholder|category:inconsistent_wording|handling_mins:has_units|structure:shifted_columns
 252,NF-2025-0035,original,channel:inconsistent_wording
@@ -316,7 +316,7 @@ raw_row,enquiry_id,row_type,issue_tags
 315,NF-2025-0097,original,date:uk_slash_format|name:extra_spaces|phone:no_spaces|status:inconsistent_wording
 316,NF-2025-0166,original,name:hidden_blank|phone:plus44|email:only_in_message_text
 317,NF-2025-0257,original,date:uk_slash_format|urgency:blank|postcode:only_in_message_text|structure:name_email_swapped
-318,NF-2025-0288,original,urgency:blank|email:only_in_message_text|phone:only_in_message_text
+318,NF-2025-0288,original,urgency:blank|phone:only_in_message_text|email:only_in_message_text
 319,NF-2025-0060,original,date:text_month|channel:inconsistent_wording|phone:no_spaces|category:blank|urgency:blank|status:inconsistent_wording
 320,NF-2025-0140,original,date:uk_slash_format|urgency:blank
 321,NF-2025-0180,original,date:long_text_month|name:case|phone:dashes

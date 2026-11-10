@@ -332,10 +332,10 @@ Kind regards, Sam Harrison  ","I can smell gas in the communal hallway at 10 Lim
 80,channel,channel_hidden_blank,treated_as_missing, ,
 81,phone,phone_format_standardised,fixed,+44 7216 375097,07216 375097
 82,received_date,date_partial,cleared_invalid,2025,
-82,email,email_hidden_blank,treated_as_missing,	,
+82,phone,phone_hidden_blank,treated_as_missing,	,
 82,status,status_format_standardised,fixed,CLOSED,Closed
-82,email,email_found_in_message_text,filled_from_message,	,ian.taylor@example.org
-82,phone,phone_found_in_message_text,filled_from_message,,07566 747736
+82,email,email_found_in_message_text,filled_from_message,,ian.taylor@example.org
+82,phone,phone_found_in_message_text,filled_from_message,	,07566 747736
 83,channel,channel_format_standardised,fixed,Web Form,Web form
 83,postcode,postcode_format_standardised,fixed,ol196qg,OL19 6QG
 83,category,category_wording_standardised,fixed,HOUSING,Housing Repairs
@@ -429,9 +429,9 @@ My name is Yvonne Young.  ","Could I order a replacement green bin for 64 Junipe
 108,name,name_and_email_swapped,fixed,guy.murray@example.net,Guy Murray
 108,email,name_and_email_swapped,fixed,Guy Murray,guy.murray@example.net
 108,received_date,date_format_standardised,fixed,01/11/2025,2025-11-01
-108,postcode,postcode_hidden_blank,treated_as_missing,   ,
-108,phone,phone_found_in_message_text,filled_from_message,,0161 461 8019
-108,postcode,postcode_found_in_message_text,filled_from_message,   ,M4 7WY
+108,phone,phone_hidden_blank,treated_as_missing,   ,
+108,phone,phone_found_in_message_text,filled_from_message,   ,0161 461 8019
+108,postcode,postcode_found_in_message_text,filled_from_message,,M4 7WY
 109,postcode,postcode_placeholder,treated_as_missing,N/A,
 109,urgency,urgency_format_standardised,fixed,P3,Low
 109,status,status_format_standardised,fixed,Complete,Closed
@@ -544,11 +544,11 @@ Please refund the extra amount.  ","Good morning, I have been charged twice for 
 133,phone,phone_placeholder,treated_as_missing,0000000000,
 133,urgency,urgency_format_standardised,fixed,high,High
 134,received_date,date_partial,cleared_invalid,2025,
-134,phone,phone_hidden_blank,treated_as_missing,	,
+134,email,email_hidden_blank,treated_as_missing,	,
 134,postcode,postcode_placeholder,treated_as_missing,N/A,
 134,category,category_wording_standardised,fixed,COMPLAINT,Complaints
-134,email,email_found_in_message_text,filled_from_message,,phillip.johnston@example.net
-134,phone,phone_found_in_message_text,filled_from_message,	,07943 586819
+134,email,email_found_in_message_text,filled_from_message,	,phillip.johnston@example.net
+134,phone,phone_found_in_message_text,filled_from_message,,07943 586819
 135,received_date,date_format_standardised,fixed,11/11/2025,2025-11-11
 135,phone,phone_format_standardised,fixed,07497917018,07497 917018
 136,name,name_and_email_swapped,fixed,sophie.briggs@example.net,Sophie Briggs
@@ -1019,12 +1019,12 @@ It is not leaking but I would like it fixed. Many thanks, Alice Power  ","To who
 248,phone,phone_format_standardised,fixed,+44 7753 630535,07753 630535
 248,handling_mins,units_removed,fixed,11 mins,11
 249,received_date,date_format_standardised,fixed,09-Dec-2025,2025-12-09
-249,email,email_hidden_blank,treated_as_missing,	,
-249,phone,phone_placeholder,treated_as_missing,N/A,
+249,email,email_placeholder,treated_as_missing,N/A,
+249,phone,phone_hidden_blank,treated_as_missing,	,
 249,urgency,urgency_format_standardised,fixed,normal,Medium
 249,status,status_format_standardised,fixed,closed,Closed
-249,email,email_found_in_message_text,filled_from_message,	,paula.fry@example.org
-249,phone,phone_found_in_message_text,filled_from_message,N/A,0161 976 9083
+249,email,email_found_in_message_text,filled_from_message,N/A,paula.fry@example.org
+249,phone,phone_found_in_message_text,filled_from_message,	,0161 976 9083
 250,received_date,date_format_standardised,fixed,09/12/2025,2025-12-09
 250,email,email_hidden_blank,treated_as_missing,   ,
 250,phone,phone_format_standardised,fixed,+441617745920,0161 774 5920
@@ -1298,9 +1298,9 @@ Please send an engineer. My email is ben.middleton@example.org. Kind regards, Be
 317,received_date,date_format_standardised,fixed,27/12/2025,2025-12-27
 317,postcode,postcode_placeholder,treated_as_missing,N/A,
 317,postcode,postcode_found_in_message_text,filled_from_message,N/A,M17 6BE
-318,phone,phone_placeholder,treated_as_missing,N/A,
-318,email,email_found_in_message_text,filled_from_message,,brenda.wilkinson@example.org
-318,phone,phone_found_in_message_text,filled_from_message,N/A,07524 485456
+318,email,email_placeholder,treated_as_missing,N/A,
+318,email,email_found_in_message_text,filled_from_message,N/A,brenda.wilkinson@example.org
+318,phone,phone_found_in_message_text,filled_from_message,,07524 485456
 319,received_date,date_format_standardised,fixed,28-Dec-2025,2025-12-28
 319,channel,channel_format_standardised,fixed,e-mail,Email
 319,phone,phone_format_standardised,fixed,07520481995,07520 481995

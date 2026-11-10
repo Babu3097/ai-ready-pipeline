@@ -61,3 +61,75 @@ Built with AI assistance (Claude Code). I have not yet written this code myself;
 1. Why does the clean-up empty a bad phone number instead of guessing the right one?
 2. What is the ground truth, and why can we only have it because the data is synthetic?
 3. What gets sent to the AI, and what never does?
+
+---
+
+## Phases 3-9 (built in one go)
+
+> **Quizzes still owed.** You asked to finish the project first, so the end-of-phase quizzes were skipped. Before you list this on a CV, be able to answer the questions at the bottom of this file in your own words.
+
+### New words
+
+- **Database / table / row / column**: a database holds tables (like sheets); each row is one record.
+- **SQLite**: a small database stored in one file. **SQL**: the language for asking a database questions.
+- **Primary key**: the column that identifies each row. **Foreign key**: a column pointing at a row in another table.
+- **SELECT / WHERE / GROUP BY / JOIN**: choose columns / filter rows / one result row per group / combine tables.
+- **Schema**: the design of the tables. `create_tables.sql` is ours.
+- **JSON**: a text format for structured data, like `{"category": "Noise"}`. **Pydantic** checks a JSON answer has the right shape.
+- **Confidence**: how sure the AI says it is (0 to 1). We don't trust it alone.
+- **Human in the loop**: a person must approve before something happens.
+- **Audit log**: a diary of who did what and when.
+- **Ground truth / accuracy / recall**: the right answers; share correct; share of true cases found.
+- **Confusion table**: shows what was true against what the AI said.
+- **Sensitivity analysis**: re-running a result with different assumptions to see how much it changes.
+- **Demo mode / stand-in**: a simple substitute that lets everything run without the real AI.
+- **n8n**: a tool that connects steps (web form -> AI -> sheet -> email) with boxes and arrows. **Webhook**: a web address that starts a workflow when something posts to it.
+- **DAX / measure**: Power BI's formula language; a measure is a calculation like "review rate".
+- **Semantic model**: the tables and measures Power BI reports use.
+- **Microsoft Fabric**: Microsoft's all-in-one data platform. **Lakehouse**: files + tables in OneLake. **Delta table**: the table format Fabric stores. **Notebook**: a document mixing code and results. **SQL analytics endpoint**: lets you query Lakehouse tables with T-SQL. **Capacity**: the compute you use (the trial gives 60 days free).
+- **T-SQL**: Microsoft's flavour of SQL.
+
+### What each new part does
+
+- `sql/create_tables.sql`, `src/load_sql.py`, `src/db.py`: design the database and load the clean data.
+- `sql/metrics_queries.sql`, `src/run_queries.py`: the questions managers ask, answered in SQL.
+- `src/triage.py`: asks the AI (or the demo stand-in) for category, urgency and summary; validates it; code decides which cases need a person.
+- `src/review_queue.py`: the human review loop: queue, decisions, draft replies, audit log. `src/make_n8n_workflow.py` + `n8n/`: the same idea as an n8n workflow (drafted, not run).
+- `sql/evaluation_queries.sql`, `src/evaluate.py`: checks the AI against the answer key and works out time and money saved from stated assumptions.
+- `src/make_report_images.py`, `powerbi/BUILD_GUIDE.md`: previews of the four report pages and instructions to build them in Power BI.
+- `fabric/`: notebooks, T-SQL and a guide for running it in Microsoft Fabric (not run).
+- `src/run_all.py`: runs everything in order.
+- `docs/`: results, error analysis, case study, video script, CV notes.
+
+### 3 interview talking points per phase
+
+See [docs/cv_and_interview.md](docs/cv_and_interview.md).
+
+### What is and isn't done (don't overclaim)
+
+- Done and tested: phases 0-3 and 6, plus the local review loop.
+- Tested only in demo mode: AI triage. The real Claude call is untested.
+- Drafted, not run: n8n workflow, Fabric notebooks.
+- Not built: the Power BI `.pbix`, real screenshots, the video.
+
+### Questions you owe (answer in your own words)
+
+Phase 2:
+1. Why does the clean-up empty a bad phone number instead of guessing the right one?
+2. What is the ground truth, and why can we only have it because the data is synthetic?
+3. What gets sent to the AI, and what never does?
+
+Phases 3-6:
+4. What does `GROUP BY category` do in plain English?
+5. Why does code, not the AI, decide when a person must review a case?
+6. Why is "urgent cases missed" a better headline than overall accuracy?
+7. The results say about 64% time saved. Which assumption would you challenge first, and why?
+8. Why can't the demo-mode accuracy be quoted as the AI's accuracy?
+
+### Time tracking
+
+Add your real hours in the table at the top of this file. Time so far on this project (your hours, not mine): _to fill in_.
+
+### Next: learn from scratch, then rebuild
+
+Order from CLAUDE.md: terminal and VS Code -> Python basics -> pandas -> SQL -> APIs/JSON/Claude -> n8n -> Power BI/DAX/Fabric. Then rewrite `data_quality.py`, the Claude call in `triage.py`, three SQL queries and one Power BI page yourself.

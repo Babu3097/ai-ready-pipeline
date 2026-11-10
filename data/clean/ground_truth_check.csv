@@ -1,0 +1,12 @@
+field,correct,left_blank_and_flagged,wrong
+case_ref,294,6,0
+received_date,285,15,0
+channel,278,22,0
+name,270,30,0
+email,271,29,0
+phone,239,61,0
+postcode,277,22,1
+category,260,40,0
+urgency,235,65,0
+status,294,6,0
+handling_mins,268,32,0

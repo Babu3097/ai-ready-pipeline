@@ -1,0 +1,5 @@
+metric,before,after,meaning
+Completeness,0.8754545454545455,0.903525641025641,Share of the 10 key fields that hold a real value
+Uniqueness,0.968944099378882,1.0,Share of rows that are not exact repeats
+Validity,0.9545056867891514,1.0,"Share of filled-in values that are real, readable values"
+Consistency,0.6494163424124514,1.0,Share of filled-in values already in the one standard format

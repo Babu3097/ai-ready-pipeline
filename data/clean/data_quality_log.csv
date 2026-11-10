@@ -1,0 +1,1410 @@
+raw_row,field,issue,action,old_value,new_value
+1,case_ref,case_ref_format_standardised,fixed,nf-2025-0221,NF-2025-0221
+1,received_date,date_format_standardised,fixed,01/10/2025,2025-10-01
+1,urgency,urgency_format_standardised,fixed,P1,High
+1,category,category_wording_standardised,fixed,HOUSING,Housing Repairs
+1,phone,phone_found_in_message_text,filled_from_message,,07743 684632
+2,received_date,date_format_standardised,fixed,02/10/2025,2025-10-02
+2,email,email_placeholder,treated_as_missing,noemail@noemail.com,
+2,postcode,postcode_format_standardised,fixed,N233SG,N23 3SG
+2,status,status_format_standardised,fixed,Complete,Closed
+2,category,category_wording_standardised,fixed,WASTE,Waste
+3,received_date,date_format_standardised,fixed,02/10/2025,2025-10-02
+3,urgency,urgency_format_standardised,fixed,P2,Medium
+4,received_date,date_format_standardised,fixed,02-Oct-2025,2025-10-02
+4,urgency,urgency_format_standardised,fixed,P2,Medium
+4,category,category_wording_standardised,fixed,bin collection,Waste
+5,phone,phone_unreadable,cleared_invalid,0161310,
+5,status,status_format_standardised,fixed,Complete,Closed
+5,category,category_wording_standardised,fixed,Housing repair,Housing Repairs
+6,received_date,date_format_standardised,fixed,03-Oct-2025,2025-10-03
+6,category,category_wording_standardised,fixed,Noise Nuisance,Noise
+7,received_date,date_format_standardised,fixed,03/10/2025,2025-10-03
+7,name,name_format_standardised,fixed,sheila barnett,Sheila Barnett
+7,phone,phone_unreadable,cleared_invalid,0728392,
+7,category,category_wording_standardised,fixed,Repairs,Housing Repairs
+8,received_date,date_format_standardised,fixed,04/10/2025,2025-10-04
+8,name,name_format_standardised,fixed,TOM CARTER,Tom Carter
+8,urgency,urgency_format_standardised,fixed,LOW,Low
+8,message,extra_whitespace_trimmed,fixed,"Your website is confusing and I could not find the form for bulky waste.
+You can ring me on 0161 753 2616.  ",Your website is confusing and I could not find the form for bulky waste. You can ring me on 0161 753 2616.
+8,phone,phone_found_in_message_text,filled_from_message,,0161 753 2616
+9,received_date,date_format_standardised,fixed,05-Oct-2025,2025-10-05
+9,name,extra_whitespace_trimmed,fixed,  Tracey  Smith ,Tracey Smith
+9,phone,phone_format_standardised,fixed,+44 7838 144894,07838 144894
+9,status,status_format_standardised,fixed,CLOSED,Closed
+10,received_date,date_format_standardised,fixed,06/10/2025,2025-10-06
+10,channel,channel_format_standardised,fixed,WEB FORM,Web form
+10,email,email_hidden_blank,treated_as_missing,​,
+10,phone,phone_unreadable,cleared_invalid,0735612,
+10,email,email_found_in_message_text,filled_from_message,​,rhys.davies@example.net
+11,received_date,date_format_standardised,fixed,06 October 2025,2025-10-06
+11,phone,phone_format_standardised,fixed,07552787836,07552 787836
+12,received_date,date_format_standardised,fixed,06/10/2025,2025-10-06
+13,received_date,date_format_standardised,fixed,07/10/2025,2025-10-07
+13,name,extra_whitespace_trimmed,fixed,  Guy  Kelly ,Guy Kelly
+13,phone,phone_format_standardised,fixed,01618601650,0161 860 1650
+13,category,category_wording_standardised,fixed,BILLING,Billing
+14,channel,channel_format_standardised,fixed,WEB FORM,Web form
+14,phone,phone_placeholder,treated_as_missing,0000000000,
+14,category,category_hidden_blank,treated_as_missing, ,
+15,received_date,date_format_standardised,fixed,07/10/2025,2025-10-07
+15,phone,phone_format_standardised,fixed,07287137604,07287 137604
+15,status,status_format_standardised,fixed,Complete,Closed
+16,received_date,date_format_standardised,fixed,07-Oct-2025,2025-10-07
+16,name,name_format_standardised,fixed,TRACEY SMITH,Tracey Smith
+16,phone,phone_placeholder,treated_as_missing,TBC,
+16,urgency,urgency_format_standardised,fixed,P1,High
+17,received_date,date_format_standardised,fixed,08/10/2025,2025-10-08
+17,urgency,urgency_format_standardised,fixed,urgent,High
+17,category,category_wording_standardised,fixed,complaints,Complaints
+18,phone,phone_format_standardised,fixed,+44 7245 911982,07245 911982
+18,status,status_format_standardised,fixed,CLOSED,Closed
+18,handling_mins,units_removed,fixed,32 mins,32
+19,received_date,date_format_standardised,fixed,08/10/2025,2025-10-08
+19,channel,channel_format_standardised,fixed,email,Email
+19,email,extra_whitespace_trimmed,fixed, carly.rowe@example.org ,carly.rowe@example.org
+19,status,status_format_standardised,fixed,open,Open
+19,category,category_wording_standardised,fixed,HOUSING,Housing Repairs
+19,phone,phone_found_in_message_text,filled_from_message,,0161 595 0467
+20,received_date,date_format_standardised,fixed,09/10/2025,2025-10-09
+20,phone,phone_format_standardised,fixed,+447396183667,07396 183667
+20,urgency,urgency_format_standardised,fixed,urgent,High
+20,handling_mins,units_removed,fixed,24 mins,24
+21,received_date,date_format_standardised,fixed,06/10/2025,2025-10-06
+21,channel,channel_format_standardised,fixed,WEB FORM,Web form
+21,email,email_hidden_blank,treated_as_missing,​,
+21,phone,phone_unreadable,cleared_invalid,0735612,
+21,email,email_found_in_message_text,filled_from_message,​,rhys.davies@example.net
+22,category,category_placeholder,treated_as_missing,?,
+23,received_date,date_format_standardised,fixed,09-Oct-2025,2025-10-09
+23,email,email_unreadable,cleared_invalid,ricky.hall@example,
+23,phone,phone_placeholder,treated_as_missing,01234567890,
+23,urgency,urgency_format_standardised,fixed,L,Low
+23,status,status_hidden_blank,treated_as_missing,​,
+23,handling_mins,units_removed,fixed,4min,4
+24,case_ref,case_ref_format_standardised,fixed,nf-2025-0171,NF-2025-0171
+24,received_date,date_format_standardised,fixed,09-Oct-2025,2025-10-09
+24,channel,channel_format_standardised,fixed,web,Web form
+24,urgency,urgency_format_standardised,fixed,HIGH,High
+24,category,category_unmappable,cleared_invalid,Other,
+24,phone,phone_found_in_message_text,filled_from_message,,07694 610856
+25,(whole row),blank_row,removed,,
+26,channel,channel_format_standardised,fixed,E-mail,Email
+26,name,name_format_standardised,fixed,"Davies, Angela",Angela Davies
+26,phone,phone_unreadable,cleared_invalid,016184704979,
+26,status,status_format_standardised,fixed,closed,Closed
+26,category,category_unmappable,cleared_invalid,misc,
+27,received_date,date_format_standardised,fixed,09/10/2025,2025-10-09
+27,email,email_unreadable,cleared_invalid,mary.andersonexample.com,
+27,phone,lost_leading_zero_restored,fixed,7495397949,07495 397949
+27,urgency,urgency_format_standardised,fixed,medium,Medium
+27,status,status_format_standardised,fixed,Done,Closed
+27,handling_mins,units_removed,fixed,16 mins,16
+28,case_ref,case_ref_format_standardised,fixed,nf-2025-0069,NF-2025-0069
+28,received_date,date_format_standardised,fixed,10/10/2025,2025-10-10
+28,name,name_placeholder,treated_as_missing,n/a,
+28,phone,phone_format_standardised,fixed,(0161) 573 3863,0161 573 3863
+28,status,status_format_standardised,fixed,CLOSED,Closed
+29,received_date,date_format_standardised,fixed,10-Oct-2025,2025-10-10
+29,phone,phone_format_standardised,fixed,+441613408341,0161 340 8341
+29,postcode,postcode_hidden_blank,treated_as_missing,​,
+29,urgency,urgency_format_standardised,fixed,HIGH,High
+30,received_date,date_format_standardised,fixed,10/10/2025,2025-10-10
+30,phone,phone_format_standardised,fixed,07988-813763,07988 813763
+30,postcode,postcode_hidden_blank,treated_as_missing,​,
+30,category,category_wording_standardised,fixed,WASTE,Waste
+31,urgency,urgency_format_standardised,fixed,1 - High,High
+31,status,status_format_standardised,fixed,Done,Closed
+32,received_date,date_format_standardised,fixed,45940,2025-10-10
+32,channel,channel_format_standardised,fixed,Webform,Web form
+32,postcode,extra_whitespace_trimmed,fixed, OL29 9YL ,OL29 9YL
+32,status,status_format_standardised,fixed,closed,Closed
+33,received_date,date_format_standardised,fixed,10/10/2025,2025-10-10
+33,channel,channel_format_standardised,fixed,Web Form,Web form
+33,phone,phone_unreadable,cleared_invalid,0754625,
+33,postcode,postcode_format_standardised,fixed,sk308gr,SK30 8GR
+33,urgency,urgency_hidden_blank,treated_as_missing, ,
+33,phone,phone_found_in_message_text,filled_from_message,0754625,07546 251981
+34,received_date,date_format_standardised,fixed,11-Oct-2025,2025-10-11
+34,urgency,urgency_format_standardised,fixed,1 - High,High
+34,status,status_format_standardised,fixed,CLOSED,Closed
+35,channel,channel_format_standardised,fixed,e-mail,Email
+35,name,name_format_standardised,fixed,"Bibi, Ashleigh",Ashleigh Bibi
+35,email,extra_whitespace_trimmed,fixed, ashleigh.bibi@example.net ,ashleigh.bibi@example.net
+36,received_date,date_format_standardised,fixed,12-Oct-2025,2025-10-12
+36,channel,channel_format_standardised,fixed,Webform,Web form
+36,phone,phone_format_standardised,fixed,07441-908577,07441 908577
+36,postcode,postcode_placeholder,treated_as_missing,N/A,
+36,handling_mins,units_removed,fixed,35 mins,35
+36,postcode,postcode_found_in_message_text,filled_from_message,N/A,M21 5GT
+37,received_date,date_format_standardised,fixed,12/10/2025,2025-10-12
+37,channel,channel_format_standardised,fixed,web,Web form
+37,urgency,urgency_format_standardised,fixed,P3,Low
+37,status,status_format_standardised,fixed,closed,Closed
+37,category,category_wording_standardised,fixed,WASTE,Waste
+38,channel,channel_format_standardised,fixed,Web Form,Web form
+38,status,status_format_standardised,fixed,Complete,Closed
+38,category,category_unmappable,cleared_invalid,Other,
+38,phone,phone_found_in_message_text,filled_from_message,,07609 881439
+39,received_date,date_partial,cleared_invalid,Oct 2025,
+39,phone,phone_hidden_blank,treated_as_missing,​,
+39,urgency,urgency_format_standardised,fixed,low,Low
+40,received_date,date_format_standardised,fixed,12/10/25,2025-10-12
+40,name,name_hidden_blank,treated_as_missing,	,
+40,email,email_placeholder,treated_as_missing,noemail@noemail.com,
+40,phone,phone_hidden_blank,treated_as_missing, ,
+40,status,status_format_standardised,fixed,closed,Closed
+41,urgency,urgency_format_standardised,fixed,1 - High,High
+41,status,status_format_standardised,fixed,Done,Closed
+42,received_date,date_format_standardised,fixed,12/10/2025,2025-10-12
+42,name,name_format_standardised,fixed,sam harrison,Sam Harrison
+42,category,category_wording_standardised,fixed,Health & Safety,Safety
+42,message,extra_whitespace_trimmed,fixed,"I can smell gas in the communal hallway at 10 Lime Grove! My postcode is M21 5GT.
+Kind regards, Sam Harrison  ","I can smell gas in the communal hallway at 10 Lime Grove! My postcode is M21 5GT. Kind regards, Sam Harrison"
+42,handling_mins,units_removed,fixed,35min,35
+42,postcode,postcode_found_in_message_text,filled_from_message,,M21 5GT
+43,received_date,date_format_standardised,fixed,13/10/2025,2025-10-13
+43,phone,phone_format_standardised,fixed,01615439149,0161 543 9149
+43,urgency,urgency_format_standardised,fixed,normal,Medium
+43,category,category_unmappable,cleared_invalid,misc,
+44,received_date,date_format_standardised,fixed,13-Oct-2025,2025-10-13
+44,channel,channel_format_standardised,fixed,EMAIL,Email
+44,urgency,urgency_format_standardised,fixed,normal,Medium
+44,category,category_wording_standardised,fixed,Noise complaint,Noise
+44,handling_mins,units_removed,fixed,8min,8
+45,received_date,date_format_standardised,fixed,45943,2025-10-13
+45,urgency,urgency_format_standardised,fixed,Urgent,High
+45,category,category_wording_standardised,fixed,BILLING,Billing
+45,handling_mins,units_removed,fixed,34min,34
+46,received_date,date_format_standardised,fixed,13-Oct-2025,2025-10-13
+46,channel,channel_hidden_blank,treated_as_missing,   ,
+47,received_date,date_format_standardised,fixed,14 October 2025,2025-10-14
+47,name,name_placeholder,treated_as_missing,none,
+47,email,email_hidden_blank,treated_as_missing, ,
+47,phone,phone_unreadable,cleared_invalid,074296285979,
+47,postcode,postcode_format_standardised,fixed,wa144lr,WA14 4LR
+47,status,status_format_standardised,fixed,Complete,Closed
+47,category,category_unmappable,cleared_invalid,Other,
+48,received_date,date_format_standardised,fixed,15/10/2025,2025-10-15
+48,channel,channel_format_standardised,fixed,email,Email
+48,name,name_format_standardised,fixed,"Mellor, Linda",Linda Mellor
+48,phone,phone_placeholder,treated_as_missing,N/A,
+48,urgency,urgency_format_standardised,fixed,Med,Medium
+48,category,category_wording_standardised,fixed,safety,Safety
+48,handling_mins,units_removed,fixed,7min,7
+49,received_date,date_format_standardised,fixed,15-Oct-2025,2025-10-15
+49,phone,phone_placeholder,treated_as_missing,N/A,
+49,urgency,urgency_format_standardised,fixed,normal,Medium
+50,received_date,date_format_standardised,fixed,15/10/2025,2025-10-15
+50,email,email_format_standardised,fixed,MARIA.JONES@EXAMPLE.COM,maria.jones@example.com
+50,urgency,urgency_format_standardised,fixed,urgent,High
+50,status,status_format_standardised,fixed,Done,Closed
+51,phone,phone_format_standardised,fixed,+44 7820 314447,07820 314447
+51,urgency,urgency_format_standardised,fixed,L,Low
+52,received_date,date_format_standardised,fixed,45946,2025-10-16
+52,phone,lost_leading_zero_restored,fixed,7111271790,07111 271790
+52,urgency,urgency_format_standardised,fixed,MEDIUM,Medium
+52,status,status_format_standardised,fixed,closed,Closed
+52,category,category_wording_standardised,fixed,Noise Nuisance,Noise
+53,channel,channel_hidden_blank,treated_as_missing,​,
+53,phone,phone_format_standardised,fixed,+441613723816,0161 372 3816
+53,status,status_format_standardised,fixed,closed,Closed
+53,category,category_wording_standardised,fixed,Noise Nuisance,Noise
+54,received_date,date_format_standardised,fixed,16 October 2025,2025-10-16
+54,postcode,postcode_unreadable,cleared_invalid,M16 8U,
+54,urgency,urgency_format_standardised,fixed,1 - High,High
+54,status,status_format_standardised,fixed,Complete,Closed
+54,handling_mins,units_removed,fixed,15min,15
+55,phone,phone_format_standardised,fixed,01619962845,0161 996 2845
+55,category,category_wording_standardised,fixed,Payments,Billing
+55,handling_mins,units_removed,fixed,12 mins,12
+56,received_date,date_placeholder,treated_as_missing,00/00/0000,
+56,name,extra_whitespace_trimmed,fixed,  David  Rogers ,David Rogers
+56,phone,lost_leading_zero_restored,fixed,7217115997,07217 115997
+56,urgency,urgency_format_standardised,fixed,urgent,High
+56,status,status_format_standardised,fixed,CLOSED,Closed
+57,received_date,date_format_standardised,fixed,17/10/2025,2025-10-17
+57,email,email_hidden_blank,treated_as_missing,   ,
+57,phone,phone_hidden_blank,treated_as_missing,​,
+57,postcode,postcode_format_standardised,fixed,m25 8da,M25 8DA
+57,urgency,urgency_format_standardised,fixed,HIGH,High
+57,phone,phone_found_in_message_text,filled_from_message,​,07659 816116
+58,email,extra_whitespace_trimmed,fixed, joseph.davies@example.org ,joseph.davies@example.org
+58,phone,phone_format_standardised,fixed,07799556542,07799 556542
+58,status,status_format_standardised,fixed,Done,Closed
+58,handling_mins,units_removed,fixed,35 mins,35
+59,received_date,date_format_standardised,fixed,17/10/2025,2025-10-17
+59,channel,channel_format_standardised,fixed,Web Form,Web form
+59,phone,phone_unreadable,cleared_invalid,07521562,
+59,postcode,postcode_hidden_blank,treated_as_missing,​,
+59,status,status_format_standardised,fixed,Complete,Closed
+59,category,category_wording_standardised,fixed,housing repairs,Housing Repairs
+60,name,name_format_standardised,fixed,"Turner, Gerald",Gerald Turner
+60,phone,phone_format_standardised,fixed,+44 7107 621546,07107 621546
+60,postcode,postcode_format_standardised,fixed,wa6 3rx,WA6 3RX
+61,received_date,date_format_standardised,fixed,18/10/2025,2025-10-18
+61,email,extra_whitespace_trimmed,fixed, beverley.palmer@example.net ,beverley.palmer@example.net
+61,phone,phone_format_standardised,fixed,07882214695,07882 214695
+62,channel,channel_format_standardised,fixed,web,Web form
+62,phone,phone_format_standardised,fixed,(0161) 626 3433,0161 626 3433
+62,urgency,urgency_format_standardised,fixed,1 - High,High
+63,received_date,date_format_standardised,fixed,19 October 2025,2025-10-19
+63,name,name_format_standardised,fixed,"Hussain, Sandra",Sandra Hussain
+63,email,email_hidden_blank,treated_as_missing,​,
+63,phone,phone_format_standardised,fixed,+447464515492,07464 515492
+63,status,status_format_standardised,fixed,CLOSED,Closed
+63,email,email_found_in_message_text,filled_from_message,​,sandra.hussain@example.net
+64,phone,phone_format_standardised,fixed,+44 7779 652388,07779 652388
+64,urgency,urgency_format_standardised,fixed,MEDIUM,Medium
+64,status,status_format_standardised,fixed,OPEN,Open
+64,category,category_wording_standardised,fixed,waste & recycling,Waste
+65,received_date,date_format_standardised,fixed,20/10/2025,2025-10-20
+65,channel,channel_format_standardised,fixed,e-mail,Email
+65,status,status_format_standardised,fixed,Done,Closed
+66,received_date,date_format_standardised,fixed,20/10/2025,2025-10-20
+66,channel,channel_format_standardised,fixed,e-mail,Email
+66,name,name_format_standardised,fixed,damian ahmed,Damian Ahmed
+66,phone,phone_unreadable,cleared_invalid,0787620,
+66,status,status_hidden_blank,treated_as_missing, ,
+66,category,category_wording_standardised,fixed,Noise Nuisance,Noise
+66,handling_mins,units_removed,fixed,12min,12
+67,channel,channel_hidden_blank,treated_as_missing,​,
+67,name,extra_whitespace_trimmed,fixed,  Harriet  Allen ,Harriet Allen
+67,phone,phone_placeholder,treated_as_missing,N/A,
+67,status,status_format_standardised,fixed,closed,Closed
+67,phone,phone_found_in_message_text,filled_from_message,N/A,07627 841978
+68,received_date,date_format_standardised,fixed,45950,2025-10-20
+68,name,extra_whitespace_trimmed,fixed,  Lisa  Wright ,Lisa Wright
+68,email,email_unreadable,cleared_invalid,lisa.wright@,
+68,status,status_format_standardised,fixed,CLOSED,Closed
+69,case_ref,case_ref_format_standardised,fixed,NF 2025 0034,NF-2025-0034
+69,received_date,date_format_standardised,fixed,21/10/2025,2025-10-21
+69,urgency,urgency_hidden_blank,treated_as_missing, ,
+69,status,status_format_standardised,fixed,Done,Closed
+70,case_ref,case_ref_format_standardised,fixed,nf-2025-0165,NF-2025-0165
+70,channel,channel_format_standardised,fixed,WEB FORM,Web form
+70,phone,phone_hidden_blank,treated_as_missing,   ,
+71,received_date,date_format_standardised,fixed,22/10/2025,2025-10-22
+71,channel,channel_format_standardised,fixed,email,Email
+71,email,email_placeholder,treated_as_missing,N/A,
+71,urgency,urgency_format_standardised,fixed,MEDIUM,Medium
+71,handling_mins,units_removed,fixed,14 mins,14
+71,email,email_found_in_message_text,filled_from_message,N/A,alexandra.allen@example.net
+72,received_date,date_format_standardised,fixed,22/10/2025,2025-10-22
+72,channel,channel_format_standardised,fixed,web,Web form
+72,status,status_format_standardised,fixed,Complete,Closed
+72,category,category_wording_standardised,fixed,WASTE,Waste
+72,phone,phone_found_in_message_text,filled_from_message,,07439 315535
+73,received_date,date_format_standardised,fixed,22/10/2025,2025-10-22
+73,name,extra_whitespace_trimmed,fixed,  Natasha  Francis ,Natasha Francis
+73,category,category_wording_standardised,fixed,Repairs,Housing Repairs
+74,received_date,date_format_standardised,fixed,22/10/2025,2025-10-22
+74,phone,phone_format_standardised,fixed,07231876909,07231 876909
+74,urgency,urgency_format_standardised,fixed,Med,Medium
+75,received_date,date_format_standardised,fixed,22/10/2025,2025-10-22
+75,email,email_placeholder,treated_as_missing,none,
+75,phone,phone_hidden_blank,treated_as_missing,   ,
+75,postcode,postcode_hidden_blank,treated_as_missing,	,
+75,status,status_format_standardised,fixed,closed,Closed
+75,category,category_wording_standardised,fixed,Safety hazard,Safety
+75,postcode,postcode_found_in_message_text,filled_from_message,	,M24 8QB
+76,phone,phone_format_standardised,fixed,(0785) 583 1514,07855 831514
+76,urgency,urgency_format_standardised,fixed,MEDIUM,Medium
+76,status,status_format_standardised,fixed,Done,Closed
+77,received_date,date_format_standardised,fixed,23/10/2025,2025-10-23
+77,channel,channel_format_standardised,fixed,e-mail,Email
+77,name,name_placeholder,treated_as_missing,xxx,
+77,phone,phone_placeholder,treated_as_missing,N/A,
+77,urgency,urgency_format_standardised,fixed,L,Low
+77,status,status_format_standardised,fixed,Done,Closed
+77,handling_mins,units_removed,fixed,6 mins,6
+77,phone,phone_found_in_message_text,filled_from_message,N/A,07847 905967
+78,(whole row),shifted_columns,fixed,extra empty cell at position 3,removed it
+78,received_date,date_format_standardised,fixed,45953,2025-10-23
+78,phone,phone_format_standardised,fixed,+44 1619 736643,0161 973 6643
+78,status,status_format_standardised,fixed,closed,Closed
+79,case_ref,case_ref_format_standardised,fixed,NF 2025 0230,NF-2025-0230
+79,received_date,date_format_standardised,fixed,45953,2025-10-23
+79,email,email_format_standardised,fixed,RHYS.SYKES@EXAMPLE.NET,rhys.sykes@example.net
+79,phone,phone_format_standardised,fixed,07440957150,07440 957150
+79,urgency,urgency_format_standardised,fixed,MEDIUM,Medium
+80,channel,channel_hidden_blank,treated_as_missing, ,
+81,phone,phone_format_standardised,fixed,+44 7216 375097,07216 375097
+82,received_date,date_partial,cleared_invalid,2025,
+82,email,email_hidden_blank,treated_as_missing,	,
+82,status,status_format_standardised,fixed,CLOSED,Closed
+82,email,email_found_in_message_text,filled_from_message,	,ian.taylor@example.org
+82,phone,phone_found_in_message_text,filled_from_message,,07566 747736
+83,channel,channel_format_standardised,fixed,Web Form,Web form
+83,postcode,postcode_format_standardised,fixed,ol196qg,OL19 6QG
+83,category,category_wording_standardised,fixed,HOUSING,Housing Repairs
+84,channel,channel_format_standardised,fixed,web form,Web form
+84,phone,phone_format_standardised,fixed,+44 7251 787926,07251 787926
+85,received_date,date_format_standardised,fixed,25/10/2025,2025-10-25
+85,email,email_unreadable,cleared_invalid,marilyn.thomasexample.com,
+85,phone,phone_format_standardised,fixed,01615415592,0161 541 5592
+85,email,email_found_in_message_text,filled_from_message,marilyn.thomasexample.com,marilyn.thomas@example.com
+86,received_date,date_format_standardised,fixed,22/10/2025,2025-10-22
+86,email,email_placeholder,treated_as_missing,none,
+86,phone,phone_hidden_blank,treated_as_missing,   ,
+86,postcode,postcode_hidden_blank,treated_as_missing,	,
+86,status,status_format_standardised,fixed,closed,Closed
+86,category,category_wording_standardised,fixed,Safety hazard,Safety
+86,postcode,postcode_found_in_message_text,filled_from_message,	,M24 8QB
+87,received_date,date_partial,cleared_invalid,2025,
+87,phone,phone_format_standardised,fixed,+447841241276,07841 241276
+88,received_date,date_format_standardised,fixed,25/10/2025,2025-10-25
+88,channel,channel_format_standardised,fixed,email,Email
+88,name,name_placeholder,treated_as_missing,xxx,
+88,postcode,postcode_format_standardised,fixed,bl28 9wj,BL28 9WJ
+88,urgency,urgency_format_standardised,fixed,L,Low
+88,category,category_wording_standardised,fixed,Housing repair,Housing Repairs
+88,handling_mins,units_removed,fixed,6 mins,6
+89,received_date,date_partial,cleared_invalid,2025,
+89,email,email_hidden_blank,treated_as_missing, ,
+89,phone,phone_found_in_message_text,filled_from_message,,07914 338651
+90,received_date,date_format_standardised,fixed,26/10/2025,2025-10-26
+90,channel,channel_format_standardised,fixed,E-mail,Email
+90,urgency,urgency_format_standardised,fixed,medium,Medium
+91,name,name_format_standardised,fixed,vanessa brooks,Vanessa Brooks
+91,phone,lost_leading_zero_restored,fixed,7560988283,07560 988283
+91,category,category_wording_standardised,fixed,Noise Nuisance,Noise
+91,message,extra_whitespace_trimmed,fixed,"Loud parties in the flat below 112 Brook Road go on past midnight, three nights this week.  ","Loud parties in the flat below 112 Brook Road go on past midnight, three nights this week."
+92,received_date,date_format_standardised,fixed,27/10/2025,2025-10-27
+92,urgency,urgency_format_standardised,fixed,P3,Low
+93,received_date,date_format_standardised,fixed,27/10/2025,2025-10-27
+93,phone,phone_format_standardised,fixed,+44 7788 239116,07788 239116
+93,status,status_format_standardised,fixed,closed,Closed
+93,handling_mins,units_removed,fixed,3 mins,3
+94,received_date,date_format_standardised,fixed,27/10/2025,2025-10-27
+94,channel,channel_format_standardised,fixed,email,Email
+94,email,email_unreadable,cleared_invalid,josh.stevenson@,
+95,received_date,date_format_standardised,fixed,28/10/2025,2025-10-28
+95,urgency,urgency_format_standardised,fixed,Med,Medium
+95,status,status_format_standardised,fixed,CLOSED,Closed
+96,received_date,date_format_standardised,fixed,28/10/2025,2025-10-28
+96,channel,channel_format_standardised,fixed,Webform,Web form
+96,postcode,extra_whitespace_trimmed,fixed, BL27 8RS ,BL27 8RS
+96,category,category_wording_standardised,fixed,Rent/Billing,Billing
+97,phone,phone_hidden_blank,treated_as_missing,   ,
+97,status,status_format_standardised,fixed,Done,Closed
+97,category,category_wording_standardised,fixed,Housing repair,Housing Repairs
+98,received_date,date_format_standardised,fixed,28/10/2025,2025-10-28
+98,email,email_placeholder,treated_as_missing,N/A,
+98,phone,lost_leading_zero_restored,fixed,7903139211,07903 139211
+98,category,category_wording_standardised,fixed,Complaint,Complaints
+98,handling_mins,units_removed,fixed,14min,14
+98,email,email_found_in_message_text,filled_from_message,N/A,clive.richards@example.com
+99,received_date,date_format_standardised,fixed,29/10/2025,2025-10-29
+99,channel,channel_format_standardised,fixed,web form,Web form
+99,email,extra_whitespace_trimmed,fixed, sian.cox@example.com ,sian.cox@example.com
+99,phone,phone_format_standardised,fixed,+44 7132 944151,07132 944151
+100,phone,phone_placeholder,treated_as_missing,01234567890,
+100,status,status_format_standardised,fixed,CLOSED,Closed
+100,postcode,postcode_found_in_message_text,filled_from_message,,M28 1UF
+101,received_date,date_format_standardised,fixed,30/10/2025,2025-10-30
+101,urgency,urgency_format_standardised,fixed,low,Low
+101,status,status_format_standardised,fixed,CLOSED,Closed
+101,category,category_wording_standardised,fixed,WASTE,Waste
+101,handling_mins,units_removed,fixed,5 mins,5
+102,received_date,date_format_standardised,fixed,31/10/2025,2025-10-31
+102,channel,channel_format_standardised,fixed,email,Email
+102,email,email_format_standardised,fixed,COLIN.LLOYD@EXAMPLE.COM,colin.lloyd@example.com
+102,category,category_wording_standardised,fixed,Health & Safety,Safety
+103,received_date,date_format_standardised,fixed,31/10/2025,2025-10-31
+103,phone,phone_hidden_blank,treated_as_missing,​,
+103,handling_mins,units_removed,fixed,5 mins,5
+104,(whole row),blank_row,removed,,
+105,received_date,date_format_standardised,fixed,31/10/25,2025-10-31
+105,category,category_wording_standardised,fixed,Waste and Recycling,Waste
+105,message,extra_whitespace_trimmed,fixed,"Could I order a replacement green bin for 64 Juniper Crescent, SK27 6FE? Ours was damaged.
+My name is Yvonne Young.  ","Could I order a replacement green bin for 64 Juniper Crescent, SK27 6FE? Ours was damaged. My name is Yvonne Young."
+106,received_date,date_format_standardised,fixed,01/11/2025,2025-11-01
+107,received_date,date_format_standardised,fixed,01/11/2025,2025-11-01
+107,phone,lost_leading_zero_restored,fixed,7904512022,07904 512022
+107,status,status_format_standardised,fixed,CLOSED,Closed
+107,category,category_wording_standardised,fixed,Waste and Recycling,Waste
+107,postcode,postcode_found_in_message_text,filled_from_message,,BL4 4YX
+108,name,name_and_email_swapped,fixed,guy.murray@example.net,Guy Murray
+108,email,name_and_email_swapped,fixed,Guy Murray,guy.murray@example.net
+108,received_date,date_format_standardised,fixed,01/11/2025,2025-11-01
+108,postcode,postcode_hidden_blank,treated_as_missing,   ,
+108,phone,phone_found_in_message_text,filled_from_message,,0161 461 8019
+108,postcode,postcode_found_in_message_text,filled_from_message,   ,M4 7WY
+109,postcode,postcode_placeholder,treated_as_missing,N/A,
+109,urgency,urgency_format_standardised,fixed,P3,Low
+109,status,status_format_standardised,fixed,Complete,Closed
+110,received_date,date_format_standardised,fixed,02-Nov-2025,2025-11-02
+110,channel,channel_format_standardised,fixed,email,Email
+110,phone,phone_format_standardised,fixed,+44 7486 177558,07486 177558
+110,postcode,postcode_unreadable,cleared_invalid,WN20 8Y,
+110,urgency,urgency_format_standardised,fixed,L,Low
+110,status,status_format_standardised,fixed,Complete,Closed
+110,postcode,postcode_found_in_message_text,filled_from_message,WN20 8Y,WN20 8YR
+111,received_date,date_format_standardised,fixed,45963,2025-11-02
+111,channel,channel_format_standardised,fixed,e-mail,Email
+111,name,name_format_standardised,fixed,"Davies, Damian",Damian Davies
+111,urgency,urgency_format_standardised,fixed,normal,Medium
+111,status,status_hidden_blank,treated_as_missing,​,
+112,received_date,date_format_standardised,fixed,03/11/25,2025-11-03
+112,channel,channel_format_standardised,fixed,EMAIL,Email
+113,received_date,date_format_standardised,fixed,03/11/2025,2025-11-03
+113,channel,channel_format_standardised,fixed,e-mail,Email
+113,urgency,urgency_format_standardised,fixed,MEDIUM,Medium
+113,category,category_wording_standardised,fixed,Rent/Billing,Billing
+113,handling_mins,units_removed,fixed,8 mins,8
+114,name,name_hidden_blank,treated_as_missing, ,
+114,phone,phone_format_standardised,fixed,07375-594241,07375 594241
+114,urgency,urgency_format_standardised,fixed,1 - High,High
+115,received_date,date_format_standardised,fixed,03/11/2025,2025-11-03
+115,channel,channel_format_standardised,fixed,email,Email
+115,urgency,urgency_format_standardised,fixed,normal,Medium
+115,status,status_format_standardised,fixed,Done,Closed
+116,received_date,date_format_standardised,fixed,04 November 2025,2025-11-04
+116,name,extra_whitespace_trimmed,fixed,  Joseph  Howe ,Joseph Howe
+116,email,email_placeholder,treated_as_missing,none,
+116,phone,phone_hidden_blank,treated_as_missing, ,
+116,urgency,urgency_format_standardised,fixed,low,Low
+116,phone,phone_found_in_message_text,filled_from_message, ,0161 731 7546
+117,received_date,date_format_standardised,fixed,05/11/2025,2025-11-05
+117,channel,channel_format_standardised,fixed,e-mail,Email
+117,name,extra_whitespace_trimmed,fixed,  Ruth  Griffiths ,Ruth Griffiths
+117,status,status_format_standardised,fixed,closed,Closed
+117,category,category_wording_standardised,fixed,Payments,Billing
+118,received_date,date_format_standardised,fixed,05/11/2025,2025-11-05
+118,email,email_format_standardised,fixed,HENRY.SMITH@EXAMPLE.COM,henry.smith@example.com
+118,phone,phone_placeholder,treated_as_missing,TBC,
+118,postcode,postcode_format_standardised,fixed,M37EQ,M3 7EQ
+118,status,status_format_standardised,fixed,Pending,Open
+119,received_date,date_format_standardised,fixed,05/11/2025,2025-11-05
+119,name,name_format_standardised,fixed,"Taylor, Donald",Donald Taylor
+119,phone,phone_placeholder,treated_as_missing,TBC,
+119,category,category_wording_standardised,fixed,HOUSING,Housing Repairs
+119,handling_mins,units_removed,fixed,13 mins,13
+119,postcode,postcode_found_in_message_text,filled_from_message,,SK12 3NA
+120,received_date,date_format_standardised,fixed,05/11/2025,2025-11-05
+120,channel,channel_format_standardised,fixed,email,Email
+120,name,name_format_standardised,fixed,"Watkins, Naomi",Naomi Watkins
+120,email,email_format_standardised,fixed,NAOMI.WATKINS@EXAMPLE.ORG,naomi.watkins@example.org
+120,status,status_format_standardised,fixed,Done,Closed
+121,received_date,date_format_standardised,fixed,05 November 2025,2025-11-05
+121,name,name_format_standardised,fixed,JANE SIMPSON,Jane Simpson
+121,phone,phone_unreadable,cleared_invalid,0161307,
+121,urgency,urgency_format_standardised,fixed,normal,Medium
+121,email,email_found_in_message_text,filled_from_message,,jane.simpson@example.com
+122,channel,channel_format_standardised,fixed,web,Web form
+122,name,name_format_standardised,fixed,"Jarvis, Gerald",Gerald Jarvis
+122,phone,phone_placeholder,treated_as_missing,unknown,
+123,phone,lost_leading_zero_restored,fixed,7932283188,07932 283188
+123,postcode,postcode_format_standardised,fixed,m28 5qp,M28 5QP
+123,urgency,urgency_format_standardised,fixed,normal,Medium
+123,category,category_wording_standardised,fixed,billing,Billing
+124,received_date,date_format_standardised,fixed,07/11/25,2025-11-07
+124,name,extra_whitespace_trimmed,fixed,  Bethan  Cooper ,Bethan Cooper
+124,phone,phone_hidden_blank,treated_as_missing,	,
+124,status,status_format_standardised,fixed,closed,Closed
+124,category,category_wording_standardised,fixed,Repairs,Housing Repairs
+124,handling_mins,units_removed,fixed,13min,13
+125,case_ref,case_ref_format_standardised,fixed,nf-2025-0018,NF-2025-0018
+125,received_date,date_format_standardised,fixed,08/11/25,2025-11-08
+125,channel,channel_format_standardised,fixed,WEB FORM,Web form
+125,phone,phone_placeholder,treated_as_missing,N/A,
+125,category,category_wording_standardised,fixed,Council Tax,Billing
+125,message,extra_whitespace_trimmed,fixed,I would like to set up a direct debit for my council tax at 23 Juniper Crescent.  ,I would like to set up a direct debit for my council tax at 23 Juniper Crescent.
+126,received_date,date_format_standardised,fixed,08-Nov-2025,2025-11-08
+126,phone,phone_format_standardised,fixed,+44 7754 932463,07754 932463
+126,handling_mins,units_removed,fixed,7 mins,7
+127,postcode,postcode_placeholder,treated_as_missing,N/A,
+127,urgency,urgency_format_standardised,fixed,P3,Low
+127,status,status_format_standardised,fixed,Complete,Closed
+128,received_date,date_format_standardised,fixed,45969,2025-11-08
+128,name,name_format_standardised,fixed,"Knowles, Scott",Scott Knowles
+128,postcode,postcode_placeholder,treated_as_missing,TBC,
+128,status,status_format_standardised,fixed,CLOSED,Closed
+128,handling_mins,units_removed,fixed,13min,13
+129,received_date,date_format_standardised,fixed,08/11/2025,2025-11-08
+129,message,extra_whitespace_trimmed,fixed,"Good morning, I have been charged twice for my November council tax payment.
+Please refund the extra amount.  ","Good morning, I have been charged twice for my November council tax payment. Please refund the extra amount."
+130,received_date,date_format_standardised,fixed,03/11/25,2025-11-03
+130,channel,channel_format_standardised,fixed,EMAIL,Email
+131,email,email_unreadable,cleared_invalid,angela.osborneexample.net,
+131,postcode,postcode_placeholder,treated_as_missing,unknown,
+131,handling_mins,units_removed,fixed,29min,29
+131,postcode,postcode_found_in_message_text,filled_from_message,unknown,M15 8FR
+132,received_date,date_format_standardised,fixed,09/11/2025,2025-11-09
+132,phone,lost_leading_zero_restored,fixed,7180545440,07180 545440
+132,postcode,postcode_format_standardised,fixed,M31US,M3 1US
+132,urgency,urgency_format_standardised,fixed,P3,Low
+132,status,status_format_standardised,fixed,Complete,Closed
+132,category,category_hidden_blank,treated_as_missing,​,
+132,email,email_found_in_message_text,filled_from_message,,carl.cole@example.com
+133,case_ref,case_ref_format_standardised,fixed,NF 2025 0074,NF-2025-0074
+133,channel,channel_hidden_blank,treated_as_missing,   ,
+133,phone,phone_placeholder,treated_as_missing,0000000000,
+133,urgency,urgency_format_standardised,fixed,high,High
+134,received_date,date_partial,cleared_invalid,2025,
+134,phone,phone_hidden_blank,treated_as_missing,	,
+134,postcode,postcode_placeholder,treated_as_missing,N/A,
+134,category,category_wording_standardised,fixed,COMPLAINT,Complaints
+134,email,email_found_in_message_text,filled_from_message,,phillip.johnston@example.net
+134,phone,phone_found_in_message_text,filled_from_message,	,07943 586819
+135,received_date,date_format_standardised,fixed,11/11/2025,2025-11-11
+135,phone,phone_format_standardised,fixed,07497917018,07497 917018
+136,name,name_and_email_swapped,fixed,sophie.briggs@example.net,Sophie Briggs
+136,email,name_and_email_swapped,fixed,Sophie Briggs,sophie.briggs@example.net
+136,received_date,date_format_standardised,fixed,45972,2025-11-11
+136,channel,channel_format_standardised,fixed,E-mail,Email
+136,phone,phone_unreadable,cleared_invalid,072457054749,
+136,category,category_wording_standardised,fixed,Repairs,Housing Repairs
+137,channel,channel_format_standardised,fixed,web form,Web form
+137,phone,phone_format_standardised,fixed,+44 7426 726121,07426 726121
+137,handling_mins,units_removed,fixed,12 mins,12
+138,case_ref,case_ref_format_standardised,fixed,nf-2025-0231,NF-2025-0231
+138,received_date,date_format_standardised,fixed,11 November 2025,2025-11-11
+138,name,name_format_standardised,fixed,rosemary jenkins,Rosemary Jenkins
+138,urgency,urgency_format_standardised,fixed,MEDIUM,Medium
+138,status,status_format_standardised,fixed,CLOSED,Closed
+138,category,category_hidden_blank,treated_as_missing, ,
+139,received_date,date_format_standardised,fixed,11/11/2025,2025-11-11
+139,channel,channel_format_standardised,fixed,EMAIL,Email
+139,phone,phone_format_standardised,fixed,(0744) 316 6292,07443 166292
+139,category,category_wording_standardised,fixed,waste & recycling,Waste
+140,received_date,date_format_standardised,fixed,45972,2025-11-11
+140,email,extra_whitespace_trimmed,fixed, elizabeth.farmer@example.com ,elizabeth.farmer@example.com
+140,phone,lost_leading_zero_restored,fixed,7567729554,07567 729554
+140,status,status_format_standardised,fixed,closed,Closed
+141,phone,phone_and_postcode_swapped,fixed,OL10 3BZ,0161 869 5981
+141,postcode,phone_and_postcode_swapped,fixed,0161 869 5981,OL10 3BZ
+141,received_date,date_format_standardised,fixed,12/11/2025,2025-11-12
+141,channel,channel_format_standardised,fixed,WEB FORM,Web form
+141,name,name_format_standardised,fixed,colin summers,Colin Summers
+141,status,status_format_standardised,fixed,Complete,Closed
+142,received_date,date_format_standardised,fixed,13 November 2025,2025-11-13
+142,channel,channel_format_standardised,fixed,e-mail,Email
+142,category,category_hidden_blank,treated_as_missing, ,
+142,handling_mins,units_removed,fixed,13 mins,13
+143,received_date,date_format_standardised,fixed,13/11/2025,2025-11-13
+143,phone,phone_placeholder,treated_as_missing,TBC,
+143,status,status_format_standardised,fixed,Done,Closed
+143,category,category_wording_standardised,fixed,safety,Safety
+144,received_date,date_format_standardised,fixed,14/11/2025,2025-11-14
+144,name,name_format_standardised,fixed,julia howard,Julia Howard
+144,phone,phone_format_standardised,fixed,+44 7958 179710,07958 179710
+144,urgency,urgency_format_standardised,fixed,Med,Medium
+145,received_date,date_format_standardised,fixed,14/11/25,2025-11-14
+145,urgency,urgency_format_standardised,fixed,Med,Medium
+145,status,status_format_standardised,fixed,Complete,Closed
+145,phone,phone_found_in_message_text,filled_from_message,,0161 668 3730
+146,received_date,date_format_standardised,fixed,14-Nov-2025,2025-11-14
+146,channel,channel_format_standardised,fixed,e-mail,Email
+146,name,name_format_standardised,fixed,thomas hewitt,Thomas Hewitt
+146,status,status_format_standardised,fixed,closed,Closed
+146,category,category_wording_standardised,fixed,Housing repair,Housing Repairs
+147,channel,channel_format_standardised,fixed,email,Email
+147,phone,phone_unreadable,cleared_invalid,07205470,
+147,category,category_hidden_blank,treated_as_missing, ,
+148,status,status_format_standardised,fixed,CLOSED,Closed
+148,category,category_hidden_blank,treated_as_missing, ,
+149,case_ref,case_ref_format_standardised,fixed,nf-2025-0070,NF-2025-0070
+149,received_date,date_format_standardised,fixed,16 November 2025,2025-11-16
+149,urgency,urgency_format_standardised,fixed,LOW,Low
+149,status,status_format_standardised,fixed,Done,Closed
+150,name,extra_whitespace_trimmed,fixed,  Melanie  Bell ,Melanie Bell
+150,email,extra_whitespace_trimmed,fixed, melanie.bell@example.org ,melanie.bell@example.org
+150,phone,phone_format_standardised,fixed,(0715) 269 7983,07152 697983
+150,urgency,urgency_format_standardised,fixed,P2,Medium
+150,status,status_format_standardised,fixed,Complete,Closed
+151,channel,channel_format_standardised,fixed,EMAIL,Email
+151,name,name_placeholder,treated_as_missing,-,
+151,email,email_format_standardised,fixed,ALEXANDER.DAVIES@EXAMPLE.NET,alexander.davies@example.net
+151,phone,lost_leading_zero_restored,fixed,7323545807,07323 545807
+151,status,status_format_standardised,fixed,closed,Closed
+151,category,category_wording_standardised,fixed,Housing repair,Housing Repairs
+151,message,extra_whitespace_trimmed,fixed,"Water is pouring through my bedroom ceiling at 57 Orchard Road from the flat above and it is getting worse.
+My name is Alexander Davies.  ",Water is pouring through my bedroom ceiling at 57 Orchard Road from the flat above and it is getting worse. My name is Alexander Davies.
+152,phone,phone_and_postcode_swapped,fixed,BL6 5EY,0161 339 9902
+152,postcode,phone_and_postcode_swapped,fixed,0161 339 9902,BL6 5EY
+152,channel,channel_format_standardised,fixed,EMAIL,Email
+152,name,name_placeholder,treated_as_missing,none,
+152,urgency,urgency_format_standardised,fixed,Med,Medium
+152,status,status_format_standardised,fixed,Pending,Open
+153,received_date,date_format_standardised,fixed,16/11/2025,2025-11-16
+153,category,category_wording_standardised,fixed,Housing repair,Housing Repairs
+153,handling_mins,units_removed,fixed,4 mins,4
+154,received_date,date_format_standardised,fixed,16 November 2025,2025-11-16
+154,phone,phone_unreadable,cleared_invalid,123,
+154,category,category_wording_standardised,fixed,BILLING,Billing
+155,received_date,date_format_standardised,fixed,16/11/2025,2025-11-16
+155,channel,channel_format_standardised,fixed,web,Web form
+155,phone,phone_format_standardised,fixed,(0741) 512 2097,07415 122097
+155,urgency,urgency_format_standardised,fixed,high,High
+155,category,category_hidden_blank,treated_as_missing, ,
+155,handling_mins,units_removed,fixed,19min,19
+156,email,email_placeholder,treated_as_missing,noemail@noemail.com,
+156,phone,phone_format_standardised,fixed,07152697983,07152 697983
+156,status,status_format_standardised,fixed,Done,Closed
+156,handling_mins,units_removed,fixed,9 mins,9
+157,received_date,date_format_standardised,fixed,17/11/2025,2025-11-17
+157,email,email_unreadable,cleared_invalid,mark.davies@,
+157,phone,phone_format_standardised,fixed,07201-979940,07201 979940
+157,urgency,urgency_format_standardised,fixed,P3,Low
+157,category,category_wording_standardised,fixed,Noise Nuisance,Noise
+157,handling_mins,units_removed,fixed,3 mins,3
+157,email,email_found_in_message_text,filled_from_message,mark.davies@,mark.davies@example.com
+158,email,email_placeholder,treated_as_missing,N/A,
+158,phone,phone_unreadable,cleared_invalid,0764248,
+158,handling_mins,units_removed,fixed,13 mins,13
+158,email,email_found_in_message_text,filled_from_message,N/A,marcus.page@example.com
+159,received_date,date_format_standardised,fixed,45978,2025-11-17
+159,name,name_hidden_blank,treated_as_missing, ,
+159,urgency,urgency_format_standardised,fixed,L,Low
+159,category,category_wording_standardised,fixed,NOISE,Noise
+159,handling_mins,units_removed,fixed,8 mins,8
+160,received_date,date_format_standardised,fixed,17/11/2025,2025-11-17
+160,name,name_format_standardised,fixed,GEORGINA O'BRIEN,Georgina O'Brien
+160,status,status_format_standardised,fixed,CLOSED,Closed
+160,category,category_unmappable,cleared_invalid,misc,
+161,status,status_format_standardised,fixed,CLOSED,Closed
+161,category,category_hidden_blank,treated_as_missing, ,
+162,received_date,date_format_standardised,fixed,17/11/25,2025-11-17
+162,channel,channel_format_standardised,fixed,E-mail,Email
+162,name,name_hidden_blank,treated_as_missing, ,
+162,phone,phone_placeholder,treated_as_missing,TBC,
+162,urgency,urgency_format_standardised,fixed,medium,Medium
+163,received_date,date_format_standardised,fixed,11/11/2025,2025-11-11
+163,channel,channel_format_standardised,fixed,EMAIL,Email
+163,phone,phone_format_standardised,fixed,(0744) 316 6292,07443 166292
+163,category,category_wording_standardised,fixed,waste & recycling,Waste
+164,channel,channel_format_standardised,fixed,e-mail,Email
+164,urgency,urgency_format_standardised,fixed,low,Low
+164,handling_mins,units_removed,fixed,8min,8
+165,received_date,date_format_standardised,fixed,17/11/2025,2025-11-17
+165,channel,channel_format_standardised,fixed,WEB FORM,Web form
+165,name,name_placeholder,treated_as_missing,?,
+165,phone,phone_format_standardised,fixed,01614-770326,0161 477 0326
+165,urgency,urgency_format_standardised,fixed,medium,Medium
+166,received_date,date_format_standardised,fixed,17/11/2025,2025-11-17
+166,phone,lost_leading_zero_restored,fixed,7240271742,07240 271742
+166,status,status_format_standardised,fixed,closed,Closed
+167,received_date,date_format_standardised,fixed,17/11/2025,2025-11-17
+167,channel,channel_format_standardised,fixed,email,Email
+167,phone,phone_format_standardised,fixed,+447159253235,07159 253235
+167,urgency,urgency_format_standardised,fixed,Urgent,High
+167,status,status_format_standardised,fixed,Done,Closed
+167,email,email_found_in_message_text,filled_from_message,,stanley.lawrence@example.org
+168,received_date,date_format_standardised,fixed,17/11/2025,2025-11-17
+168,phone,phone_format_standardised,fixed,07958179710,07958 179710
+168,status,status_format_standardised,fixed,closed,Closed
+169,received_date,date_format_standardised,fixed,18/11/2025,2025-11-18
+169,email,email_unreadable,cleared_invalid,leanne.jones@,
+169,phone,phone_format_standardised,fixed,07260-659381,07260 659381
+169,handling_mins,units_removed,fixed,15 mins,15
+169,email,email_found_in_message_text,filled_from_message,leanne.jones@,leanne.jones@example.net
+170,(whole row),shifted_columns,fixed,extra empty cell at position 4,removed it
+170,received_date,date_partial,cleared_invalid,2025,
+170,status,status_format_standardised,fixed,Complete,Closed
+170,category,category_hidden_blank,treated_as_missing, ,
+170,postcode,postcode_found_in_message_text,filled_from_message,,M6 4WT
+171,case_ref,case_ref_format_standardised,fixed,nf-2025-0217,NF-2025-0217
+171,received_date,date_format_standardised,fixed,45979,2025-11-18
+171,channel,channel_hidden_blank,treated_as_missing, ,
+171,name,name_format_standardised,fixed,SHARON REES,Sharon Rees
+171,handling_mins,units_removed,fixed,10min,10
+171,phone,phone_found_in_message_text,filled_from_message,,07860 699716
+172,received_date,date_format_standardised,fixed,18/11/2025,2025-11-18
+172,channel,channel_format_standardised,fixed,Web Form,Web form
+172,email,extra_whitespace_trimmed,fixed, leslie.slater@example.org ,leslie.slater@example.org
+172,phone,phone_format_standardised,fixed,07316-794668,07316 794668
+172,urgency,urgency_format_standardised,fixed,normal,Medium
+173,received_date,date_format_standardised,fixed,18/11/2025,2025-11-18
+173,phone,phone_placeholder,treated_as_missing,TBC,
+173,urgency,urgency_format_standardised,fixed,low,Low
+173,status,status_format_standardised,fixed,Done,Closed
+173,category,category_wording_standardised,fixed,Complaint,Complaints
+174,name,extra_whitespace_trimmed,fixed,  Owen  Davison ,Owen Davison
+174,email,extra_whitespace_trimmed,fixed, owen.davison@example.net ,owen.davison@example.net
+174,urgency,urgency_format_standardised,fixed,Med,Medium
+174,category,category_wording_standardised,fixed,noise,Noise
+175,(whole row),shifted_columns,fixed,extra empty cell at position 1,removed it
+175,received_date,date_format_standardised,fixed,19/11/2025,2025-11-19
+175,name,name_format_standardised,fixed,BILLY NORTON,Billy Norton
+175,phone,phone_placeholder,treated_as_missing,TBC,
+175,urgency,urgency_format_standardised,fixed,low,Low
+175,category,category_wording_standardised,fixed,waste & recycling,Waste
+176,received_date,date_format_standardised,fixed,20/11/2025,2025-11-20
+176,phone,phone_unreadable,cleared_invalid,123,
+176,message,extra_whitespace_trimmed,fixed,I can smell gas in the communal hallway at 37 Hawthorn Court.  ,I can smell gas in the communal hallway at 37 Hawthorn Court.
+177,received_date,date_format_standardised,fixed,21/11/2025,2025-11-21
+177,name,name_format_standardised,fixed,janice hopkins,Janice Hopkins
+177,phone,lost_leading_zero_restored,fixed,1613160410,0161 316 0410
+177,urgency,urgency_format_standardised,fixed,Med,Medium
+177,status,status_format_standardised,fixed,CLOSED,Closed
+177,handling_mins,units_removed,fixed,14 mins,14
+178,name,name_format_standardised,fixed,ASHLEY BOND,Ashley Bond
+178,email,email_format_standardised,fixed,ASHLEY.BOND@EXAMPLE.ORG,ashley.bond@example.org
+178,urgency,urgency_format_standardised,fixed,L,Low
+178,status,status_format_standardised,fixed,CLOSED,Closed
+179,received_date,date_format_standardised,fixed,21/11/2025,2025-11-21
+179,phone,phone_found_in_message_text,filled_from_message,,07126 787237
+180,received_date,date_format_standardised,fixed,21/11/2025,2025-11-21
+180,phone,phone_hidden_blank,treated_as_missing,   ,
+180,urgency,urgency_format_standardised,fixed,normal,Medium
+180,status,status_format_standardised,fixed,CLOSED,Closed
+180,category,category_wording_standardised,fixed,HOUSING,Housing Repairs
+181,channel,channel_format_standardised,fixed,E-mail,Email
+181,postcode,postcode_format_standardised,fixed,m124ph,M12 4PH
+181,status,status_format_standardised,fixed,CLOSED,Closed
+182,received_date,date_format_standardised,fixed,22/11/2025,2025-11-22
+182,name,name_format_standardised,fixed,GEMMA FERGUSON,Gemma Ferguson
+182,category,category_hidden_blank,treated_as_missing,	,
+182,handling_mins,units_removed,fixed,10min,10
+183,case_ref,case_ref_format_standardised,fixed,NF 2025 0215,NF-2025-0215
+183,received_date,date_format_standardised,fixed,22/11/2025,2025-11-22
+183,channel,channel_hidden_blank,treated_as_missing, ,
+183,email,email_unreadable,cleared_invalid,shannon.holmesexample.org,
+183,category,category_wording_standardised,fixed,Council Tax,Billing
+183,email,email_found_in_message_text,filled_from_message,shannon.holmesexample.org,shannon.holmes@example.org
+184,(whole row),shifted_columns,fixed,extra empty cell at position 4,removed it
+184,received_date,date_format_standardised,fixed,23 November 2025,2025-11-23
+184,status,status_format_standardised,fixed,In progress,Open
+184,category,category_unmappable,cleared_invalid,Other,
+184,phone,phone_found_in_message_text,filled_from_message,,07833 429445
+185,received_date,date_format_standardised,fixed,23/11/2025,2025-11-23
+185,phone,phone_format_standardised,fixed,+44 7867 665621,07867 665621
+186,case_ref,case_ref_format_standardised,fixed,nf-2025-0045,NF-2025-0045
+186,name,name_format_standardised,fixed,KIRSTY HAWKINS,Kirsty Hawkins
+186,phone,phone_format_standardised,fixed,+447386134305,07386 134305
+186,postcode,postcode_format_standardised,fixed,BL78TJ,BL7 8TJ
+186,status,status_hidden_blank,treated_as_missing, ,
+187,name,name_hidden_blank,treated_as_missing, ,
+187,urgency,urgency_format_standardised,fixed,low,Low
+188,received_date,date_partial,cleared_invalid,2025,
+188,phone,phone_format_standardised,fixed,07861363550,07861 363550
+188,urgency,urgency_hidden_blank,treated_as_missing, ,
+188,category,category_wording_standardised,fixed,SAFETY,Safety
+189,phone,phone_hidden_blank,treated_as_missing,	,
+189,postcode,postcode_placeholder,treated_as_missing,N/A,
+189,urgency,urgency_format_standardised,fixed,urgent,High
+189,status,status_format_standardised,fixed,Complete,Closed
+189,postcode,postcode_found_in_message_text,filled_from_message,N/A,M14 9RU
+190,received_date,date_format_standardised,fixed,23/11/2025,2025-11-23
+190,channel,channel_format_standardised,fixed,email,Email
+190,phone,phone_format_standardised,fixed,+44 1612 241366,0161 224 1366
+190,status,status_format_standardised,fixed,CLOSED,Closed
+191,received_date,date_format_standardised,fixed,24/11/2025,2025-11-24
+191,channel,channel_format_standardised,fixed,e-mail,Email
+191,phone,phone_format_standardised,fixed,01615198043,0161 519 8043
+191,urgency,urgency_format_standardised,fixed,high,High
+191,status,status_format_standardised,fixed,Done,Closed
+191,category,category_wording_standardised,fixed,Customer complaint,Complaints
+192,(whole row),blank_row,removed,,
+193,received_date,date_format_standardised,fixed,24/11/2025,2025-11-24
+193,channel,channel_format_standardised,fixed,e-mail,Email
+193,phone,phone_format_standardised,fixed,01615198043,0161 519 8043
+193,urgency,urgency_format_standardised,fixed,high,High
+193,status,status_format_standardised,fixed,Done,Closed
+193,category,category_wording_standardised,fixed,Customer complaint,Complaints
+194,received_date,date_format_standardised,fixed,24/11/2025,2025-11-24
+194,channel,channel_format_standardised,fixed,e-mail,Email
+194,email,email_unreadable,cleared_invalid,glen.lewis@example,
+194,category,category_wording_standardised,fixed,complaints,Complaints
+194,email,email_found_in_message_text,filled_from_message,glen.lewis@example,glen.lewis@example.org
+194,phone,phone_found_in_message_text,filled_from_message,,07665 959907
+195,channel,channel_format_standardised,fixed,email,Email
+195,phone,phone_format_standardised,fixed,07386-134305,07386 134305
+195,urgency,urgency_format_standardised,fixed,P2,Medium
+196,status,status_format_standardised,fixed,CLOSED,Closed
+196,handling_mins,units_removed,fixed,20min,20
+196,phone,phone_found_in_message_text,filled_from_message,,0161 566 0737
+197,(whole row),shifted_columns,fixed,extra empty cell at position 4,removed it
+197,received_date,date_format_standardised,fixed,45987,2025-11-26
+197,channel,channel_format_standardised,fixed,Webform,Web form
+197,category,category_wording_standardised,fixed,noise,Noise
+197,phone,phone_found_in_message_text,filled_from_message,,07165 454508
+198,phone,phone_and_postcode_swapped,fixed,M22 9NE,0161 877 0445
+198,postcode,phone_and_postcode_swapped,fixed,0161 877 0445,M22 9NE
+198,status,status_format_standardised,fixed,Done,Closed
+198,category,category_wording_standardised,fixed,noise,Noise
+199,received_date,date_format_standardised,fixed,26/11/2025,2025-11-26
+199,phone,phone_format_standardised,fixed,+44 1616 162454,0161 616 2454
+199,handling_mins,units_removed,fixed,13 mins,13
+200,received_date,date_format_standardised,fixed,26-Nov-2025,2025-11-26
+200,postcode,extra_whitespace_trimmed,fixed, SK23 3NG ,SK23 3NG
+200,urgency,urgency_format_standardised,fixed,L,Low
+200,handling_mins,units_removed,fixed,6min,6
+201,received_date,date_format_standardised,fixed,26/11/2025,2025-11-26
+201,urgency,urgency_format_standardised,fixed,P3,Low
+202,received_date,date_format_standardised,fixed,26/11/2025,2025-11-26
+202,channel,channel_hidden_blank,treated_as_missing,​,
+202,phone,phone_placeholder,treated_as_missing,TBC,
+202,category,category_wording_standardised,fixed,housing repairs,Housing Repairs
+203,received_date,date_partial,cleared_invalid,Nov 2025,
+203,channel,channel_format_standardised,fixed,EMAIL,Email
+203,name,name_hidden_blank,treated_as_missing, ,
+203,category,category_wording_standardised,fixed,H&S,Safety
+203,handling_mins,units_removed,fixed,14 mins,14
+204,received_date,date_format_standardised,fixed,27 November 2025,2025-11-27
+204,phone,phone_format_standardised,fixed,(0716) 545 4508,07165 454508
+204,urgency,urgency_format_standardised,fixed,medium,Medium
+204,status,status_format_standardised,fixed,Complete,Closed
+204,category,category_wording_standardised,fixed,Noise complaint,Noise
+205,received_date,date_format_standardised,fixed,28/11/2025,2025-11-28
+205,status,status_format_standardised,fixed,CLOSED,Closed
+206,channel,channel_format_standardised,fixed,WEB FORM,Web form
+206,phone,phone_format_standardised,fixed,(0161) 533 6282,0161 533 6282
+206,status,status_format_standardised,fixed,Complete,Closed
+207,received_date,date_format_standardised,fixed,28/11/2025,2025-11-28
+207,name,name_placeholder,treated_as_missing,N/A,
+207,phone,phone_format_standardised,fixed,+441619758299,0161 975 8299
+207,urgency,urgency_format_standardised,fixed,Urgent,High
+207,category,category_wording_standardised,fixed,Housing repair,Housing Repairs
+208,received_date,date_format_standardised,fixed,29/11/2025,2025-11-29
+208,message,extra_whitespace_trimmed,fixed,"Missed bin collections three weeks in a row at 31 Hawthorn Court and the bins are overflowing.
+My email is carl.patel@example.org.  ",Missed bin collections three weeks in a row at 31 Hawthorn Court and the bins are overflowing. My email is carl.patel@example.org.
+209,channel,channel_format_standardised,fixed,Web Form,Web form
+209,phone,phone_placeholder,treated_as_missing,01234567890,
+209,urgency,urgency_format_standardised,fixed,normal,Medium
+209,category,category_wording_standardised,fixed,Housing repair,Housing Repairs
+210,received_date,date_format_standardised,fixed,29 November 2025,2025-11-29
+210,channel,channel_format_standardised,fixed,EMAIL,Email
+210,status,status_format_standardised,fixed,CLOSED,Closed
+210,category,category_wording_standardised,fixed,Noise complaint,Noise
+210,handling_mins,units_removed,fixed,13 mins,13
+211,case_ref,case_ref_format_standardised,fixed,nf-2025-0203,NF-2025-0203
+211,received_date,date_format_standardised,fixed,29/11/2025,2025-11-29
+211,phone,phone_format_standardised,fixed,07525-961957,07525 961957
+211,postcode,postcode_format_standardised,fixed,BL261ZL,BL26 1ZL
+212,received_date,date_format_standardised,fixed,29/11/2025,2025-11-29
+212,channel,channel_format_standardised,fixed,E-mail,Email
+212,name,name_format_standardised,fixed,"Wall, Rosie",Rosie Wall
+212,phone,phone_format_standardised,fixed,(0715) 582 3468,07155 823468
+213,phone,phone_format_standardised,fixed,+441618707231,0161 870 7231
+213,postcode,postcode_placeholder,treated_as_missing,N/A,
+213,urgency,urgency_format_standardised,fixed,L,Low
+213,message,extra_whitespace_trimmed,fixed,"The kitchen cabinet door at 26 Lime Grove has come off its hinge.
+Could someone repair it when convenient? My postcode is WA14 1PQ. Kind regards, Andrea Clarke  ","The kitchen cabinet door at 26 Lime Grove has come off its hinge. Could someone repair it when convenient? My postcode is WA14 1PQ. Kind regards, Andrea Clarke"
+213,postcode,postcode_found_in_message_text,filled_from_message,N/A,WA14 1PQ
+214,received_date,date_placeholder,treated_as_missing,TBC,
+214,postcode,postcode_hidden_blank,treated_as_missing, ,
+214,urgency,urgency_format_standardised,fixed,normal,Medium
+214,category,category_wording_standardised,fixed,Bins,Waste
+214,postcode,postcode_found_in_message_text,filled_from_message, ,OL5 3NJ
+215,postcode,postcode_format_standardised,fixed,bl147tb,BL14 7TB
+215,urgency,urgency_format_standardised,fixed,L,Low
+215,status,status_format_standardised,fixed,CLOSED,Closed
+215,category,category_wording_standardised,fixed,bin collection,Waste
+215,message,extra_whitespace_trimmed,fixed,"Could I order a replacement green bin for 52 Lime Grove? Ours was damaged.
+Kind regards, Chelsea Ryan  ","Could I order a replacement green bin for 52 Lime Grove? Ours was damaged. Kind regards, Chelsea Ryan"
+216,received_date,date_format_standardised,fixed,30/11/2025,2025-11-30
+216,category,category_wording_standardised,fixed,safety,Safety
+217,name,name_and_email_swapped,fixed,kelly.stone@example.net,Kelly Stone
+217,email,name_and_email_swapped,fixed,Kelly Stone,kelly.stone@example.net
+217,received_date,date_format_standardised,fixed,30/11/2025,2025-11-30
+217,channel,channel_hidden_blank,treated_as_missing, ,
+217,urgency,urgency_format_standardised,fixed,LOW,Low
+217,category,category_wording_standardised,fixed,WASTE,Waste
+218,received_date,date_format_standardised,fixed,30-Nov-2025,2025-11-30
+218,phone,phone_placeholder,treated_as_missing,0000000000,
+218,category,category_wording_standardised,fixed,Bins,Waste
+219,phone,phone_format_standardised,fixed,07499-438083,07499 438083
+219,urgency,urgency_format_standardised,fixed,P1,High
+220,received_date,date_format_standardised,fixed,01/12/2025,2025-12-01
+220,email,email_unreadable,cleared_invalid,william.wilson@example,
+220,phone,phone_format_standardised,fixed,07467702733,07467 702733
+220,postcode,postcode_unreadable,cleared_invalid,OL23 5A,
+220,status,status_format_standardised,fixed,Complete,Closed
+220,category,category_unmappable,cleared_invalid,misc,
+221,received_date,date_format_standardised,fixed,01 December 2025,2025-12-01
+221,channel,channel_format_standardised,fixed,EMAIL,Email
+221,name,name_hidden_blank,treated_as_missing,​,
+221,phone,phone_format_standardised,fixed,07894-579911,07894 579911
+221,urgency,urgency_format_standardised,fixed,high,High
+222,name,extra_whitespace_trimmed,fixed,  Norman  McKenzie ,Norman McKenzie
+222,phone,phone_hidden_blank,treated_as_missing,   ,
+222,status,status_format_standardised,fixed,closed,Closed
+222,phone,phone_found_in_message_text,filled_from_message,   ,07187 221707
+223,received_date,date_format_standardised,fixed,01/12/2025,2025-12-01
+223,phone,phone_hidden_blank,treated_as_missing,	,
+223,urgency,urgency_format_standardised,fixed,LOW,Low
+223,status,status_format_standardised,fixed,closed,Closed
+223,category,category_wording_standardised,fixed,Housing - Repairs,Housing Repairs
+224,received_date,date_format_standardised,fixed,01/12/2025,2025-12-01
+224,phone,lost_leading_zero_restored,fixed,7774551989,07774 551989
+225,phone,phone_placeholder,treated_as_missing,TBC,
+225,status,status_format_standardised,fixed,Done,Closed
+225,category,category_wording_standardised,fixed,Housing - Repairs,Housing Repairs
+225,email,email_found_in_message_text,filled_from_message,,debra.carr@example.net
+226,phone,phone_format_standardised,fixed,07760-615959,07760 615959
+226,postcode,postcode_hidden_blank,treated_as_missing, ,
+226,status,status_format_standardised,fixed,closed,Closed
+226,category,category_wording_standardised,fixed,housing repairs,Housing Repairs
+226,postcode,postcode_found_in_message_text,filled_from_message, ,M5 9SH
+227,(whole row),blank_row,removed,,
+228,received_date,date_format_standardised,fixed,45993,2025-12-02
+228,name,name_format_standardised,fixed,FIONA HARDING,Fiona Harding
+228,postcode,postcode_placeholder,treated_as_missing,unknown,
+228,urgency,urgency_format_standardised,fixed,Med,Medium
+228,status,status_format_standardised,fixed,Complete,Closed
+228,postcode,postcode_found_in_message_text,filled_from_message,unknown,M9 8UJ
+229,received_date,date_format_standardised,fixed,02/12/25,2025-12-02
+229,phone,phone_format_standardised,fixed,07894-579911,07894 579911
+229,postcode,postcode_placeholder,treated_as_missing,ZZ99 9ZZ,
+229,urgency,urgency_format_standardised,fixed,HIGH,High
+230,received_date,date_format_standardised,fixed,03/12/2025,2025-12-03
+230,channel,channel_format_standardised,fixed,web form,Web form
+230,phone,phone_format_standardised,fixed,+447550861265,07550 861265
+230,urgency,urgency_format_standardised,fixed,L,Low
+230,category,category_wording_standardised,fixed,waste & recycling,Waste
+230,handling_mins,units_removed,fixed,4 mins,4
+231,received_date,date_format_standardised,fixed,03/12/2025,2025-12-03
+231,phone,lost_leading_zero_restored,fixed,1613309069,0161 330 9069
+231,message,extra_whitespace_trimmed,fixed,"A fire door at 97 Juniper Crescent is propped open with a wedge and the fire alarm has been beeping for days.
+Many thanks, Martyn Miller  ","A fire door at 97 Juniper Crescent is propped open with a wedge and the fire alarm has been beeping for days. Many thanks, Martyn Miller"
+232,received_date,date_format_standardised,fixed,45994,2025-12-03
+232,phone,phone_format_standardised,fixed,07102261505,07102 261505
+232,category,category_wording_standardised,fixed,Customer complaint,Complaints
+233,received_date,date_format_standardised,fixed,03/12/2025,2025-12-03
+233,email,email_found_in_message_text,filled_from_message,,michael.baxter@example.com
+234,received_date,date_format_standardised,fixed,01 December 2025,2025-12-01
+234,channel,channel_format_standardised,fixed,EMAIL,Email
+234,name,name_hidden_blank,treated_as_missing,​,
+234,phone,phone_format_standardised,fixed,07894-579911,07894 579911
+234,urgency,urgency_format_standardised,fixed,high,High
+235,email,email_unreadable,cleared_invalid,matthew.mccarthyexample.com,
+235,urgency,urgency_format_standardised,fixed,1 - High,High
+235,category,category_wording_standardised,fixed,H&S,Safety
+236,case_ref,case_ref_format_standardised,fixed,nf-2025-0021,NF-2025-0021
+236,received_date,date_format_standardised,fixed,04/12/2025,2025-12-04
+236,phone,phone_format_standardised,fixed,+447262879779,07262 879779
+237,received_date,date_format_standardised,fixed,04/12/2025,2025-12-04
+237,channel,channel_format_standardised,fixed,EMAIL,Email
+237,phone,phone_format_standardised,fixed,07930978053,07930 978053
+237,urgency,urgency_hidden_blank,treated_as_missing,   ,
+237,handling_mins,units_removed,fixed,6 mins,6
+237,email,email_found_in_message_text,filled_from_message,,sam.james@example.com
+238,received_date,date_format_standardised,fixed,04/12/2025,2025-12-04
+238,phone,lost_leading_zero_restored,fixed,7830449218,07830 449218
+239,case_ref,case_ref_format_standardised,fixed,NF 2025 0109,NF-2025-0109
+239,channel,channel_format_standardised,fixed,web,Web form
+239,email,email_hidden_blank,treated_as_missing, ,
+239,phone,lost_leading_zero_restored,fixed,7525844638,07525 844638
+239,urgency,urgency_format_standardised,fixed,1 - High,High
+239,status,status_format_standardised,fixed,closed,Closed
+239,email,email_found_in_message_text,filled_from_message, ,jade.taylor@example.org
+240,received_date,date_format_standardised,fixed,45996,2025-12-05
+240,status,status_format_standardised,fixed,Complete,Closed
+240,category,category_wording_standardised,fixed,noise,Noise
+241,received_date,date_format_standardised,fixed,05/12/2025,2025-12-05
+241,name,name_format_standardised,fixed,phillip murphy,Phillip Murphy
+242,urgency,urgency_format_standardised,fixed,Med,Medium
+242,category,category_wording_standardised,fixed,Housing - Repairs,Housing Repairs
+243,received_date,date_format_standardised,fixed,06/12/2025,2025-12-06
+243,urgency,urgency_format_standardised,fixed,P3,Low
+243,category,category_hidden_blank,treated_as_missing,​,
+243,postcode,postcode_found_in_message_text,filled_from_message,,WN8 7GG
+244,received_date,date_format_standardised,fixed,06 December 2025,2025-12-06
+244,channel,channel_format_standardised,fixed,web,Web form
+244,name,extra_whitespace_trimmed,fixed,  Alice  Power ,Alice Power
+244,urgency,urgency_format_standardised,fixed,low,Low
+244,message,extra_whitespace_trimmed,fixed,"To whom it may concern, There is a small crack in the bathroom tiles at 40 Cedar Avenue.
+It is not leaking but I would like it fixed. Many thanks, Alice Power  ","To whom it may concern, There is a small crack in the bathroom tiles at 40 Cedar Avenue. It is not leaking but I would like it fixed. Many thanks, Alice Power"
+245,received_date,date_format_standardised,fixed,08/12/2025,2025-12-08
+245,status,status_format_standardised,fixed,closed,Closed
+245,category,category_wording_standardised,fixed,Housing - Repairs,Housing Repairs
+246,(whole row),blank_row,removed,,
+247,case_ref,case_ref_format_standardised,fixed,nf-2025-0261,NF-2025-0261
+247,channel,channel_format_standardised,fixed,web,Web form
+248,received_date,date_format_standardised,fixed,09/12/2025,2025-12-09
+248,phone,phone_format_standardised,fixed,+44 7753 630535,07753 630535
+248,handling_mins,units_removed,fixed,11 mins,11
+249,received_date,date_format_standardised,fixed,09-Dec-2025,2025-12-09
+249,email,email_hidden_blank,treated_as_missing,	,
+249,phone,phone_placeholder,treated_as_missing,N/A,
+249,urgency,urgency_format_standardised,fixed,normal,Medium
+249,status,status_format_standardised,fixed,closed,Closed
+249,email,email_found_in_message_text,filled_from_message,	,paula.fry@example.org
+249,phone,phone_found_in_message_text,filled_from_message,N/A,0161 976 9083
+250,received_date,date_format_standardised,fixed,09/12/2025,2025-12-09
+250,email,email_hidden_blank,treated_as_missing,   ,
+250,phone,phone_format_standardised,fixed,+441617745920,0161 774 5920
+250,postcode,postcode_hidden_blank,treated_as_missing,   ,
+250,urgency,urgency_format_standardised,fixed,low,Low
+250,category,category_wording_standardised,fixed,Waste and Recycling,Waste
+250,postcode,postcode_found_in_message_text,filled_from_message,   ,OL9 6EX
+251,(whole row),shifted_columns,fixed,extra empty cell at position 4,removed it
+251,received_date,date_format_standardised,fixed,10/12/2025,2025-12-10
+251,name,name_format_standardised,fixed,FRANCESCA HARRISON,Francesca Harrison
+251,phone,phone_placeholder,treated_as_missing,01234567890,
+251,category,category_wording_standardised,fixed,Health & Safety,Safety
+251,handling_mins,units_removed,fixed,25 mins,25
+252,channel,channel_format_standardised,fixed,e-mail,Email
+253,received_date,date_format_standardised,fixed,10 December 2025,2025-12-10
+253,email,email_unreadable,cleared_invalid,paula.myers@,
+253,urgency,urgency_format_standardised,fixed,MEDIUM,Medium
+253,category,category_wording_standardised,fixed,Bins,Waste
+253,email,email_found_in_message_text,filled_from_message,paula.myers@,paula.myers@example.org
+254,phone,phone_and_postcode_swapped,fixed,WA26 7YP,07448 318353
+254,postcode,phone_and_postcode_swapped,fixed,07448 318353,WA26 7YP
+254,received_date,date_format_standardised,fixed,10/12/25,2025-12-10
+254,email,email_unreadable,cleared_invalid,danny.hall@example,
+254,message,extra_whitespace_trimmed,fixed,"There is a small crack in the bathroom tiles at 10 Lime Grove.
+It is not leaking but I would like it fixed.  ",There is a small crack in the bathroom tiles at 10 Lime Grove. It is not leaking but I would like it fixed.
+254,handling_mins,units_removed,fixed,4 mins,4
+255,received_date,date_format_standardised,fixed,10/12/2025,2025-12-10
+255,phone,phone_unreadable,cleared_invalid,07628295,
+255,category,category_wording_standardised,fixed,waste & recycling,Waste
+255,handling_mins,units_removed,fixed,23 mins,23
+256,received_date,date_format_standardised,fixed,11/12/2025,2025-12-11
+256,channel,channel_format_standardised,fixed,web form,Web form
+256,status,status_format_standardised,fixed,CLOSED,Closed
+256,category,category_wording_standardised,fixed,Housing - Repairs,Housing Repairs
+257,received_date,date_format_standardised,fixed,11/12/2025,2025-12-11
+257,phone,phone_format_standardised,fixed,07464263690,07464 263690
+258,phone,phone_format_standardised,fixed,+44 1615 021481,0161 502 1481
+258,postcode,extra_whitespace_trimmed,fixed, M3 5PQ ,M3 5PQ
+258,status,status_format_standardised,fixed,Complete,Closed
+259,received_date,date_format_standardised,fixed,12-Dec-2025,2025-12-12
+259,channel,channel_format_standardised,fixed,WEB FORM,Web form
+259,phone,phone_format_standardised,fixed,+44 7971 440802,07971 440802
+259,urgency,urgency_format_standardised,fixed,Med,Medium
+260,received_date,date_format_standardised,fixed,12/12/2025,2025-12-12
+260,channel,channel_format_standardised,fixed,E-mail,Email
+260,email,email_unreadable,cleared_invalid,heather.lee@example,
+260,postcode,postcode_format_standardised,fixed,sk21 4ld,SK21 4LD
+260,category,category_wording_standardised,fixed,SAFETY,Safety
+261,received_date,date_format_standardised,fixed,12/12/25,2025-12-12
+261,email,email_format_standardised,fixed,JOANNE.POOLE@EXAMPLE.NET,joanne.poole@example.net
+261,phone,phone_format_standardised,fixed,07575-486162,07575 486162
+261,status,status_format_standardised,fixed,CLOSED,Closed
+261,postcode,postcode_found_in_message_text,filled_from_message,,WN25 4XJ
+262,received_date,date_format_standardised,fixed,09/12/2025,2025-12-09
+262,phone,phone_format_standardised,fixed,+44 7753 630535,07753 630535
+262,handling_mins,units_removed,fixed,11 mins,11
+263,received_date,date_format_standardised,fixed,12/12/2025,2025-12-12
+263,email,email_hidden_blank,treated_as_missing, ,
+263,phone,phone_format_standardised,fixed,07326260639,07326 260639
+263,category,category_wording_standardised,fixed,Repairs,Housing Repairs
+263,email,email_found_in_message_text,filled_from_message, ,arthur.thomas@example.org
+264,received_date,date_format_standardised,fixed,13 December 2025,2025-12-13
+264,name,name_hidden_blank,treated_as_missing,​,
+264,status,status_format_standardised,fixed,Done,Closed
+264,handling_mins,units_removed,fixed,6min,6
+265,received_date,date_format_standardised,fixed,13/12/2025,2025-12-13
+265,channel,channel_format_standardised,fixed,web,Web form
+265,phone,phone_format_standardised,fixed,+447252394083,07252 394083
+265,postcode,postcode_unreadable,cleared_invalid,117XG,
+265,urgency,urgency_format_standardised,fixed,LOW,Low
+266,received_date,date_format_standardised,fixed,14/12/2025,2025-12-14
+266,channel,channel_format_standardised,fixed,Webform,Web form
+266,postcode,postcode_hidden_blank,treated_as_missing, ,
+266,urgency,urgency_format_standardised,fixed,low,Low
+266,status,status_format_standardised,fixed,Complete,Closed
+266,postcode,postcode_found_in_message_text,filled_from_message, ,WN26 3DP
+267,received_date,date_format_standardised,fixed,14-Dec-2025,2025-12-14
+267,name,name_hidden_blank,treated_as_missing,   ,
+267,category,category_hidden_blank,treated_as_missing,	,
+268,received_date,date_format_standardised,fixed,14-Dec-2025,2025-12-14
+268,channel,channel_format_standardised,fixed,WEB FORM,Web form
+268,urgency,urgency_format_standardised,fixed,LOW,Low
+269,received_date,date_format_standardised,fixed,15/12/25,2025-12-15
+269,channel,channel_format_standardised,fixed,Web Form,Web form
+269,postcode,postcode_unreadable,cleared_invalid,WA17 2D,
+269,category,category_wording_standardised,fixed,complaints,Complaints
+269,handling_mins,units_removed,fixed,6min,6
+270,received_date,date_placeholder,treated_as_missing,00/00/0000,
+270,phone,phone_format_standardised,fixed,07496-958160,07496 958160
+270,postcode,extra_whitespace_trimmed,fixed, WA18 8YJ ,WA18 8YJ
+270,category,category_wording_standardised,fixed,Customer complaint,Complaints
+271,received_date,date_format_standardised,fixed,16 December 2025,2025-12-16
+271,name,name_format_standardised,fixed,"White, Frank",Frank White
+271,status,status_format_standardised,fixed,Complete,Closed
+272,received_date,date_format_standardised,fixed,16 December 2025,2025-12-16
+272,channel,channel_format_standardised,fixed,web,Web form
+272,phone,phone_format_standardised,fixed,07833574514,07833 574514
+272,postcode,extra_whitespace_trimmed,fixed, M4 4AP ,M4 4AP
+272,urgency,urgency_format_standardised,fixed,HIGH,High
+272,status,status_format_standardised,fixed,Done,Closed
+272,category,category_unmappable,cleared_invalid,Other,
+273,received_date,date_format_standardised,fixed,16/12/2025,2025-12-16
+273,channel,channel_format_standardised,fixed,EMAIL,Email
+273,phone,phone_format_standardised,fixed,+44 1618 889591,0161 888 9591
+273,urgency,urgency_format_standardised,fixed,MEDIUM,Medium
+273,category,category_wording_standardised,fixed,WASTE,Waste
+274,received_date,date_format_standardised,fixed,16/12/2025,2025-12-16
+274,name,extra_whitespace_trimmed,fixed,  Rita  Griffiths ,Rita Griffiths
+274,phone,phone_placeholder,treated_as_missing,N/A,
+274,urgency,urgency_format_standardised,fixed,P2,Medium
+274,category,category_wording_standardised,fixed,bin collection,Waste
+275,received_date,date_format_standardised,fixed,16-Dec-2025,2025-12-16
+275,phone,phone_unreadable,cleared_invalid,01616834,
+276,phone,phone_format_standardised,fixed,07586650818,07586 650818
+276,urgency,urgency_format_standardised,fixed,urgent,High
+276,status,status_format_standardised,fixed,Complete,Closed
+277,received_date,date_format_standardised,fixed,17 December 2025,2025-12-17
+278,status,status_format_standardised,fixed,open,Open
+279,received_date,date_format_standardised,fixed,17/12/2025,2025-12-17
+279,channel,channel_format_standardised,fixed,web,Web form
+279,email,email_unreadable,cleared_invalid,jessica.white@,
+279,urgency,urgency_format_standardised,fixed,MEDIUM,Medium
+280,(whole row),blank_row,removed,,
+281,received_date,date_format_standardised,fixed,18/12/2025,2025-12-18
+281,channel,channel_format_standardised,fixed,email,Email
+281,handling_mins,units_removed,fixed,15 mins,15
+282,case_ref,case_ref_format_standardised,fixed,nf-2025-0128,NF-2025-0128
+282,received_date,date_format_standardised,fixed,46009,2025-12-18
+282,channel,channel_format_standardised,fixed,E-mail,Email
+282,email,email_format_standardised,fixed,SUZANNE.ADAMS@EXAMPLE.NET,suzanne.adams@example.net
+282,postcode,postcode_placeholder,treated_as_missing,N/A,
+282,urgency,urgency_format_standardised,fixed,LOW,Low
+283,received_date,date_format_standardised,fixed,46009,2025-12-18
+283,name,name_format_standardised,fixed,"Long, Joanna",Joanna Long
+283,handling_mins,units_removed,fixed,13 mins,13
+284,received_date,date_format_standardised,fixed,18-Dec-2025,2025-12-18
+284,channel,channel_format_standardised,fixed,EMAIL,Email
+284,name,name_hidden_blank,treated_as_missing,	,
+284,email,email_hidden_blank,treated_as_missing,​,
+284,phone,lost_leading_zero_restored,fixed,1619172293,0161 917 2293
+284,status,status_format_standardised,fixed,In progress,Open
+285,received_date,date_format_standardised,fixed,19/12/2025,2025-12-19
+285,name,name_hidden_blank,treated_as_missing,	,
+285,email,email_unreadable,cleared_invalid,gerald.richardsonexample.org,
+285,phone,lost_leading_zero_restored,fixed,1613200558,0161 320 0558
+285,postcode,postcode_unreadable,cleared_invalid,SK15,
+285,status,status_format_standardised,fixed,Complete,Closed
+286,received_date,date_partial,cleared_invalid,2025,
+286,phone,lost_leading_zero_restored,fixed,7984129751,07984 129751
+286,status,status_format_standardised,fixed,CLOSED,Closed
+286,category,category_wording_standardised,fixed,Repairs,Housing Repairs
+287,phone,phone_placeholder,treated_as_missing,unknown,
+287,urgency,urgency_format_standardised,fixed,Med,Medium
+287,message,extra_whitespace_trimmed,fixed,"My boiler at 106 Juniper Crescent stopped working two days ago and we have no hot water.
+Please send an engineer. My email is ben.middleton@example.org. Kind regards, Ben Middleton  ","My boiler at 106 Juniper Crescent stopped working two days ago and we have no hot water. Please send an engineer. My email is ben.middleton@example.org. Kind regards, Ben Middleton"
+287,email,email_found_in_message_text,filled_from_message,,ben.middleton@example.org
+288,received_date,date_format_standardised,fixed,20/12/2025,2025-12-20
+288,phone,phone_format_standardised,fixed,+44 7452 774565,07452 774565
+288,urgency,urgency_format_standardised,fixed,LOW,Low
+288,handling_mins,units_removed,fixed,4 mins,4
+289,(whole row),blank_row,removed,,
+290,received_date,date_format_standardised,fixed,20/12/25,2025-12-20
+290,channel,channel_format_standardised,fixed,E-mail,Email
+290,phone,phone_format_standardised,fixed,(0727) 412 9959,07274 129959
+290,status,status_hidden_blank,treated_as_missing,	,
+290,category,category_wording_standardised,fixed,Council Tax,Billing
+291,received_date,date_format_standardised,fixed,20/12/2025,2025-12-20
+291,name,name_format_standardised,fixed,"Walters, Samuel",Samuel Walters
+291,phone,phone_unreadable,cleared_invalid,01618835,
+292,received_date,date_format_standardised,fixed,20-Dec-2025,2025-12-20
+293,received_date,date_format_standardised,fixed,20/12/2025,2025-12-20
+293,name,name_format_standardised,fixed,"Holmes, Abbie",Abbie Holmes
+293,email,email_format_standardised,fixed,ABBIE.HOLMES@EXAMPLE.ORG,abbie.holmes@example.org
+293,phone,phone_format_standardised,fixed,(0161) 281 6146,0161 281 6146
+293,urgency,urgency_format_standardised,fixed,LOW,Low
+293,status,status_format_standardised,fixed,closed,Closed
+294,received_date,date_format_standardised,fixed,21-Dec-2025,2025-12-21
+294,email,email_format_standardised,fixed,JOEL.GRAY@EXAMPLE.COM,joel.gray@example.com
+294,phone,phone_unreadable,cleared_invalid,07989158,
+294,category,category_hidden_blank,treated_as_missing,   ,
+294,handling_mins,units_removed,fixed,28min,28
+295,received_date,date_format_standardised,fixed,21-Dec-2025,2025-12-21
+295,name,name_format_standardised,fixed,LEAH HODGSON,Leah Hodgson
+295,phone,phone_format_standardised,fixed,+44 7314 898169,07314 898169
+295,urgency,urgency_format_standardised,fixed,HIGH,High
+295,status,status_format_standardised,fixed,CLOSED,Closed
+296,received_date,date_format_standardised,fixed,21/12/2025,2025-12-21
+296,channel,channel_format_standardised,fixed,WEB FORM,Web form
+296,phone,phone_format_standardised,fixed,+447332943797,07332 943797
+296,postcode,postcode_hidden_blank,treated_as_missing, ,
+296,status,status_format_standardised,fixed,CLOSED,Closed
+296,category,category_hidden_blank,treated_as_missing,	,
+296,postcode,postcode_found_in_message_text,filled_from_message, ,M15 5QS
+297,received_date,date_format_standardised,fixed,21 December 2025,2025-12-21
+297,postcode,postcode_format_standardised,fixed,M63XR,M6 3XR
+297,urgency,urgency_format_standardised,fixed,P3,Low
+297,status,status_format_standardised,fixed,CLOSED,Closed
+297,category,category_unmappable,cleared_invalid,misc,
+298,received_date,date_format_standardised,fixed,21 December 2025,2025-12-21
+298,channel,channel_hidden_blank,treated_as_missing,	,
+298,name,name_format_standardised,fixed,"Jones, Gerald",Gerald Jones
+298,phone,phone_format_standardised,fixed,07393-777424,07393 777424
+298,postcode,postcode_unreadable,cleared_invalid,M9 4R,
+298,handling_mins,units_removed,fixed,9min,9
+299,received_date,date_format_standardised,fixed,22/12/2025,2025-12-22
+299,name,name_placeholder,treated_as_missing,xxx,
+299,phone,phone_hidden_blank,treated_as_missing,	,
+300,received_date,date_format_standardised,fixed,22/12/2025,2025-12-22
+300,phone,phone_format_standardised,fixed,07854-453487,07854 453487
+300,status,status_format_standardised,fixed,Done,Closed
+300,category,category_wording_standardised,fixed,NOISE,Noise
+301,email,email_placeholder,treated_as_missing,test@test.com,
+301,phone,phone_format_standardised,fixed,07967177941,07967 177941
+301,urgency,urgency_format_standardised,fixed,Med,Medium
+302,channel,channel_format_standardised,fixed,Webform,Web form
+302,phone,phone_unreadable,cleared_invalid,0161312,
+302,postcode,postcode_format_standardised,fixed,BL298TT,BL29 8TT
+302,urgency,urgency_format_standardised,fixed,L,Low
+302,status,status_format_standardised,fixed,Done,Closed
+302,handling_mins,units_removed,fixed,3 mins,3
+303,phone,phone_placeholder,treated_as_missing,01234567890,
+303,urgency,urgency_format_standardised,fixed,high,High
+303,category,category_hidden_blank,treated_as_missing, ,
+304,phone,phone_format_standardised,fixed,(0775) 624 2703,07756 242703
+304,status,status_format_standardised,fixed,Pending,Open
+305,received_date,date_format_standardised,fixed,46014,2025-12-23
+305,channel,channel_format_standardised,fixed,E-mail,Email
+305,category,category_wording_standardised,fixed,Noise Nuisance,Noise
+306,received_date,date_format_standardised,fixed,23-Dec-2025,2025-12-23
+306,name,name_hidden_blank,treated_as_missing,   ,
+306,phone,phone_format_standardised,fixed,07526855276,07526 855276
+306,urgency,urgency_format_standardised,fixed,urgent,High
+306,status,status_format_standardised,fixed,Done,Closed
+306,postcode,postcode_found_in_message_text,filled_from_message,,BL9 2YQ
+307,received_date,date_format_standardised,fixed,24/12/2025,2025-12-24
+307,name,name_format_standardised,fixed,ryan nelson,Ryan Nelson
+307,phone,phone_format_standardised,fixed,07742-777737,07742 777737
+307,postcode,extra_whitespace_trimmed,fixed, M10 8BY ,M10 8BY
+307,category,category_wording_standardised,fixed,bin collection,Waste
+308,received_date,date_placeholder,treated_as_missing,TBC,
+308,channel,channel_format_standardised,fixed,EMAIL,Email
+308,phone,phone_unreadable,cleared_invalid,07904268,
+308,status,status_format_standardised,fixed,Done,Closed
+309,received_date,date_format_standardised,fixed,26/12/2025,2025-12-26
+309,email,email_unreadable,cleared_invalid,leigh.butler@,
+309,phone,lost_leading_zero_restored,fixed,7915871711,07915 871711
+309,category,category_wording_standardised,fixed,Bins,Waste
+309,email,email_found_in_message_text,filled_from_message,leigh.butler@,leigh.butler@example.net
+311,received_date,date_format_standardised,fixed,26/12/2025,2025-12-26
+311,phone,phone_unreadable,cleared_invalid,07461641,
+312,(whole row),blank_row,removed,,
+313,received_date,date_format_standardised,fixed,27/12/2025,2025-12-27
+313,email,email_format_standardised,fixed,RUTH.HOLMES@EXAMPLE.COM,ruth.holmes@example.com
+313,phone,lost_leading_zero_restored,fixed,1615640416,0161 564 0416
+313,status,status_format_standardised,fixed,CLOSED,Closed
+313,category,category_wording_standardised,fixed,Housing - Repairs,Housing Repairs
+313,handling_mins,units_removed,fixed,12min,12
+313,postcode,postcode_found_in_message_text,filled_from_message,,M25 2TG
+314,phone,phone_format_standardised,fixed,01615-720870,0161 572 0870
+314,postcode,postcode_format_standardised,fixed,M292PZ,M29 2PZ
+314,urgency,urgency_hidden_blank,treated_as_missing,	,
+315,received_date,date_format_standardised,fixed,27/12/2025,2025-12-27
+315,name,extra_whitespace_trimmed,fixed,  Thomas  Hammond ,Thomas Hammond
+315,phone,phone_format_standardised,fixed,07133288066,07133 288066
+315,status,status_format_standardised,fixed,Complete,Closed
+316,name,name_hidden_blank,treated_as_missing, ,
+316,phone,phone_format_standardised,fixed,+44 1619 927131,0161 992 7131
+316,email,email_found_in_message_text,filled_from_message,,rachael.kelly@example.org
+317,name,name_and_email_swapped,fixed,leanne.pugh@example.net,Leanne Pugh
+317,email,name_and_email_swapped,fixed,Leanne Pugh,leanne.pugh@example.net
+317,received_date,date_format_standardised,fixed,27/12/2025,2025-12-27
+317,postcode,postcode_placeholder,treated_as_missing,N/A,
+317,postcode,postcode_found_in_message_text,filled_from_message,N/A,M17 6BE
+318,phone,phone_placeholder,treated_as_missing,N/A,
+318,email,email_found_in_message_text,filled_from_message,,brenda.wilkinson@example.org
+318,phone,phone_found_in_message_text,filled_from_message,N/A,07524 485456
+319,received_date,date_format_standardised,fixed,28-Dec-2025,2025-12-28
+319,channel,channel_format_standardised,fixed,e-mail,Email
+319,phone,phone_format_standardised,fixed,07520481995,07520 481995
+319,status,status_format_standardised,fixed,Complete,Closed
+320,received_date,date_format_standardised,fixed,28/12/2025,2025-12-28
+321,received_date,date_format_standardised,fixed,28 December 2025,2025-12-28
+321,name,name_format_standardised,fixed,LAUREN JACKSON,Lauren Jackson
+321,phone,phone_format_standardised,fixed,07258-546768,07258 546768
+322,received_date,date_format_standardised,fixed,28/12/2025,2025-12-28
+322,status,status_format_standardised,fixed,CLOSED,Closed
+322,message,extra_whitespace_trimmed,fixed,"My boiler at 66 Juniper Crescent stopped working two days ago and we have no hot water.
+Please send an engineer.  ",My boiler at 66 Juniper Crescent stopped working two days ago and we have no hot water. Please send an engineer.
+323,received_date,date_format_standardised,fixed,28-Dec-2025,2025-12-28
+323,phone,phone_format_standardised,fixed,+447788108887,07788 108887
+324,received_date,date_format_standardised,fixed,28/12/25,2025-12-28
+324,name,name_hidden_blank,treated_as_missing, ,
+324,phone,phone_format_standardised,fixed,07178222227,07178 222227
+325,name,name_format_standardised,fixed,"Shaw, Linda",Linda Shaw
+325,urgency,urgency_format_standardised,fixed,Urgent,High
+325,status,status_format_standardised,fixed,closed,Closed
+325,category,category_wording_standardised,fixed,Housing - Repairs,Housing Repairs
+326,received_date,date_format_standardised,fixed,29/12/2025,2025-12-29
+326,channel,channel_format_standardised,fixed,web form,Web form
+326,phone,phone_format_standardised,fixed,+447339178315,07339 178315
+326,status,status_format_standardised,fixed,CLOSED,Closed
+326,category,category_wording_standardised,fixed,Complaint,Complaints
+326,handling_mins,units_removed,fixed,15 mins,15
+327,received_date,date_format_standardised,fixed,29/12/2025,2025-12-29
+327,channel,channel_format_standardised,fixed,email,Email
+327,status,status_hidden_blank,treated_as_missing,	,
+327,phone,phone_found_in_message_text,filled_from_message,,0161 468 8245
+328,received_date,date_format_standardised,fixed,30/12/2025,2025-12-30
+328,channel,channel_format_standardised,fixed,WEB FORM,Web form
+328,email,email_placeholder,treated_as_missing,N/A,
+328,phone,phone_format_standardised,fixed,+44 7661 620465,07661 620465
+328,status,status_format_standardised,fixed,open,Open
+328,email,email_found_in_message_text,filled_from_message,N/A,oliver.ford@example.org
+329,email,email_unreadable,cleared_invalid,bethany.clayton@,
+329,phone,phone_format_standardised,fixed,+44 7420 146307,07420 146307
+329,category,category_wording_standardised,fixed,housing repairs,Housing Repairs
+330,channel,channel_format_standardised,fixed,web,Web form
+330,name,extra_whitespace_trimmed,fixed,  Thomas  Hammond ,Thomas Hammond
+330,phone,phone_format_standardised,fixed,07133288066,07133 288066
+330,postcode,extra_whitespace_trimmed,fixed, BL1 4YF ,BL1 4YF
+21,(whole row),exact_duplicate,removed,,same as raw row 10
+41,(whole row),exact_duplicate,removed,,same as raw row 31
+86,(whole row),exact_duplicate,removed,,same as raw row 75
+127,(whole row),exact_duplicate,removed,,same as raw row 109
+130,(whole row),exact_duplicate,removed,,same as raw row 112
+161,(whole row),exact_duplicate,removed,,same as raw row 148
+163,(whole row),exact_duplicate,removed,,same as raw row 139
+193,(whole row),exact_duplicate,removed,,same as raw row 191
+234,(whole row),exact_duplicate,removed,,same as raw row 221
+262,(whole row),exact_duplicate,removed,,same as raw row 248
+16,(whole row),near_duplicate,flagged,,looks like raw row 9 (similarity 1.00)
+27,(whole row),near_duplicate,flagged,,looks like raw row 22 (similarity 0.91)
+42,(whole row),near_duplicate,flagged,,looks like raw row 36 (similarity 1.00)
+156,(whole row),near_duplicate,flagged,,looks like raw row 150 (similarity 0.94)
+168,(whole row),near_duplicate,flagged,,looks like raw row 144 (similarity 1.00)
+173,(whole row),near_duplicate,flagged,,looks like raw row 149 (similarity 1.00)
+174,(whole row),near_duplicate,flagged,,looks like raw row 162 (similarity 0.92)
+195,(whole row),near_duplicate,flagged,,looks like raw row 186 (similarity 1.00)
+204,(whole row),near_duplicate,flagged,,looks like raw row 197 (similarity 1.00)
+224,(whole row),near_duplicate,flagged,,looks like raw row 215 (similarity 1.00)
+229,(whole row),near_duplicate,flagged,,looks like raw row 221 (similarity 1.00)
+330,(whole row),near_duplicate,flagged,,looks like raw row 315 (similarity 1.00)
+10,category,category_unresolved_by_rules,ai_suggested,,Waste (0.80) - needs human check
+14,category,category_unresolved_by_rules,ai_suggested,,Housing Repairs (0.80) - needs human check
+22,category,category_unresolved_by_rules,ai_suggested,,Housing Repairs (0.65) - needs human check
+24,category,category_unresolved_by_rules,ai_suggested,,Housing Repairs (0.80) - needs human check
+26,category,category_unresolved_by_rules,ai_suggested,,Noise (0.65) - needs human check
+34,category,category_unresolved_by_rules,ai_suggested,,Noise (0.65) - needs human check
+38,category,category_unresolved_by_rules,ai_suggested,,Complaints (0.65) - needs human check
+43,category,category_unresolved_by_rules,ai_suggested,,Complaints (0.65) - needs human check
+47,category,category_unresolved_by_rules,ai_suggested,,Housing Repairs (0.80) - needs human check
+65,category,category_unresolved_by_rules,ai_suggested,,Waste (0.80) - needs human check
+90,category,category_unresolved_by_rules,ai_suggested,,Waste (0.80) - needs human check
+94,category,category_unresolved_by_rules,ai_suggested,,Billing (0.65) - needs human check
+132,category,category_unresolved_by_rules,ai_suggested,,Housing Repairs (0.80) - needs human check
+138,category,category_unresolved_by_rules,ai_suggested,,Noise (0.80) - needs human check
+142,category,category_unresolved_by_rules,ai_suggested,,Billing (0.80) - needs human check
+145,category,category_unresolved_by_rules,ai_suggested,,Billing (0.80) - needs human check
+147,category,category_unresolved_by_rules,ai_suggested,,Safety (0.65) - needs human check
+148,category,category_unresolved_by_rules,ai_suggested,,Noise (0.80) - needs human check
+155,category,category_unresolved_by_rules,ai_suggested,,Safety (0.80) - needs human check
+160,category,category_unresolved_by_rules,ai_suggested,,Billing (0.65) - needs human check
+170,category,category_unresolved_by_rules,ai_suggested,,Billing (0.65) - needs human check
+177,category,category_unresolved_by_rules,ai_suggested,,Waste (0.80) - needs human check
+182,category,category_unresolved_by_rules,ai_suggested,,Housing Repairs (0.65) - needs human check
+184,category,category_unresolved_by_rules,ai_suggested,,Housing Repairs (0.80) - needs human check
+200,category,category_unresolved_by_rules,ai_suggested,,Housing Repairs (0.80) - needs human check
+213,category,category_unresolved_by_rules,ai_suggested,,Housing Repairs (0.80) - needs human check
+220,category,category_unresolved_by_rules,ai_suggested,,Housing Repairs (0.65) - needs human check
+224,category,category_unresolved_by_rules,ai_suggested,,Waste (0.65) - needs human check
+236,category,category_unresolved_by_rules,ai_suggested,,Complaints (0.80) - needs human check
+243,category,category_unresolved_by_rules,ai_suggested,,Complaints (0.65) - needs human check
+264,category,category_unresolved_by_rules,ai_suggested,,Housing Repairs (0.65) - needs human check
+267,category,category_unresolved_by_rules,ai_suggested,,Complaints (0.65) - needs human check
+272,category,category_unresolved_by_rules,ai_suggested,,Noise (0.65) - needs human check
+279,category,category_unresolved_by_rules,ai_suggested,,Billing (0.65) - needs human check
+283,category,category_unresolved_by_rules,ai_suggested,,Safety (0.80) - needs human check
+294,category,category_unresolved_by_rules,ai_suggested,,Complaints (0.80) - needs human check
+296,category,category_unresolved_by_rules,ai_suggested,,Waste (0.80) - needs human check
+297,category,category_unresolved_by_rules,ai_suggested,,Noise (0.80) - needs human check
+303,category,category_unresolved_by_rules,ai_suggested,,Housing Repairs (0.80) - needs human check
+311,category,category_unresolved_by_rules,ai_suggested,,Billing (0.65) - needs human check
+319,category,category_unresolved_by_rules,ai_suggested,,Housing Repairs (0.80) - needs human check

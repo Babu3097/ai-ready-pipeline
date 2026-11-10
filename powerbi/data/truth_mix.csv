@@ -1,0 +1,18 @@
+category,urgency,n
+Billing,High,5
+Billing,Low,16
+Billing,Medium,27
+Complaints,High,13
+Complaints,Low,12
+Complaints,Medium,12
+Housing Repairs,High,25
+Housing Repairs,Low,30
+Housing Repairs,Medium,24
+Noise,High,7
+Noise,Low,12
+Noise,Medium,29
+Safety,High,23
+Safety,Medium,7
+Waste,High,13
+Waste,Low,18
+Waste,Medium,27

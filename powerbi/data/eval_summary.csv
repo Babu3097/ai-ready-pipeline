@@ -1,0 +1,17 @@
+metric,value,unit,note
+Enquiries scored,300.0,count,Original enquiries only
+Category accuracy,97.0,%,AI category = true category
+Urgency accuracy,99.0,%,AI urgency = true urgency
+Truly urgent enquiries,86.0,count,True urgency = High
+Urgent missed by AI,2.0,count,AI did not say High (includes blank messages it could not read)
+Urgent missed AND not sent to a person,0.0,count,The dangerous kind
+Sent to human review,185.0,count,"Low confidence, High urgency or Safety"
+Review rate,61.7,%,Share of enquiries needing a person
+Accuracy after human review,100.0,%,SIMULATED reviewer - best case
+Manual triage time,20.0,hours,4.0 min per enquiry (assumed)
+Time with AI + human review,7.1,hours,"0.5 min skim, 2.0 min review (assumed)"
+Time saved,12.9,hours,Over the scored enquiries
+Time saved %,64.4,%,"Triage time only, not fixing the problem"
+Staff cost saved,231.75,GBP,"At £18.0/hour (assumed), after AI cost"
+AI cost,0.0,GBP,Demo mode = 0; real Claude cost is estimated from assumed token prices
+"Hours saved per 10,000 enquiries",429.0,hours,Straight scaling - illustrative only

@@ -1,0 +1,899 @@
+id,ts,raw_row,actor,action,detail
+1,2026-11-10 09:19:17,,system,database_loaded,"312 enquiries, 1396 log lines"
+2,2026-11-10 09:20:13,1.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+3,2026-11-10 09:20:13,1.0,system,queued_for_review,"low confidence, high urgency"
+4,2026-11-10 09:20:13,2.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.67; mode=demo
+5,2026-11-10 09:20:13,2.0,system,queued_for_review,low confidence
+6,2026-11-10 09:20:13,3.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+7,2026-11-10 09:20:13,4.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+8,2026-11-10 09:20:13,5.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.67; mode=demo
+9,2026-11-10 09:20:13,5.0,system,queued_for_review,low confidence
+10,2026-11-10 09:20:13,6.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+11,2026-11-10 09:20:13,6.0,system,queued_for_review,low confidence
+12,2026-11-10 09:20:13,7.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+13,2026-11-10 09:20:13,7.0,system,queued_for_review,"low confidence, high urgency"
+14,2026-11-10 09:20:13,8.0,ai,triaged,category=Complaints; urgency=Low; confidence=0.67; mode=demo
+15,2026-11-10 09:20:13,8.0,system,queued_for_review,low confidence
+16,2026-11-10 09:20:13,9.0,ai,triaged,category=Safety; urgency=High; confidence=0.67; mode=demo
+17,2026-11-10 09:20:13,9.0,system,queued_for_review,"low confidence, high urgency, safety issue"
+18,2026-11-10 09:20:13,10.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+19,2026-11-10 09:20:13,11.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.52; mode=demo
+20,2026-11-10 09:20:13,11.0,system,queued_for_review,low confidence
+21,2026-11-10 09:20:13,12.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+22,2026-11-10 09:20:13,12.0,system,queued_for_review,low confidence
+23,2026-11-10 09:20:13,13.0,ai,triaged,category=Billing; urgency=Low; confidence=0.79; mode=demo
+24,2026-11-10 09:20:13,14.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.79; mode=demo
+25,2026-11-10 09:20:13,15.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.79; mode=demo
+26,2026-11-10 09:20:13,16.0,ai,triaged,category=Safety; urgency=High; confidence=0.67; mode=demo
+27,2026-11-10 09:20:13,16.0,system,queued_for_review,"low confidence, high urgency, safety issue"
+28,2026-11-10 09:20:13,17.0,ai,triaged,category=Complaints; urgency=High; confidence=0.79; mode=demo
+29,2026-11-10 09:20:13,17.0,system,queued_for_review,high urgency
+30,2026-11-10 09:20:13,18.0,ai,triaged,category=Safety; urgency=High; confidence=0.79; mode=demo
+31,2026-11-10 09:20:13,18.0,system,queued_for_review,"high urgency, safety issue"
+32,2026-11-10 09:20:13,19.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+33,2026-11-10 09:20:13,19.0,system,queued_for_review,"low confidence, high urgency"
+34,2026-11-10 09:20:13,20.0,ai,triaged,category=Waste; urgency=High; confidence=0.79; mode=demo
+35,2026-11-10 09:20:13,20.0,system,queued_for_review,high urgency
+36,2026-11-10 09:20:13,22.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.52; mode=demo
+37,2026-11-10 09:20:13,22.0,system,queued_for_review,low confidence
+38,2026-11-10 09:20:13,23.0,ai,triaged,category=Complaints; urgency=Low; confidence=0.67; mode=demo
+39,2026-11-10 09:20:13,23.0,system,queued_for_review,low confidence
+40,2026-11-10 09:20:13,24.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.79; mode=demo
+41,2026-11-10 09:20:13,24.0,system,queued_for_review,high urgency
+42,2026-11-10 09:20:13,26.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+43,2026-11-10 09:20:13,26.0,system,queued_for_review,low confidence
+44,2026-11-10 09:20:13,27.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.52; mode=demo
+45,2026-11-10 09:20:13,27.0,system,queued_for_review,low confidence
+46,2026-11-10 09:20:13,28.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+47,2026-11-10 09:20:13,29.0,ai,triage_failed,empty message
+48,2026-11-10 09:20:13,29.0,system,queued_for_review,triage failed
+49,2026-11-10 09:20:13,30.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+50,2026-11-10 09:20:13,31.0,ai,triaged,category=Complaints; urgency=High; confidence=0.79; mode=demo
+51,2026-11-10 09:20:13,31.0,system,queued_for_review,high urgency
+52,2026-11-10 09:20:13,32.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+53,2026-11-10 09:20:13,33.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+54,2026-11-10 09:20:13,33.0,system,queued_for_review,low confidence
+55,2026-11-10 09:20:13,34.0,ai,triaged,category=Noise; urgency=High; confidence=0.67; mode=demo
+56,2026-11-10 09:20:13,34.0,system,queued_for_review,"low confidence, high urgency"
+57,2026-11-10 09:20:13,35.0,ai,triaged,category=Waste; urgency=High; confidence=0.79; mode=demo
+58,2026-11-10 09:20:13,35.0,system,queued_for_review,high urgency
+59,2026-11-10 09:20:13,36.0,ai,triaged,category=Safety; urgency=High; confidence=0.67; mode=demo
+60,2026-11-10 09:20:13,36.0,system,queued_for_review,"low confidence, high urgency, safety issue"
+61,2026-11-10 09:20:13,37.0,ai,triage_failed,empty message
+62,2026-11-10 09:20:13,37.0,system,queued_for_review,triage failed
+63,2026-11-10 09:20:13,38.0,ai,triaged,category=Complaints; urgency=Medium; confidence=0.67; mode=demo
+64,2026-11-10 09:20:13,38.0,system,queued_for_review,low confidence
+65,2026-11-10 09:20:13,39.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+66,2026-11-10 09:20:13,40.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.67; mode=demo
+67,2026-11-10 09:20:13,40.0,system,queued_for_review,low confidence
+68,2026-11-10 09:20:13,42.0,ai,triaged,category=Safety; urgency=High; confidence=0.67; mode=demo
+69,2026-11-10 09:20:13,42.0,system,queued_for_review,"low confidence, high urgency, safety issue"
+70,2026-11-10 09:20:13,43.0,ai,triaged,category=Complaints; urgency=Medium; confidence=0.67; mode=demo
+71,2026-11-10 09:20:13,43.0,system,queued_for_review,low confidence
+72,2026-11-10 09:20:13,44.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+73,2026-11-10 09:20:13,44.0,system,queued_for_review,low confidence
+74,2026-11-10 09:20:13,45.0,ai,triaged,category=Billing; urgency=High; confidence=0.79; mode=demo
+75,2026-11-10 09:20:13,45.0,system,queued_for_review,high urgency
+76,2026-11-10 09:20:13,46.0,ai,triaged,category=Waste; urgency=High; confidence=0.79; mode=demo
+77,2026-11-10 09:20:13,46.0,system,queued_for_review,high urgency
+78,2026-11-10 09:20:13,47.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+79,2026-11-10 09:20:13,48.0,ai,triaged,category=Safety; urgency=Medium; confidence=0.79; mode=demo
+80,2026-11-10 09:20:13,48.0,system,queued_for_review,safety issue
+81,2026-11-10 09:20:13,49.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.79; mode=demo
+82,2026-11-10 09:20:13,50.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+83,2026-11-10 09:20:13,50.0,system,queued_for_review,"low confidence, high urgency"
+84,2026-11-10 09:20:13,51.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+85,2026-11-10 09:20:13,52.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+86,2026-11-10 09:20:13,52.0,system,queued_for_review,low confidence
+87,2026-11-10 09:20:13,53.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+88,2026-11-10 09:20:13,53.0,system,queued_for_review,low confidence
+89,2026-11-10 09:20:13,54.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+90,2026-11-10 09:20:13,54.0,system,queued_for_review,"low confidence, high urgency"
+91,2026-11-10 09:20:13,55.0,ai,triaged,category=Billing; urgency=High; confidence=0.79; mode=demo
+92,2026-11-10 09:20:13,55.0,system,queued_for_review,high urgency
+93,2026-11-10 09:20:13,56.0,ai,triaged,category=Billing; urgency=High; confidence=0.79; mode=demo
+94,2026-11-10 09:20:13,56.0,system,queued_for_review,high urgency
+95,2026-11-10 09:20:13,57.0,ai,triaged,category=Safety; urgency=High; confidence=0.79; mode=demo
+96,2026-11-10 09:20:13,57.0,system,queued_for_review,"high urgency, safety issue"
+97,2026-11-10 09:20:13,58.0,ai,triaged,category=Safety; urgency=High; confidence=0.79; mode=demo
+98,2026-11-10 09:20:13,58.0,system,queued_for_review,"high urgency, safety issue"
+99,2026-11-10 09:20:13,59.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.79; mode=demo
+100,2026-11-10 09:20:13,59.0,system,queued_for_review,high urgency
+101,2026-11-10 09:20:13,60.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+102,2026-11-10 09:20:13,60.0,system,queued_for_review,low confidence
+103,2026-11-10 09:20:13,61.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.67; mode=demo
+104,2026-11-10 09:20:13,61.0,system,queued_for_review,low confidence
+105,2026-11-10 09:20:13,62.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+106,2026-11-10 09:20:13,62.0,system,queued_for_review,"low confidence, high urgency"
+107,2026-11-10 09:20:13,63.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.79; mode=demo
+108,2026-11-10 09:20:13,64.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+109,2026-11-10 09:20:13,65.0,ai,triaged,category=Waste; urgency=Low; confidence=0.79; mode=demo
+110,2026-11-10 09:20:13,66.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+111,2026-11-10 09:20:13,66.0,system,queued_for_review,low confidence
+112,2026-11-10 09:20:13,67.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.91; mode=demo
+113,2026-11-10 09:20:13,68.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.79; mode=demo
+114,2026-11-10 09:20:13,69.0,ai,triaged,category=Noise; urgency=Low; confidence=0.79; mode=demo
+115,2026-11-10 09:20:13,70.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+116,2026-11-10 09:20:13,71.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.91; mode=demo
+117,2026-11-10 09:20:13,72.0,ai,triaged,category=Waste; urgency=High; confidence=0.79; mode=demo
+118,2026-11-10 09:20:13,72.0,system,queued_for_review,high urgency
+119,2026-11-10 09:20:13,73.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+120,2026-11-10 09:20:13,74.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.79; mode=demo
+121,2026-11-10 09:20:13,75.0,ai,triaged,category=Safety; urgency=Medium; confidence=0.79; mode=demo
+122,2026-11-10 09:20:13,75.0,system,queued_for_review,safety issue
+123,2026-11-10 09:20:13,76.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+124,2026-11-10 09:20:13,76.0,system,queued_for_review,low confidence
+125,2026-11-10 09:20:13,77.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+126,2026-11-10 09:20:13,78.0,ai,triaged,category=Waste; urgency=Low; confidence=0.79; mode=demo
+127,2026-11-10 09:20:13,79.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.67; mode=demo
+128,2026-11-10 09:20:13,79.0,system,queued_for_review,low confidence
+129,2026-11-10 09:20:13,80.0,ai,triaged,category=Complaints; urgency=High; confidence=0.79; mode=demo
+130,2026-11-10 09:20:13,80.0,system,queued_for_review,high urgency
+131,2026-11-10 09:20:13,81.0,ai,triaged,category=Complaints; urgency=High; confidence=0.79; mode=demo
+132,2026-11-10 09:20:13,81.0,system,queued_for_review,high urgency
+133,2026-11-10 09:20:13,82.0,ai,triaged,category=Noise; urgency=Low; confidence=0.79; mode=demo
+134,2026-11-10 09:20:13,83.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+135,2026-11-10 09:20:13,84.0,ai,triaged,category=Noise; urgency=High; confidence=0.67; mode=demo
+136,2026-11-10 09:20:13,84.0,system,queued_for_review,"low confidence, high urgency"
+137,2026-11-10 09:20:13,85.0,ai,triaged,category=Waste; urgency=Low; confidence=0.79; mode=demo
+138,2026-11-10 09:20:13,87.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+139,2026-11-10 09:20:13,87.0,system,queued_for_review,low confidence
+140,2026-11-10 09:20:13,88.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+141,2026-11-10 09:20:13,89.0,ai,triaged,category=Complaints; urgency=Low; confidence=0.67; mode=demo
+142,2026-11-10 09:20:13,89.0,system,queued_for_review,low confidence
+143,2026-11-10 09:20:13,90.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+144,2026-11-10 09:20:13,91.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.79; mode=demo
+145,2026-11-10 09:20:13,92.0,ai,triaged,category=Waste; urgency=Low; confidence=0.67; mode=demo
+146,2026-11-10 09:20:13,92.0,system,queued_for_review,low confidence
+147,2026-11-10 09:20:13,93.0,ai,triaged,category=Billing; urgency=Low; confidence=0.67; mode=demo
+148,2026-11-10 09:20:13,93.0,system,queued_for_review,low confidence
+149,2026-11-10 09:20:13,94.0,ai,triaged,category=Billing; urgency=Low; confidence=0.67; mode=demo
+150,2026-11-10 09:20:13,94.0,system,queued_for_review,low confidence
+151,2026-11-10 09:20:13,95.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.79; mode=demo
+152,2026-11-10 09:20:13,96.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.67; mode=demo
+153,2026-11-10 09:20:13,96.0,system,queued_for_review,low confidence
+154,2026-11-10 09:20:13,97.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.67; mode=demo
+155,2026-11-10 09:20:13,97.0,system,queued_for_review,low confidence
+156,2026-11-10 09:20:13,98.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.52; mode=demo
+157,2026-11-10 09:20:13,98.0,system,queued_for_review,low confidence
+158,2026-11-10 09:20:13,99.0,ai,triaged,category=Noise; urgency=High; confidence=0.67; mode=demo
+159,2026-11-10 09:20:13,99.0,system,queued_for_review,"low confidence, high urgency"
+160,2026-11-10 09:20:13,100.0,ai,triaged,category=Complaints; urgency=Low; confidence=0.67; mode=demo
+161,2026-11-10 09:20:13,100.0,system,queued_for_review,low confidence
+162,2026-11-10 09:20:13,101.0,ai,triaged,category=Waste; urgency=Low; confidence=0.79; mode=demo
+163,2026-11-10 09:20:13,102.0,ai,triaged,category=Safety; urgency=High; confidence=0.79; mode=demo
+164,2026-11-10 09:20:13,102.0,system,queued_for_review,"high urgency, safety issue"
+165,2026-11-10 09:20:13,103.0,ai,triaged,category=Billing; urgency=Low; confidence=0.67; mode=demo
+166,2026-11-10 09:20:13,103.0,system,queued_for_review,low confidence
+167,2026-11-10 09:20:13,105.0,ai,triaged,category=Waste; urgency=Low; confidence=0.67; mode=demo
+168,2026-11-10 09:20:13,105.0,system,queued_for_review,low confidence
+169,2026-11-10 09:20:13,106.0,ai,triaged,category=Billing; urgency=Low; confidence=0.79; mode=demo
+170,2026-11-10 09:20:13,107.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+171,2026-11-10 09:20:13,108.0,ai,triaged,category=Billing; urgency=High; confidence=0.79; mode=demo
+172,2026-11-10 09:20:13,108.0,system,queued_for_review,high urgency
+173,2026-11-10 09:20:13,109.0,ai,triaged,category=Noise; urgency=Low; confidence=0.79; mode=demo
+174,2026-11-10 09:20:13,110.0,ai,triaged,category=Billing; urgency=Low; confidence=0.67; mode=demo
+175,2026-11-10 09:20:13,110.0,system,queued_for_review,low confidence
+176,2026-11-10 09:20:13,111.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.79; mode=demo
+177,2026-11-10 09:20:13,112.0,ai,triaged,category=Noise; urgency=High; confidence=0.67; mode=demo
+178,2026-11-10 09:20:13,112.0,system,queued_for_review,"low confidence, high urgency"
+179,2026-11-10 09:20:13,113.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.91; mode=demo
+180,2026-11-10 09:20:13,114.0,ai,triaged,category=Noise; urgency=High; confidence=0.67; mode=demo
+181,2026-11-10 09:20:13,114.0,system,queued_for_review,"low confidence, high urgency"
+182,2026-11-10 09:20:13,115.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.67; mode=demo
+183,2026-11-10 09:20:13,115.0,system,queued_for_review,low confidence
+184,2026-11-10 09:20:13,116.0,ai,triaged,category=Billing; urgency=Low; confidence=0.79; mode=demo
+185,2026-11-10 09:20:13,117.0,ai,triaged,category=Billing; urgency=Low; confidence=0.79; mode=demo
+186,2026-11-10 09:20:13,118.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.91; mode=demo
+187,2026-11-10 09:20:13,119.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.67; mode=demo
+188,2026-11-10 09:20:13,119.0,system,queued_for_review,low confidence
+189,2026-11-10 09:20:13,120.0,ai,triaged,category=Waste; urgency=Low; confidence=0.67; mode=demo
+190,2026-11-10 09:20:13,120.0,system,queued_for_review,low confidence
+191,2026-11-10 09:20:13,121.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+192,2026-11-10 09:20:13,122.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.67; mode=demo
+193,2026-11-10 09:20:13,122.0,system,queued_for_review,low confidence
+194,2026-11-10 09:20:13,123.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.79; mode=demo
+195,2026-11-10 09:20:13,124.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.67; mode=demo
+196,2026-11-10 09:20:13,124.0,system,queued_for_review,low confidence
+197,2026-11-10 09:20:13,125.0,ai,triaged,category=Billing; urgency=Low; confidence=0.79; mode=demo
+198,2026-11-10 09:20:13,126.0,ai,triaged,category=Billing; urgency=Low; confidence=0.67; mode=demo
+199,2026-11-10 09:20:13,126.0,system,queued_for_review,low confidence
+200,2026-11-10 09:20:13,128.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.91; mode=demo
+201,2026-11-10 09:20:13,129.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.91; mode=demo
+202,2026-11-10 09:20:13,131.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.79; mode=demo
+203,2026-11-10 09:20:13,131.0,system,queued_for_review,high urgency
+204,2026-11-10 09:20:13,132.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+205,2026-11-10 09:20:13,133.0,ai,triaged,category=Complaints; urgency=High; confidence=0.79; mode=demo
+206,2026-11-10 09:20:13,133.0,system,queued_for_review,high urgency
+207,2026-11-10 09:20:13,134.0,ai,triaged,category=Complaints; urgency=High; confidence=0.79; mode=demo
+208,2026-11-10 09:20:13,134.0,system,queued_for_review,high urgency
+209,2026-11-10 09:20:13,135.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+210,2026-11-10 09:20:13,135.0,system,queued_for_review,"low confidence, high urgency"
+211,2026-11-10 09:20:13,136.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+212,2026-11-10 09:20:13,137.0,ai,triaged,category=Safety; urgency=Medium; confidence=0.67; mode=demo
+213,2026-11-10 09:20:13,137.0,system,queued_for_review,"low confidence, safety issue"
+214,2026-11-10 09:20:13,138.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.79; mode=demo
+215,2026-11-10 09:20:13,139.0,ai,triaged,category=Waste; urgency=Low; confidence=0.67; mode=demo
+216,2026-11-10 09:20:13,139.0,system,queued_for_review,low confidence
+217,2026-11-10 09:20:13,140.0,ai,triaged,category=Billing; urgency=Low; confidence=0.79; mode=demo
+218,2026-11-10 09:20:13,141.0,ai,triaged,category=Safety; urgency=Medium; confidence=0.67; mode=demo
+219,2026-11-10 09:20:13,141.0,system,queued_for_review,"low confidence, safety issue"
+220,2026-11-10 09:20:13,142.0,ai,triaged,category=Billing; urgency=High; confidence=0.79; mode=demo
+221,2026-11-10 09:20:13,142.0,system,queued_for_review,high urgency
+222,2026-11-10 09:20:13,143.0,ai,triaged,category=Safety; urgency=High; confidence=0.79; mode=demo
+223,2026-11-10 09:20:13,143.0,system,queued_for_review,"high urgency, safety issue"
+224,2026-11-10 09:20:13,144.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.67; mode=demo
+225,2026-11-10 09:20:13,144.0,system,queued_for_review,low confidence
+226,2026-11-10 09:20:13,145.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.79; mode=demo
+227,2026-11-10 09:20:13,146.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.79; mode=demo
+228,2026-11-10 09:20:13,147.0,ai,triaged,category=Safety; urgency=High; confidence=0.67; mode=demo
+229,2026-11-10 09:20:13,147.0,system,queued_for_review,"low confidence, high urgency, safety issue"
+230,2026-11-10 09:20:13,148.0,ai,triaged,category=Noise; urgency=Low; confidence=0.79; mode=demo
+231,2026-11-10 09:20:13,149.0,ai,triaged,category=Complaints; urgency=Low; confidence=0.67; mode=demo
+232,2026-11-10 09:20:13,149.0,system,queued_for_review,low confidence
+233,2026-11-10 09:20:13,150.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.67; mode=demo
+234,2026-11-10 09:20:13,150.0,system,queued_for_review,low confidence
+235,2026-11-10 09:20:13,151.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+236,2026-11-10 09:20:13,151.0,system,queued_for_review,"low confidence, high urgency"
+237,2026-11-10 09:20:13,152.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+238,2026-11-10 09:20:13,153.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+239,2026-11-10 09:20:13,154.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.91; mode=demo
+240,2026-11-10 09:20:13,155.0,ai,triaged,category=Safety; urgency=High; confidence=0.79; mode=demo
+241,2026-11-10 09:20:13,155.0,system,queued_for_review,"high urgency, safety issue"
+242,2026-11-10 09:20:13,156.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.67; mode=demo
+243,2026-11-10 09:20:13,156.0,system,queued_for_review,low confidence
+244,2026-11-10 09:20:13,157.0,ai,triaged,category=Noise; urgency=Low; confidence=0.79; mode=demo
+245,2026-11-10 09:20:13,158.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.91; mode=demo
+246,2026-11-10 09:20:13,159.0,ai,triaged,category=Noise; urgency=Low; confidence=0.79; mode=demo
+247,2026-11-10 09:20:13,160.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.67; mode=demo
+248,2026-11-10 09:20:13,160.0,system,queued_for_review,low confidence
+249,2026-11-10 09:20:13,162.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+250,2026-11-10 09:20:13,162.0,system,queued_for_review,low confidence
+251,2026-11-10 09:20:13,164.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+252,2026-11-10 09:20:13,165.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+253,2026-11-10 09:20:13,165.0,system,queued_for_review,low confidence
+254,2026-11-10 09:20:13,166.0,ai,triaged,category=Waste; urgency=High; confidence=0.79; mode=demo
+255,2026-11-10 09:20:13,166.0,system,queued_for_review,high urgency
+256,2026-11-10 09:20:13,167.0,ai,triaged,category=Safety; urgency=High; confidence=0.67; mode=demo
+257,2026-11-10 09:20:13,167.0,system,queued_for_review,"low confidence, high urgency, safety issue"
+258,2026-11-10 09:20:13,168.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.67; mode=demo
+259,2026-11-10 09:20:13,168.0,system,queued_for_review,low confidence
+260,2026-11-10 09:20:13,169.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.79; mode=demo
+261,2026-11-10 09:20:13,170.0,ai,triaged,category=Billing; urgency=Low; confidence=0.67; mode=demo
+262,2026-11-10 09:20:13,170.0,system,queued_for_review,low confidence
+263,2026-11-10 09:20:13,171.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.67; mode=demo
+264,2026-11-10 09:20:13,171.0,system,queued_for_review,low confidence
+265,2026-11-10 09:20:13,172.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.79; mode=demo
+266,2026-11-10 09:20:13,173.0,ai,triaged,category=Complaints; urgency=Low; confidence=0.67; mode=demo
+267,2026-11-10 09:20:13,173.0,system,queued_for_review,low confidence
+268,2026-11-10 09:20:13,174.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+269,2026-11-10 09:20:13,174.0,system,queued_for_review,low confidence
+270,2026-11-10 09:20:13,175.0,ai,triaged,category=Waste; urgency=Low; confidence=0.79; mode=demo
+271,2026-11-10 09:20:13,176.0,ai,triaged,category=Safety; urgency=High; confidence=0.67; mode=demo
+272,2026-11-10 09:20:13,176.0,system,queued_for_review,"low confidence, high urgency, safety issue"
+273,2026-11-10 09:20:13,177.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+274,2026-11-10 09:20:13,178.0,ai,triaged,category=Noise; urgency=Low; confidence=0.79; mode=demo
+275,2026-11-10 09:20:13,179.0,ai,triaged,category=Complaints; urgency=High; confidence=0.79; mode=demo
+276,2026-11-10 09:20:13,179.0,system,queued_for_review,high urgency
+277,2026-11-10 09:20:13,180.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.67; mode=demo
+278,2026-11-10 09:20:13,180.0,system,queued_for_review,low confidence
+279,2026-11-10 09:20:13,181.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.67; mode=demo
+280,2026-11-10 09:20:13,181.0,system,queued_for_review,low confidence
+281,2026-11-10 09:20:13,182.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.67; mode=demo
+282,2026-11-10 09:20:13,182.0,system,queued_for_review,low confidence
+283,2026-11-10 09:20:13,183.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.91; mode=demo
+284,2026-11-10 09:20:13,184.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+285,2026-11-10 09:20:13,185.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.52; mode=demo
+286,2026-11-10 09:20:13,185.0,system,queued_for_review,low confidence
+287,2026-11-10 09:20:13,186.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+288,2026-11-10 09:20:13,186.0,system,queued_for_review,low confidence
+289,2026-11-10 09:20:13,187.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+290,2026-11-10 09:20:13,188.0,ai,triaged,category=Safety; urgency=High; confidence=0.67; mode=demo
+291,2026-11-10 09:20:13,188.0,system,queued_for_review,"low confidence, high urgency, safety issue"
+292,2026-11-10 09:20:13,189.0,ai,triaged,category=Safety; urgency=High; confidence=0.67; mode=demo
+293,2026-11-10 09:20:13,189.0,system,queued_for_review,"low confidence, high urgency, safety issue"
+294,2026-11-10 09:20:13,190.0,ai,triaged,category=Billing; urgency=Low; confidence=0.67; mode=demo
+295,2026-11-10 09:20:13,190.0,system,queued_for_review,low confidence
+296,2026-11-10 09:20:13,191.0,ai,triaged,category=Complaints; urgency=High; confidence=0.79; mode=demo
+297,2026-11-10 09:20:13,191.0,system,queued_for_review,high urgency
+298,2026-11-10 09:20:13,194.0,ai,triaged,category=Complaints; urgency=High; confidence=0.79; mode=demo
+299,2026-11-10 09:20:13,194.0,system,queued_for_review,high urgency
+300,2026-11-10 09:20:13,195.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+301,2026-11-10 09:20:13,195.0,system,queued_for_review,low confidence
+302,2026-11-10 09:20:13,196.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+303,2026-11-10 09:20:13,196.0,system,queued_for_review,"low confidence, high urgency"
+304,2026-11-10 09:20:13,197.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.79; mode=demo
+305,2026-11-10 09:20:13,198.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+306,2026-11-10 09:20:13,198.0,system,queued_for_review,low confidence
+307,2026-11-10 09:20:13,199.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+308,2026-11-10 09:20:13,199.0,system,queued_for_review,low confidence
+309,2026-11-10 09:20:13,200.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+310,2026-11-10 09:20:13,201.0,ai,triaged,category=Waste; urgency=Low; confidence=0.67; mode=demo
+311,2026-11-10 09:20:13,201.0,system,queued_for_review,low confidence
+312,2026-11-10 09:20:13,202.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+313,2026-11-10 09:20:13,203.0,ai,triaged,category=Safety; urgency=High; confidence=0.79; mode=demo
+314,2026-11-10 09:20:13,203.0,system,queued_for_review,"high urgency, safety issue"
+315,2026-11-10 09:20:13,204.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.79; mode=demo
+316,2026-11-10 09:20:13,205.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.79; mode=demo
+317,2026-11-10 09:20:13,206.0,ai,triaged,category=Complaints; urgency=Low; confidence=0.67; mode=demo
+318,2026-11-10 09:20:13,206.0,system,queued_for_review,low confidence
+319,2026-11-10 09:20:13,207.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+320,2026-11-10 09:20:13,207.0,system,queued_for_review,"low confidence, high urgency"
+321,2026-11-10 09:20:13,208.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+322,2026-11-10 09:20:13,209.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.79; mode=demo
+323,2026-11-10 09:20:13,210.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.79; mode=demo
+324,2026-11-10 09:20:13,211.0,ai,triaged,category=Billing; urgency=Low; confidence=0.79; mode=demo
+325,2026-11-10 09:20:13,212.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.91; mode=demo
+326,2026-11-10 09:20:13,213.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+327,2026-11-10 09:20:13,214.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.67; mode=demo
+328,2026-11-10 09:20:13,214.0,system,queued_for_review,low confidence
+329,2026-11-10 09:20:13,215.0,ai,triaged,category=Waste; urgency=Low; confidence=0.67; mode=demo
+330,2026-11-10 09:20:13,215.0,system,queued_for_review,low confidence
+331,2026-11-10 09:20:13,216.0,ai,triaged,category=Safety; urgency=High; confidence=0.67; mode=demo
+332,2026-11-10 09:20:13,216.0,system,queued_for_review,"low confidence, high urgency, safety issue"
+333,2026-11-10 09:20:13,217.0,ai,triaged,category=Waste; urgency=Low; confidence=0.67; mode=demo
+334,2026-11-10 09:20:13,217.0,system,queued_for_review,low confidence
+335,2026-11-10 09:20:13,218.0,ai,triaged,category=Waste; urgency=High; confidence=0.79; mode=demo
+336,2026-11-10 09:20:13,218.0,system,queued_for_review,high urgency
+337,2026-11-10 09:20:13,219.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.79; mode=demo
+338,2026-11-10 09:20:13,219.0,system,queued_for_review,high urgency
+339,2026-11-10 09:20:13,220.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.67; mode=demo
+340,2026-11-10 09:20:13,220.0,system,queued_for_review,low confidence
+341,2026-11-10 09:20:13,221.0,ai,triaged,category=Waste; urgency=High; confidence=0.79; mode=demo
+342,2026-11-10 09:20:13,221.0,system,queued_for_review,high urgency
+343,2026-11-10 09:20:13,222.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+344,2026-11-10 09:20:13,223.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+345,2026-11-10 09:20:13,224.0,ai,triaged,category=Waste; urgency=Low; confidence=0.67; mode=demo
+346,2026-11-10 09:20:13,224.0,system,queued_for_review,low confidence
+347,2026-11-10 09:20:13,225.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+348,2026-11-10 09:20:13,225.0,system,queued_for_review,"low confidence, high urgency"
+349,2026-11-10 09:20:13,226.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+350,2026-11-10 09:20:13,228.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+351,2026-11-10 09:20:13,229.0,ai,triaged,category=Waste; urgency=High; confidence=0.79; mode=demo
+352,2026-11-10 09:20:13,229.0,system,queued_for_review,high urgency
+353,2026-11-10 09:20:13,230.0,ai,triaged,category=Waste; urgency=Low; confidence=0.67; mode=demo
+354,2026-11-10 09:20:13,230.0,system,queued_for_review,low confidence
+355,2026-11-10 09:20:13,231.0,ai,triaged,category=Safety; urgency=High; confidence=0.67; mode=demo
+356,2026-11-10 09:20:13,231.0,system,queued_for_review,"low confidence, high urgency, safety issue"
+357,2026-11-10 09:20:13,232.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.52; mode=demo
+358,2026-11-10 09:20:13,232.0,system,queued_for_review,low confidence
+359,2026-11-10 09:20:13,233.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.67; mode=demo
+360,2026-11-10 09:20:13,233.0,system,queued_for_review,low confidence
+361,2026-11-10 09:20:13,235.0,ai,triaged,category=Safety; urgency=High; confidence=0.79; mode=demo
+362,2026-11-10 09:20:13,235.0,system,queued_for_review,"high urgency, safety issue"
+363,2026-11-10 09:20:13,236.0,ai,triaged,category=Complaints; urgency=High; confidence=0.79; mode=demo
+364,2026-11-10 09:20:13,236.0,system,queued_for_review,high urgency
+365,2026-11-10 09:20:13,237.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+366,2026-11-10 09:20:13,237.0,system,queued_for_review,low confidence
+367,2026-11-10 09:20:13,238.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+368,2026-11-10 09:20:13,239.0,ai,triaged,category=Complaints; urgency=High; confidence=0.79; mode=demo
+369,2026-11-10 09:20:13,239.0,system,queued_for_review,high urgency
+370,2026-11-10 09:20:13,240.0,ai,triaged,category=Noise; urgency=High; confidence=0.67; mode=demo
+371,2026-11-10 09:20:13,240.0,system,queued_for_review,"low confidence, high urgency"
+372,2026-11-10 09:20:13,241.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+373,2026-11-10 09:20:13,242.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.79; mode=demo
+374,2026-11-10 09:20:13,243.0,ai,triaged,category=Complaints; urgency=Low; confidence=0.67; mode=demo
+375,2026-11-10 09:20:13,243.0,system,queued_for_review,low confidence
+376,2026-11-10 09:20:13,244.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+377,2026-11-10 09:20:13,245.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+378,2026-11-10 09:20:13,245.0,system,queued_for_review,"low confidence, high urgency"
+379,2026-11-10 09:20:13,247.0,ai,triaged,category=Waste; urgency=Low; confidence=0.67; mode=demo
+380,2026-11-10 09:20:13,247.0,system,queued_for_review,low confidence
+381,2026-11-10 09:20:13,248.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.67; mode=demo
+382,2026-11-10 09:20:13,248.0,system,queued_for_review,low confidence
+383,2026-11-10 09:20:13,249.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+384,2026-11-10 09:20:13,250.0,ai,triaged,category=Waste; urgency=Low; confidence=0.67; mode=demo
+385,2026-11-10 09:20:13,250.0,system,queued_for_review,low confidence
+386,2026-11-10 09:20:13,251.0,ai,triaged,category=Safety; urgency=High; confidence=0.67; mode=demo
+387,2026-11-10 09:20:13,251.0,system,queued_for_review,"low confidence, high urgency, safety issue"
+388,2026-11-10 09:20:13,252.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.79; mode=demo
+389,2026-11-10 09:20:13,253.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+390,2026-11-10 09:20:13,254.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+391,2026-11-10 09:20:13,255.0,ai,triaged,category=Waste; urgency=High; confidence=0.79; mode=demo
+392,2026-11-10 09:20:13,255.0,system,queued_for_review,high urgency
+393,2026-11-10 09:20:13,256.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+394,2026-11-10 09:20:13,256.0,system,queued_for_review,"low confidence, high urgency"
+395,2026-11-10 09:20:13,257.0,ai,triaged,category=Safety; urgency=Medium; confidence=0.67; mode=demo
+396,2026-11-10 09:20:13,257.0,system,queued_for_review,"low confidence, safety issue"
+397,2026-11-10 09:20:13,258.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.67; mode=demo
+398,2026-11-10 09:20:13,258.0,system,queued_for_review,low confidence
+399,2026-11-10 09:20:13,259.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.67; mode=demo
+400,2026-11-10 09:20:13,259.0,system,queued_for_review,low confidence
+401,2026-11-10 09:20:13,260.0,ai,triaged,category=Safety; urgency=High; confidence=0.79; mode=demo
+402,2026-11-10 09:20:13,260.0,system,queued_for_review,"high urgency, safety issue"
+403,2026-11-10 09:20:13,261.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.79; mode=demo
+404,2026-11-10 09:20:13,263.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+405,2026-11-10 09:20:13,263.0,system,queued_for_review,"low confidence, high urgency"
+406,2026-11-10 09:20:13,264.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.67; mode=demo
+407,2026-11-10 09:20:13,264.0,system,queued_for_review,low confidence
+408,2026-11-10 09:20:13,265.0,ai,triaged,category=Waste; urgency=Low; confidence=0.67; mode=demo
+409,2026-11-10 09:20:13,265.0,system,queued_for_review,low confidence
+410,2026-11-10 09:20:13,266.0,ai,triaged,category=Noise; urgency=Low; confidence=0.79; mode=demo
+411,2026-11-10 09:20:13,267.0,ai,triaged,category=Complaints; urgency=Medium; confidence=0.67; mode=demo
+412,2026-11-10 09:20:13,267.0,system,queued_for_review,low confidence
+413,2026-11-10 09:20:13,268.0,ai,triaged,category=Complaints; urgency=Low; confidence=0.67; mode=demo
+414,2026-11-10 09:20:13,268.0,system,queued_for_review,low confidence
+415,2026-11-10 09:20:13,269.0,ai,triaged,category=Complaints; urgency=Low; confidence=0.67; mode=demo
+416,2026-11-10 09:20:13,269.0,system,queued_for_review,low confidence
+417,2026-11-10 09:20:13,270.0,ai,triaged,category=Complaints; urgency=Medium; confidence=0.67; mode=demo
+418,2026-11-10 09:20:13,270.0,system,queued_for_review,low confidence
+419,2026-11-10 09:20:13,271.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.79; mode=demo
+420,2026-11-10 09:20:13,272.0,ai,triaged,category=Noise; urgency=High; confidence=0.67; mode=demo
+421,2026-11-10 09:20:13,272.0,system,queued_for_review,"low confidence, high urgency"
+422,2026-11-10 09:20:13,273.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+423,2026-11-10 09:20:13,274.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.67; mode=demo
+424,2026-11-10 09:20:13,274.0,system,queued_for_review,low confidence
+425,2026-11-10 09:20:13,275.0,ai,triaged,category=Complaints; urgency=Low; confidence=0.67; mode=demo
+426,2026-11-10 09:20:13,275.0,system,queued_for_review,low confidence
+427,2026-11-10 09:20:13,276.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+428,2026-11-10 09:20:13,276.0,system,queued_for_review,"low confidence, high urgency"
+429,2026-11-10 09:20:13,277.0,ai,triaged,category=Safety; urgency=High; confidence=0.79; mode=demo
+430,2026-11-10 09:20:13,277.0,system,queued_for_review,"high urgency, safety issue"
+431,2026-11-10 09:20:13,278.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+432,2026-11-10 09:20:13,279.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.67; mode=demo
+433,2026-11-10 09:20:13,279.0,system,queued_for_review,low confidence
+434,2026-11-10 09:20:13,281.0,ai,triaged,category=Safety; urgency=Medium; confidence=0.67; mode=demo
+435,2026-11-10 09:20:13,281.0,system,queued_for_review,"low confidence, safety issue"
+436,2026-11-10 09:20:13,282.0,ai,triaged,category=Complaints; urgency=Low; confidence=0.67; mode=demo
+437,2026-11-10 09:20:13,282.0,system,queued_for_review,low confidence
+438,2026-11-10 09:20:13,283.0,ai,triaged,category=Safety; urgency=Medium; confidence=0.79; mode=demo
+439,2026-11-10 09:20:13,283.0,system,queued_for_review,safety issue
+440,2026-11-10 09:20:13,284.0,ai,triage_failed,empty message
+441,2026-11-10 09:20:13,284.0,system,queued_for_review,triage failed
+442,2026-11-10 09:20:13,285.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+443,2026-11-10 09:20:13,286.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.79; mode=demo
+444,2026-11-10 09:20:13,286.0,system,queued_for_review,high urgency
+445,2026-11-10 09:20:13,287.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.79; mode=demo
+446,2026-11-10 09:20:13,288.0,ai,triaged,category=Complaints; urgency=Low; confidence=0.67; mode=demo
+447,2026-11-10 09:20:13,288.0,system,queued_for_review,low confidence
+448,2026-11-10 09:20:13,290.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.79; mode=demo
+449,2026-11-10 09:20:13,291.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+450,2026-11-10 09:20:13,292.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+451,2026-11-10 09:20:13,292.0,system,queued_for_review,"low confidence, high urgency"
+452,2026-11-10 09:20:13,293.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+453,2026-11-10 09:20:13,294.0,ai,triaged,category=Complaints; urgency=High; confidence=0.79; mode=demo
+454,2026-11-10 09:20:13,294.0,system,queued_for_review,high urgency
+455,2026-11-10 09:20:13,295.0,ai,triaged,category=Safety; urgency=High; confidence=0.79; mode=demo
+456,2026-11-10 09:20:13,295.0,system,queued_for_review,"high urgency, safety issue"
+457,2026-11-10 09:20:13,296.0,ai,triaged,category=Waste; urgency=High; confidence=0.79; mode=demo
+458,2026-11-10 09:20:13,296.0,system,queued_for_review,high urgency
+459,2026-11-10 09:20:13,297.0,ai,triaged,category=Noise; urgency=Low; confidence=0.79; mode=demo
+460,2026-11-10 09:20:13,298.0,ai,triaged,category=Noise; urgency=Low; confidence=0.79; mode=demo
+461,2026-11-10 09:20:13,299.0,ai,triaged,category=Safety; urgency=High; confidence=0.67; mode=demo
+462,2026-11-10 09:20:13,299.0,system,queued_for_review,"low confidence, high urgency, safety issue"
+463,2026-11-10 09:20:13,300.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+464,2026-11-10 09:20:13,300.0,system,queued_for_review,low confidence
+465,2026-11-10 09:20:13,301.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+466,2026-11-10 09:20:13,302.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+467,2026-11-10 09:20:13,303.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.79; mode=demo
+468,2026-11-10 09:20:13,303.0,system,queued_for_review,high urgency
+469,2026-11-10 09:20:13,304.0,ai,triaged,category=Billing; urgency=Low; confidence=0.79; mode=demo
+470,2026-11-10 09:20:13,305.0,ai,triaged,category=Noise; urgency=Low; confidence=0.79; mode=demo
+471,2026-11-10 09:20:13,306.0,ai,triaged,category=Waste; urgency=High; confidence=0.79; mode=demo
+472,2026-11-10 09:20:13,306.0,system,queued_for_review,high urgency
+473,2026-11-10 09:20:13,307.0,ai,triaged,category=Waste; urgency=High; confidence=0.79; mode=demo
+474,2026-11-10 09:20:13,307.0,system,queued_for_review,high urgency
+475,2026-11-10 09:20:13,308.0,ai,triaged,category=Noise; urgency=Low; confidence=0.79; mode=demo
+476,2026-11-10 09:20:13,309.0,ai,triaged,category=Waste; urgency=Medium; confidence=0.79; mode=demo
+477,2026-11-10 09:20:13,310.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.79; mode=demo
+478,2026-11-10 09:20:13,311.0,ai,triaged,category=Billing; urgency=Low; confidence=0.67; mode=demo
+479,2026-11-10 09:20:13,311.0,system,queued_for_review,low confidence
+480,2026-11-10 09:20:13,313.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.79; mode=demo
+481,2026-11-10 09:20:13,313.0,system,queued_for_review,high urgency
+482,2026-11-10 09:20:13,314.0,ai,triaged,category=Complaints; urgency=Medium; confidence=0.67; mode=demo
+483,2026-11-10 09:20:13,314.0,system,queued_for_review,low confidence
+484,2026-11-10 09:20:13,315.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+485,2026-11-10 09:20:13,316.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+486,2026-11-10 09:20:13,317.0,ai,triaged,category=Waste; urgency=Low; confidence=0.67; mode=demo
+487,2026-11-10 09:20:13,317.0,system,queued_for_review,low confidence
+488,2026-11-10 09:20:13,318.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+489,2026-11-10 09:20:13,319.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+490,2026-11-10 09:20:13,320.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.52; mode=demo
+491,2026-11-10 09:20:13,320.0,system,queued_for_review,low confidence
+492,2026-11-10 09:20:13,321.0,ai,triaged,category=Noise; urgency=Medium; confidence=0.67; mode=demo
+493,2026-11-10 09:20:13,321.0,system,queued_for_review,low confidence
+494,2026-11-10 09:20:13,322.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.79; mode=demo
+495,2026-11-10 09:20:13,323.0,ai,triaged,category=Waste; urgency=High; confidence=0.79; mode=demo
+496,2026-11-10 09:20:13,323.0,system,queued_for_review,high urgency
+497,2026-11-10 09:20:13,324.0,ai,triaged,category=Complaints; urgency=High; confidence=0.79; mode=demo
+498,2026-11-10 09:20:13,324.0,system,queued_for_review,high urgency
+499,2026-11-10 09:20:13,325.0,ai,triaged,category=Housing Repairs; urgency=High; confidence=0.67; mode=demo
+500,2026-11-10 09:20:13,325.0,system,queued_for_review,"low confidence, high urgency"
+501,2026-11-10 09:20:13,326.0,ai,triaged,category=Complaints; urgency=Medium; confidence=0.67; mode=demo
+502,2026-11-10 09:20:13,326.0,system,queued_for_review,low confidence
+503,2026-11-10 09:20:13,327.0,ai,triaged,category=Billing; urgency=Medium; confidence=0.67; mode=demo
+504,2026-11-10 09:20:13,327.0,system,queued_for_review,low confidence
+505,2026-11-10 09:20:13,328.0,ai,triaged,category=Safety; urgency=High; confidence=0.79; mode=demo
+506,2026-11-10 09:20:13,328.0,system,queued_for_review,"high urgency, safety issue"
+507,2026-11-10 09:20:13,329.0,ai,triaged,category=Housing Repairs; urgency=Medium; confidence=0.79; mode=demo
+508,2026-11-10 09:20:13,330.0,ai,triaged,category=Housing Repairs; urgency=Low; confidence=0.79; mode=demo
+514,2026-11-10 09:20:58,56.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=High; notes=
+515,2026-11-10 09:20:58,56.0,system,reply_sent,draft saved to outbox/reply_row0056.txt (demo: not emailed)
+516,2026-11-10 09:20:58,134.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=High; notes=
+517,2026-11-10 09:20:58,134.0,system,reply_sent,draft saved to outbox/reply_row0134.txt (demo: not emailed)
+518,2026-11-10 09:20:58,188.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+519,2026-11-10 09:20:58,188.0,system,reply_sent,draft saved to outbox/reply_row0188.txt (demo: not emailed)
+520,2026-11-10 09:20:58,203.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+521,2026-11-10 09:20:58,203.0,system,reply_sent,draft saved to outbox/reply_row0203.txt (demo: not emailed)
+522,2026-11-10 09:20:58,286.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+523,2026-11-10 09:20:58,286.0,system,reply_sent,draft saved to outbox/reply_row0286.txt (demo: not emailed)
+524,2026-11-10 09:20:58,1.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+525,2026-11-10 09:20:58,1.0,system,reply_sent,draft saved to outbox/reply_row0001.txt (demo: not emailed)
+526,2026-11-10 09:20:58,7.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+527,2026-11-10 09:20:58,7.0,system,reply_sent,draft saved to outbox/reply_row0007.txt (demo: not emailed)
+528,2026-11-10 09:20:58,9.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+529,2026-11-10 09:20:58,9.0,system,reply_sent,draft saved to outbox/reply_row0009.txt (demo: not emailed)
+530,2026-11-10 09:20:58,16.0,human,decision_rejected,reviewer=SIMULATED-REVIEWER; category=None; urgency=None; notes=Looks like a repeat of an earlier enquiry
+531,2026-11-10 09:20:58,16.0,system,no_reply_sent,rejected by reviewer - back to manual handling
+532,2026-11-10 09:20:58,17.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=High; notes=
+533,2026-11-10 09:20:58,17.0,system,reply_sent,draft saved to outbox/reply_row0017.txt (demo: not emailed)
+534,2026-11-10 09:20:58,18.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+535,2026-11-10 09:20:58,18.0,system,reply_sent,draft saved to outbox/reply_row0018.txt (demo: not emailed)
+536,2026-11-10 09:20:58,19.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+537,2026-11-10 09:20:58,19.0,system,reply_sent,draft saved to outbox/reply_row0019.txt (demo: not emailed)
+538,2026-11-10 09:20:58,20.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=High; notes=
+539,2026-11-10 09:20:58,20.0,system,reply_sent,draft saved to outbox/reply_row0020.txt (demo: not emailed)
+540,2026-11-10 09:20:58,24.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+541,2026-11-10 09:20:58,24.0,system,reply_sent,draft saved to outbox/reply_row0024.txt (demo: not emailed)
+542,2026-11-10 09:20:58,31.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=High; notes=
+543,2026-11-10 09:20:58,31.0,system,reply_sent,draft saved to outbox/reply_row0031.txt (demo: not emailed)
+544,2026-11-10 09:20:58,34.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=High; notes=
+545,2026-11-10 09:20:58,34.0,system,reply_sent,draft saved to outbox/reply_row0034.txt (demo: not emailed)
+546,2026-11-10 09:20:58,35.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=High; notes=
+547,2026-11-10 09:20:58,35.0,system,reply_sent,draft saved to outbox/reply_row0035.txt (demo: not emailed)
+548,2026-11-10 09:20:58,36.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+549,2026-11-10 09:20:58,36.0,system,reply_sent,draft saved to outbox/reply_row0036.txt (demo: not emailed)
+550,2026-11-10 09:20:58,42.0,human,decision_rejected,reviewer=SIMULATED-REVIEWER; category=None; urgency=None; notes=Looks like a repeat of an earlier enquiry
+551,2026-11-10 09:20:58,42.0,system,no_reply_sent,rejected by reviewer - back to manual handling
+552,2026-11-10 09:20:58,45.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=High; notes=
+553,2026-11-10 09:20:58,45.0,system,reply_sent,draft saved to outbox/reply_row0045.txt (demo: not emailed)
+554,2026-11-10 09:20:58,46.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=High; notes=
+555,2026-11-10 09:20:58,46.0,system,reply_sent,draft saved to outbox/reply_row0046.txt (demo: not emailed)
+556,2026-11-10 09:20:58,50.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+557,2026-11-10 09:20:58,50.0,system,reply_sent,draft saved to outbox/reply_row0050.txt (demo: not emailed)
+558,2026-11-10 09:20:58,54.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+559,2026-11-10 09:20:58,54.0,system,reply_sent,draft saved to outbox/reply_row0054.txt (demo: not emailed)
+560,2026-11-10 09:20:58,55.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=High; notes=
+561,2026-11-10 09:20:58,55.0,system,reply_sent,draft saved to outbox/reply_row0055.txt (demo: not emailed)
+562,2026-11-10 09:20:58,57.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+563,2026-11-10 09:20:58,57.0,system,reply_sent,draft saved to outbox/reply_row0057.txt (demo: not emailed)
+564,2026-11-10 09:20:58,58.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+565,2026-11-10 09:20:58,58.0,system,reply_sent,draft saved to outbox/reply_row0058.txt (demo: not emailed)
+566,2026-11-10 09:20:58,59.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+567,2026-11-10 09:20:58,59.0,system,reply_sent,draft saved to outbox/reply_row0059.txt (demo: not emailed)
+568,2026-11-10 09:20:58,62.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+569,2026-11-10 09:20:58,62.0,system,reply_sent,draft saved to outbox/reply_row0062.txt (demo: not emailed)
+570,2026-11-10 09:20:58,72.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=High; notes=
+571,2026-11-10 09:20:58,72.0,system,reply_sent,draft saved to outbox/reply_row0072.txt (demo: not emailed)
+572,2026-11-10 09:20:58,80.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=High; notes=
+573,2026-11-10 09:20:58,80.0,system,reply_sent,draft saved to outbox/reply_row0080.txt (demo: not emailed)
+574,2026-11-10 09:20:58,81.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=High; notes=
+575,2026-11-10 09:20:58,81.0,system,reply_sent,draft saved to outbox/reply_row0081.txt (demo: not emailed)
+576,2026-11-10 09:20:58,84.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=High; notes=
+577,2026-11-10 09:20:58,84.0,system,reply_sent,draft saved to outbox/reply_row0084.txt (demo: not emailed)
+578,2026-11-10 09:20:58,99.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=High; notes=
+579,2026-11-10 09:20:58,99.0,system,reply_sent,draft saved to outbox/reply_row0099.txt (demo: not emailed)
+580,2026-11-10 09:20:58,102.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+581,2026-11-10 09:20:58,102.0,system,reply_sent,draft saved to outbox/reply_row0102.txt (demo: not emailed)
+582,2026-11-10 09:20:58,108.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=High; notes=
+583,2026-11-10 09:20:58,108.0,system,reply_sent,draft saved to outbox/reply_row0108.txt (demo: not emailed)
+584,2026-11-10 09:20:58,112.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=High; notes=
+585,2026-11-10 09:20:58,112.0,system,reply_sent,draft saved to outbox/reply_row0112.txt (demo: not emailed)
+586,2026-11-10 09:20:58,114.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=High; notes=
+587,2026-11-10 09:20:58,114.0,system,reply_sent,draft saved to outbox/reply_row0114.txt (demo: not emailed)
+588,2026-11-10 09:20:58,131.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+589,2026-11-10 09:20:58,131.0,system,reply_sent,draft saved to outbox/reply_row0131.txt (demo: not emailed)
+590,2026-11-10 09:20:58,133.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=High; notes=
+591,2026-11-10 09:20:58,133.0,system,reply_sent,draft saved to outbox/reply_row0133.txt (demo: not emailed)
+592,2026-11-10 09:20:58,135.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+593,2026-11-10 09:20:58,135.0,system,reply_sent,draft saved to outbox/reply_row0135.txt (demo: not emailed)
+594,2026-11-10 09:20:58,142.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=High; notes=
+595,2026-11-10 09:20:58,142.0,system,reply_sent,draft saved to outbox/reply_row0142.txt (demo: not emailed)
+596,2026-11-10 09:20:58,143.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+597,2026-11-10 09:20:58,143.0,system,reply_sent,draft saved to outbox/reply_row0143.txt (demo: not emailed)
+598,2026-11-10 09:20:58,147.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+599,2026-11-10 09:20:58,147.0,system,reply_sent,draft saved to outbox/reply_row0147.txt (demo: not emailed)
+600,2026-11-10 09:20:58,151.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+601,2026-11-10 09:20:58,151.0,system,reply_sent,draft saved to outbox/reply_row0151.txt (demo: not emailed)
+602,2026-11-10 09:20:58,155.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+603,2026-11-10 09:20:58,155.0,system,reply_sent,draft saved to outbox/reply_row0155.txt (demo: not emailed)
+604,2026-11-10 09:20:58,166.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=High; notes=
+605,2026-11-10 09:20:58,166.0,system,reply_sent,draft saved to outbox/reply_row0166.txt (demo: not emailed)
+606,2026-11-10 09:20:58,167.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+607,2026-11-10 09:20:58,167.0,system,reply_sent,draft saved to outbox/reply_row0167.txt (demo: not emailed)
+608,2026-11-10 09:20:58,176.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+609,2026-11-10 09:20:58,176.0,system,reply_sent,draft saved to outbox/reply_row0176.txt (demo: not emailed)
+610,2026-11-10 09:20:58,179.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=High; notes=
+611,2026-11-10 09:20:58,179.0,system,reply_sent,draft saved to outbox/reply_row0179.txt (demo: not emailed)
+612,2026-11-10 09:20:58,189.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+613,2026-11-10 09:20:58,189.0,system,reply_sent,draft saved to outbox/reply_row0189.txt (demo: not emailed)
+614,2026-11-10 09:20:58,191.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=High; notes=
+615,2026-11-10 09:20:58,191.0,system,reply_sent,draft saved to outbox/reply_row0191.txt (demo: not emailed)
+616,2026-11-10 09:20:58,194.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=High; notes=
+617,2026-11-10 09:20:58,194.0,system,reply_sent,draft saved to outbox/reply_row0194.txt (demo: not emailed)
+618,2026-11-10 09:20:58,196.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+619,2026-11-10 09:20:58,196.0,system,reply_sent,draft saved to outbox/reply_row0196.txt (demo: not emailed)
+620,2026-11-10 09:20:58,207.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+621,2026-11-10 09:20:58,207.0,system,reply_sent,draft saved to outbox/reply_row0207.txt (demo: not emailed)
+622,2026-11-10 09:20:58,216.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+623,2026-11-10 09:20:58,216.0,system,reply_sent,draft saved to outbox/reply_row0216.txt (demo: not emailed)
+624,2026-11-10 09:20:58,218.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=High; notes=
+625,2026-11-10 09:20:58,218.0,system,reply_sent,draft saved to outbox/reply_row0218.txt (demo: not emailed)
+626,2026-11-10 09:20:58,219.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+627,2026-11-10 09:20:58,219.0,system,reply_sent,draft saved to outbox/reply_row0219.txt (demo: not emailed)
+628,2026-11-10 09:20:58,221.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=High; notes=
+629,2026-11-10 09:20:58,221.0,system,reply_sent,draft saved to outbox/reply_row0221.txt (demo: not emailed)
+630,2026-11-10 09:20:58,225.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+631,2026-11-10 09:20:58,225.0,system,reply_sent,draft saved to outbox/reply_row0225.txt (demo: not emailed)
+632,2026-11-10 09:20:58,229.0,human,decision_rejected,reviewer=SIMULATED-REVIEWER; category=None; urgency=None; notes=Looks like a repeat of an earlier enquiry
+633,2026-11-10 09:20:58,229.0,system,no_reply_sent,rejected by reviewer - back to manual handling
+634,2026-11-10 09:20:58,231.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+635,2026-11-10 09:20:58,231.0,system,reply_sent,draft saved to outbox/reply_row0231.txt (demo: not emailed)
+636,2026-11-10 09:20:58,235.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+637,2026-11-10 09:20:58,235.0,system,reply_sent,draft saved to outbox/reply_row0235.txt (demo: not emailed)
+638,2026-11-10 09:20:58,236.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=High; notes=
+639,2026-11-10 09:20:58,236.0,system,reply_sent,draft saved to outbox/reply_row0236.txt (demo: not emailed)
+640,2026-11-10 09:20:58,239.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=High; notes=
+641,2026-11-10 09:20:58,239.0,system,reply_sent,draft saved to outbox/reply_row0239.txt (demo: not emailed)
+642,2026-11-10 09:20:58,240.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=High; notes=
+643,2026-11-10 09:20:58,240.0,system,reply_sent,draft saved to outbox/reply_row0240.txt (demo: not emailed)
+644,2026-11-10 09:20:58,245.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+645,2026-11-10 09:20:58,245.0,system,reply_sent,draft saved to outbox/reply_row0245.txt (demo: not emailed)
+646,2026-11-10 09:20:58,251.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+647,2026-11-10 09:20:58,251.0,system,reply_sent,draft saved to outbox/reply_row0251.txt (demo: not emailed)
+648,2026-11-10 09:20:58,255.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=High; notes=
+649,2026-11-10 09:20:58,255.0,system,reply_sent,draft saved to outbox/reply_row0255.txt (demo: not emailed)
+650,2026-11-10 09:20:58,256.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+651,2026-11-10 09:20:58,256.0,system,reply_sent,draft saved to outbox/reply_row0256.txt (demo: not emailed)
+652,2026-11-10 09:20:58,260.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+653,2026-11-10 09:20:58,260.0,system,reply_sent,draft saved to outbox/reply_row0260.txt (demo: not emailed)
+654,2026-11-10 09:20:58,263.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+655,2026-11-10 09:20:58,263.0,system,reply_sent,draft saved to outbox/reply_row0263.txt (demo: not emailed)
+656,2026-11-10 09:20:58,272.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=High; notes=
+657,2026-11-10 09:20:58,272.0,system,reply_sent,draft saved to outbox/reply_row0272.txt (demo: not emailed)
+658,2026-11-10 09:20:58,276.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+659,2026-11-10 09:20:58,276.0,system,reply_sent,draft saved to outbox/reply_row0276.txt (demo: not emailed)
+660,2026-11-10 09:20:58,277.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+661,2026-11-10 09:20:58,277.0,system,reply_sent,draft saved to outbox/reply_row0277.txt (demo: not emailed)
+662,2026-11-10 09:20:58,292.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+663,2026-11-10 09:20:58,292.0,system,reply_sent,draft saved to outbox/reply_row0292.txt (demo: not emailed)
+664,2026-11-10 09:20:58,294.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=High; notes=
+665,2026-11-10 09:20:58,294.0,system,reply_sent,draft saved to outbox/reply_row0294.txt (demo: not emailed)
+666,2026-11-10 09:20:58,295.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+667,2026-11-10 09:20:58,295.0,system,reply_sent,draft saved to outbox/reply_row0295.txt (demo: not emailed)
+668,2026-11-10 09:20:58,296.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=High; notes=
+669,2026-11-10 09:20:58,296.0,system,reply_sent,draft saved to outbox/reply_row0296.txt (demo: not emailed)
+670,2026-11-10 09:20:58,299.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+671,2026-11-10 09:20:58,299.0,system,reply_sent,draft saved to outbox/reply_row0299.txt (demo: not emailed)
+672,2026-11-10 09:20:58,303.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+673,2026-11-10 09:20:58,303.0,system,reply_sent,draft saved to outbox/reply_row0303.txt (demo: not emailed)
+674,2026-11-10 09:20:58,306.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=High; notes=
+675,2026-11-10 09:20:58,306.0,system,reply_sent,draft saved to outbox/reply_row0306.txt (demo: not emailed)
+676,2026-11-10 09:20:58,307.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=High; notes=
+677,2026-11-10 09:20:58,307.0,system,reply_sent,draft saved to outbox/reply_row0307.txt (demo: not emailed)
+678,2026-11-10 09:20:58,313.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+679,2026-11-10 09:20:58,313.0,system,reply_sent,draft saved to outbox/reply_row0313.txt (demo: not emailed)
+680,2026-11-10 09:20:58,323.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=High; notes=
+681,2026-11-10 09:20:58,323.0,system,reply_sent,draft saved to outbox/reply_row0323.txt (demo: not emailed)
+682,2026-11-10 09:20:58,324.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=High; notes=
+683,2026-11-10 09:20:58,324.0,system,reply_sent,draft saved to outbox/reply_row0324.txt (demo: not emailed)
+684,2026-11-10 09:20:58,325.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=
+685,2026-11-10 09:20:58,325.0,system,reply_sent,draft saved to outbox/reply_row0325.txt (demo: not emailed)
+686,2026-11-10 09:20:58,328.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=High; notes=
+687,2026-11-10 09:20:58,328.0,system,reply_sent,draft saved to outbox/reply_row0328.txt (demo: not emailed)
+688,2026-11-10 09:20:58,5.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=Medium; notes=
+689,2026-11-10 09:20:58,5.0,system,reply_sent,draft saved to outbox/reply_row0005.txt (demo: not emailed)
+690,2026-11-10 09:20:58,38.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Medium; notes=
+691,2026-11-10 09:20:58,38.0,system,reply_sent,draft saved to outbox/reply_row0038.txt (demo: not emailed)
+692,2026-11-10 09:20:58,87.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+693,2026-11-10 09:20:58,87.0,system,reply_sent,draft saved to outbox/reply_row0087.txt (demo: not emailed)
+694,2026-11-10 09:20:58,214.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Medium; notes=
+695,2026-11-10 09:20:58,214.0,system,reply_sent,draft saved to outbox/reply_row0214.txt (demo: not emailed)
+696,2026-11-10 09:20:58,270.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Medium; notes=
+697,2026-11-10 09:20:58,270.0,system,reply_sent,draft saved to outbox/reply_row0270.txt (demo: not emailed)
+698,2026-11-10 09:20:58,2.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Medium; notes=
+699,2026-11-10 09:20:58,2.0,system,reply_sent,draft saved to outbox/reply_row0002.txt (demo: not emailed)
+700,2026-11-10 09:20:58,6.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+701,2026-11-10 09:20:58,6.0,system,reply_sent,draft saved to outbox/reply_row0006.txt (demo: not emailed)
+702,2026-11-10 09:20:58,11.0,human,decision_edited,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Medium; notes=Corrected AI category/urgency
+703,2026-11-10 09:20:58,11.0,system,reply_sent,draft saved to outbox/reply_row0011.txt (demo: not emailed)
+704,2026-11-10 09:20:58,12.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+705,2026-11-10 09:20:58,12.0,system,reply_sent,draft saved to outbox/reply_row0012.txt (demo: not emailed)
+706,2026-11-10 09:20:58,22.0,human,decision_edited,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Medium; notes=Corrected AI category/urgency
+707,2026-11-10 09:20:58,22.0,system,reply_sent,draft saved to outbox/reply_row0022.txt (demo: not emailed)
+708,2026-11-10 09:20:58,26.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+709,2026-11-10 09:20:58,26.0,system,reply_sent,draft saved to outbox/reply_row0026.txt (demo: not emailed)
+710,2026-11-10 09:20:58,27.0,human,decision_rejected,reviewer=SIMULATED-REVIEWER; category=None; urgency=None; notes=Looks like a repeat of an earlier enquiry
+711,2026-11-10 09:20:58,27.0,system,no_reply_sent,rejected by reviewer - back to manual handling
+712,2026-11-10 09:20:58,33.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+713,2026-11-10 09:20:58,33.0,system,reply_sent,draft saved to outbox/reply_row0033.txt (demo: not emailed)
+714,2026-11-10 09:20:58,40.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=Medium; notes=
+715,2026-11-10 09:20:58,40.0,system,reply_sent,draft saved to outbox/reply_row0040.txt (demo: not emailed)
+716,2026-11-10 09:20:58,43.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Medium; notes=
+717,2026-11-10 09:20:58,43.0,system,reply_sent,draft saved to outbox/reply_row0043.txt (demo: not emailed)
+718,2026-11-10 09:20:58,44.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+719,2026-11-10 09:20:58,44.0,system,reply_sent,draft saved to outbox/reply_row0044.txt (demo: not emailed)
+720,2026-11-10 09:20:58,48.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=Medium; notes=
+721,2026-11-10 09:20:58,48.0,system,reply_sent,draft saved to outbox/reply_row0048.txt (demo: not emailed)
+722,2026-11-10 09:20:58,52.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+723,2026-11-10 09:20:58,52.0,system,reply_sent,draft saved to outbox/reply_row0052.txt (demo: not emailed)
+724,2026-11-10 09:20:58,53.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+725,2026-11-10 09:20:58,53.0,system,reply_sent,draft saved to outbox/reply_row0053.txt (demo: not emailed)
+726,2026-11-10 09:20:58,60.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+727,2026-11-10 09:20:58,60.0,system,reply_sent,draft saved to outbox/reply_row0060.txt (demo: not emailed)
+728,2026-11-10 09:20:58,61.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=Medium; notes=
+729,2026-11-10 09:20:58,61.0,system,reply_sent,draft saved to outbox/reply_row0061.txt (demo: not emailed)
+730,2026-11-10 09:20:58,66.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+731,2026-11-10 09:20:58,66.0,system,reply_sent,draft saved to outbox/reply_row0066.txt (demo: not emailed)
+732,2026-11-10 09:20:58,75.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=Medium; notes=
+733,2026-11-10 09:20:58,75.0,system,reply_sent,draft saved to outbox/reply_row0075.txt (demo: not emailed)
+734,2026-11-10 09:20:58,76.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+735,2026-11-10 09:20:58,76.0,system,reply_sent,draft saved to outbox/reply_row0076.txt (demo: not emailed)
+736,2026-11-10 09:20:58,79.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=Medium; notes=
+737,2026-11-10 09:20:58,79.0,system,reply_sent,draft saved to outbox/reply_row0079.txt (demo: not emailed)
+738,2026-11-10 09:20:58,96.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Medium; notes=
+739,2026-11-10 09:20:58,96.0,system,reply_sent,draft saved to outbox/reply_row0096.txt (demo: not emailed)
+740,2026-11-10 09:20:58,97.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=Medium; notes=
+741,2026-11-10 09:20:58,97.0,system,reply_sent,draft saved to outbox/reply_row0097.txt (demo: not emailed)
+742,2026-11-10 09:20:58,98.0,human,decision_edited,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Medium; notes=Corrected AI category/urgency
+743,2026-11-10 09:20:58,98.0,system,reply_sent,draft saved to outbox/reply_row0098.txt (demo: not emailed)
+744,2026-11-10 09:20:58,115.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Medium; notes=
+745,2026-11-10 09:20:58,115.0,system,reply_sent,draft saved to outbox/reply_row0115.txt (demo: not emailed)
+746,2026-11-10 09:20:58,119.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=Medium; notes=
+747,2026-11-10 09:20:58,119.0,system,reply_sent,draft saved to outbox/reply_row0119.txt (demo: not emailed)
+748,2026-11-10 09:20:58,122.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Medium; notes=
+749,2026-11-10 09:20:58,122.0,system,reply_sent,draft saved to outbox/reply_row0122.txt (demo: not emailed)
+750,2026-11-10 09:20:58,124.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=Medium; notes=
+751,2026-11-10 09:20:58,124.0,system,reply_sent,draft saved to outbox/reply_row0124.txt (demo: not emailed)
+752,2026-11-10 09:20:58,137.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=Medium; notes=
+753,2026-11-10 09:20:58,137.0,system,reply_sent,draft saved to outbox/reply_row0137.txt (demo: not emailed)
+754,2026-11-10 09:20:58,141.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=Medium; notes=
+755,2026-11-10 09:20:58,141.0,system,reply_sent,draft saved to outbox/reply_row0141.txt (demo: not emailed)
+756,2026-11-10 09:20:58,144.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Medium; notes=
+757,2026-11-10 09:20:58,144.0,system,reply_sent,draft saved to outbox/reply_row0144.txt (demo: not emailed)
+758,2026-11-10 09:20:58,150.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Medium; notes=
+759,2026-11-10 09:20:58,150.0,system,reply_sent,draft saved to outbox/reply_row0150.txt (demo: not emailed)
+760,2026-11-10 09:20:58,156.0,human,decision_rejected,reviewer=SIMULATED-REVIEWER; category=None; urgency=None; notes=Looks like a repeat of an earlier enquiry
+761,2026-11-10 09:20:58,156.0,system,no_reply_sent,rejected by reviewer - back to manual handling
+762,2026-11-10 09:20:58,160.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Medium; notes=
+763,2026-11-10 09:20:58,160.0,system,reply_sent,draft saved to outbox/reply_row0160.txt (demo: not emailed)
+764,2026-11-10 09:20:58,162.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+765,2026-11-10 09:20:58,162.0,system,reply_sent,draft saved to outbox/reply_row0162.txt (demo: not emailed)
+766,2026-11-10 09:20:58,165.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+767,2026-11-10 09:20:58,165.0,system,reply_sent,draft saved to outbox/reply_row0165.txt (demo: not emailed)
+768,2026-11-10 09:20:58,168.0,human,decision_rejected,reviewer=SIMULATED-REVIEWER; category=None; urgency=None; notes=Looks like a repeat of an earlier enquiry
+769,2026-11-10 09:20:58,168.0,system,no_reply_sent,rejected by reviewer - back to manual handling
+770,2026-11-10 09:20:58,171.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Medium; notes=
+771,2026-11-10 09:20:58,171.0,system,reply_sent,draft saved to outbox/reply_row0171.txt (demo: not emailed)
+772,2026-11-10 09:20:58,174.0,human,decision_rejected,reviewer=SIMULATED-REVIEWER; category=None; urgency=None; notes=Looks like a repeat of an earlier enquiry
+773,2026-11-10 09:20:58,174.0,system,no_reply_sent,rejected by reviewer - back to manual handling
+774,2026-11-10 09:20:58,180.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=Medium; notes=
+775,2026-11-10 09:20:58,180.0,system,reply_sent,draft saved to outbox/reply_row0180.txt (demo: not emailed)
+776,2026-11-10 09:20:58,181.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=Medium; notes=
+777,2026-11-10 09:20:58,181.0,system,reply_sent,draft saved to outbox/reply_row0181.txt (demo: not emailed)
+778,2026-11-10 09:20:58,182.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=Medium; notes=
+779,2026-11-10 09:20:58,182.0,system,reply_sent,draft saved to outbox/reply_row0182.txt (demo: not emailed)
+780,2026-11-10 09:20:58,185.0,human,decision_edited,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Medium; notes=Corrected AI category/urgency
+781,2026-11-10 09:20:58,185.0,system,reply_sent,draft saved to outbox/reply_row0185.txt (demo: not emailed)
+782,2026-11-10 09:20:58,186.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+783,2026-11-10 09:20:58,186.0,system,reply_sent,draft saved to outbox/reply_row0186.txt (demo: not emailed)
+784,2026-11-10 09:20:58,195.0,human,decision_rejected,reviewer=SIMULATED-REVIEWER; category=None; urgency=None; notes=Looks like a repeat of an earlier enquiry
+785,2026-11-10 09:20:58,195.0,system,no_reply_sent,rejected by reviewer - back to manual handling
+786,2026-11-10 09:20:58,198.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+787,2026-11-10 09:20:58,198.0,system,reply_sent,draft saved to outbox/reply_row0198.txt (demo: not emailed)
+788,2026-11-10 09:20:58,199.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+789,2026-11-10 09:20:58,199.0,system,reply_sent,draft saved to outbox/reply_row0199.txt (demo: not emailed)
+790,2026-11-10 09:20:58,220.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=Medium; notes=
+791,2026-11-10 09:20:58,220.0,system,reply_sent,draft saved to outbox/reply_row0220.txt (demo: not emailed)
+792,2026-11-10 09:20:58,232.0,human,decision_edited,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Medium; notes=Corrected AI category/urgency
+793,2026-11-10 09:20:58,232.0,system,reply_sent,draft saved to outbox/reply_row0232.txt (demo: not emailed)
+794,2026-11-10 09:20:58,233.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Medium; notes=
+795,2026-11-10 09:20:58,233.0,system,reply_sent,draft saved to outbox/reply_row0233.txt (demo: not emailed)
+796,2026-11-10 09:20:58,237.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+797,2026-11-10 09:20:58,237.0,system,reply_sent,draft saved to outbox/reply_row0237.txt (demo: not emailed)
+798,2026-11-10 09:20:58,248.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Medium; notes=
+799,2026-11-10 09:20:58,248.0,system,reply_sent,draft saved to outbox/reply_row0248.txt (demo: not emailed)
+800,2026-11-10 09:20:58,257.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=Medium; notes=
+801,2026-11-10 09:20:58,257.0,system,reply_sent,draft saved to outbox/reply_row0257.txt (demo: not emailed)
+802,2026-11-10 09:20:58,258.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Medium; notes=
+803,2026-11-10 09:20:58,258.0,system,reply_sent,draft saved to outbox/reply_row0258.txt (demo: not emailed)
+804,2026-11-10 09:20:58,259.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=Medium; notes=
+805,2026-11-10 09:20:58,259.0,system,reply_sent,draft saved to outbox/reply_row0259.txt (demo: not emailed)
+806,2026-11-10 09:20:58,264.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=Medium; notes=
+807,2026-11-10 09:20:58,264.0,system,reply_sent,draft saved to outbox/reply_row0264.txt (demo: not emailed)
+808,2026-11-10 09:20:58,267.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Medium; notes=
+809,2026-11-10 09:20:58,267.0,system,reply_sent,draft saved to outbox/reply_row0267.txt (demo: not emailed)
+810,2026-11-10 09:20:58,274.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Medium; notes=
+811,2026-11-10 09:20:58,274.0,system,reply_sent,draft saved to outbox/reply_row0274.txt (demo: not emailed)
+812,2026-11-10 09:20:58,279.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Medium; notes=
+813,2026-11-10 09:20:58,279.0,system,reply_sent,draft saved to outbox/reply_row0279.txt (demo: not emailed)
+814,2026-11-10 09:20:58,281.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=Medium; notes=
+815,2026-11-10 09:20:58,281.0,system,reply_sent,draft saved to outbox/reply_row0281.txt (demo: not emailed)
+816,2026-11-10 09:20:58,283.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Safety; urgency=Medium; notes=
+817,2026-11-10 09:20:58,283.0,system,reply_sent,draft saved to outbox/reply_row0283.txt (demo: not emailed)
+818,2026-11-10 09:20:58,300.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+819,2026-11-10 09:20:58,300.0,system,reply_sent,draft saved to outbox/reply_row0300.txt (demo: not emailed)
+820,2026-11-10 09:20:58,314.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Medium; notes=
+821,2026-11-10 09:20:58,314.0,system,reply_sent,draft saved to outbox/reply_row0314.txt (demo: not emailed)
+822,2026-11-10 09:20:58,320.0,human,decision_edited,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Medium; notes=Corrected AI category/urgency
+823,2026-11-10 09:20:58,320.0,system,reply_sent,draft saved to outbox/reply_row0320.txt (demo: not emailed)
+824,2026-11-10 09:20:58,321.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Noise; urgency=Medium; notes=
+825,2026-11-10 09:20:58,321.0,system,reply_sent,draft saved to outbox/reply_row0321.txt (demo: not emailed)
+826,2026-11-10 09:20:58,326.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Medium; notes=
+827,2026-11-10 09:20:58,326.0,system,reply_sent,draft saved to outbox/reply_row0326.txt (demo: not emailed)
+828,2026-11-10 09:20:58,327.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Medium; notes=
+829,2026-11-10 09:20:58,327.0,system,reply_sent,draft saved to outbox/reply_row0327.txt (demo: not emailed)
+830,2026-11-10 09:20:58,89.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Low; notes=
+831,2026-11-10 09:20:58,89.0,system,reply_sent,draft saved to outbox/reply_row0089.txt (demo: not emailed)
+832,2026-11-10 09:20:58,170.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Low; notes=
+833,2026-11-10 09:20:58,170.0,system,reply_sent,draft saved to outbox/reply_row0170.txt (demo: not emailed)
+834,2026-11-10 09:20:58,8.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Low; notes=
+835,2026-11-10 09:20:58,8.0,system,reply_sent,draft saved to outbox/reply_row0008.txt (demo: not emailed)
+836,2026-11-10 09:20:58,23.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Low; notes=
+837,2026-11-10 09:20:58,23.0,system,reply_sent,draft saved to outbox/reply_row0023.txt (demo: not emailed)
+838,2026-11-10 09:20:58,29.0,human,decision_edited,reviewer=SIMULATED-REVIEWER; category=Housing Repairs; urgency=High; notes=Corrected AI category/urgency
+839,2026-11-10 09:20:58,29.0,system,reply_sent,draft saved to outbox/reply_row0029.txt (demo: not emailed)
+840,2026-11-10 09:20:58,37.0,human,decision_edited,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Low; notes=Corrected AI category/urgency
+841,2026-11-10 09:20:58,37.0,system,reply_sent,draft saved to outbox/reply_row0037.txt (demo: not emailed)
+842,2026-11-10 09:20:58,92.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Low; notes=
+843,2026-11-10 09:20:58,92.0,system,reply_sent,draft saved to outbox/reply_row0092.txt (demo: not emailed)
+844,2026-11-10 09:20:58,93.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Low; notes=
+845,2026-11-10 09:20:58,93.0,system,reply_sent,draft saved to outbox/reply_row0093.txt (demo: not emailed)
+846,2026-11-10 09:20:58,94.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Low; notes=
+847,2026-11-10 09:20:58,94.0,system,reply_sent,draft saved to outbox/reply_row0094.txt (demo: not emailed)
+848,2026-11-10 09:20:58,100.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Low; notes=
+849,2026-11-10 09:20:58,100.0,system,reply_sent,draft saved to outbox/reply_row0100.txt (demo: not emailed)
+850,2026-11-10 09:20:58,103.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Low; notes=
+851,2026-11-10 09:20:58,103.0,system,reply_sent,draft saved to outbox/reply_row0103.txt (demo: not emailed)
+852,2026-11-10 09:20:58,105.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Low; notes=
+853,2026-11-10 09:20:58,105.0,system,reply_sent,draft saved to outbox/reply_row0105.txt (demo: not emailed)
+854,2026-11-10 09:20:58,110.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Low; notes=
+855,2026-11-10 09:20:58,110.0,system,reply_sent,draft saved to outbox/reply_row0110.txt (demo: not emailed)
+856,2026-11-10 09:20:58,120.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Low; notes=
+857,2026-11-10 09:20:58,120.0,system,reply_sent,draft saved to outbox/reply_row0120.txt (demo: not emailed)
+858,2026-11-10 09:20:58,126.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Low; notes=
+859,2026-11-10 09:20:58,126.0,system,reply_sent,draft saved to outbox/reply_row0126.txt (demo: not emailed)
+860,2026-11-10 09:20:58,139.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Low; notes=
+861,2026-11-10 09:20:58,139.0,system,reply_sent,draft saved to outbox/reply_row0139.txt (demo: not emailed)
+862,2026-11-10 09:20:58,149.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Low; notes=
+863,2026-11-10 09:20:58,149.0,system,reply_sent,draft saved to outbox/reply_row0149.txt (demo: not emailed)
+864,2026-11-10 09:20:58,173.0,human,decision_rejected,reviewer=SIMULATED-REVIEWER; category=None; urgency=None; notes=Looks like a repeat of an earlier enquiry
+865,2026-11-10 09:20:58,173.0,system,no_reply_sent,rejected by reviewer - back to manual handling
+866,2026-11-10 09:20:58,190.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Low; notes=
+867,2026-11-10 09:20:58,190.0,system,reply_sent,draft saved to outbox/reply_row0190.txt (demo: not emailed)
+868,2026-11-10 09:20:58,201.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Low; notes=
+869,2026-11-10 09:20:58,201.0,system,reply_sent,draft saved to outbox/reply_row0201.txt (demo: not emailed)
+870,2026-11-10 09:20:58,206.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Low; notes=
+871,2026-11-10 09:20:58,206.0,system,reply_sent,draft saved to outbox/reply_row0206.txt (demo: not emailed)
+872,2026-11-10 09:20:58,215.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Low; notes=
+873,2026-11-10 09:20:58,215.0,system,reply_sent,draft saved to outbox/reply_row0215.txt (demo: not emailed)
+874,2026-11-10 09:20:58,217.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Low; notes=
+875,2026-11-10 09:20:58,217.0,system,reply_sent,draft saved to outbox/reply_row0217.txt (demo: not emailed)
+876,2026-11-10 09:20:58,224.0,human,decision_rejected,reviewer=SIMULATED-REVIEWER; category=None; urgency=None; notes=Looks like a repeat of an earlier enquiry
+877,2026-11-10 09:20:58,224.0,system,no_reply_sent,rejected by reviewer - back to manual handling
+878,2026-11-10 09:20:58,230.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Low; notes=
+879,2026-11-10 09:20:58,230.0,system,reply_sent,draft saved to outbox/reply_row0230.txt (demo: not emailed)
+880,2026-11-10 09:20:58,243.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Low; notes=
+881,2026-11-10 09:20:58,243.0,system,reply_sent,draft saved to outbox/reply_row0243.txt (demo: not emailed)
+882,2026-11-10 09:20:58,247.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Low; notes=
+883,2026-11-10 09:20:58,247.0,system,reply_sent,draft saved to outbox/reply_row0247.txt (demo: not emailed)
+884,2026-11-10 09:20:58,250.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Low; notes=
+885,2026-11-10 09:20:58,250.0,system,reply_sent,draft saved to outbox/reply_row0250.txt (demo: not emailed)
+886,2026-11-10 09:20:58,265.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Low; notes=
+887,2026-11-10 09:20:58,265.0,system,reply_sent,draft saved to outbox/reply_row0265.txt (demo: not emailed)
+888,2026-11-10 09:20:58,268.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Low; notes=
+889,2026-11-10 09:20:58,268.0,system,reply_sent,draft saved to outbox/reply_row0268.txt (demo: not emailed)
+890,2026-11-10 09:20:58,269.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Low; notes=
+891,2026-11-10 09:20:58,269.0,system,reply_sent,draft saved to outbox/reply_row0269.txt (demo: not emailed)
+892,2026-11-10 09:20:58,275.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Low; notes=
+893,2026-11-10 09:20:58,275.0,system,reply_sent,draft saved to outbox/reply_row0275.txt (demo: not emailed)
+894,2026-11-10 09:20:58,282.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Low; notes=
+895,2026-11-10 09:20:58,282.0,system,reply_sent,draft saved to outbox/reply_row0282.txt (demo: not emailed)
+896,2026-11-10 09:20:58,284.0,human,decision_edited,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=High; notes=Corrected AI category/urgency
+897,2026-11-10 09:20:58,284.0,system,reply_sent,draft saved to outbox/reply_row0284.txt (demo: not emailed)
+898,2026-11-10 09:20:58,288.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Complaints; urgency=Low; notes=
+899,2026-11-10 09:20:58,288.0,system,reply_sent,draft saved to outbox/reply_row0288.txt (demo: not emailed)
+900,2026-11-10 09:20:58,311.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Billing; urgency=Low; notes=
+901,2026-11-10 09:20:58,311.0,system,reply_sent,draft saved to outbox/reply_row0311.txt (demo: not emailed)
+902,2026-11-10 09:20:58,317.0,human,decision_approved,reviewer=SIMULATED-REVIEWER; category=Waste; urgency=Low; notes=
+903,2026-11-10 09:20:58,317.0,system,reply_sent,draft saved to outbox/reply_row0317.txt (demo: not emailed)

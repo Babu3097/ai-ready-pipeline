@@ -14,7 +14,7 @@ These notes describe the run in `docs/results.md`, which used the **keyword stan
 - Of the 115 enquiries handled with only a skim (not sent to a person), **all 115 were right**.
 - No urgent case was missed *silently*: every true "High" case was either labelled High or sent to a person.
 
-This looks excellent, but it is mostly a property of the data. The 300 enquiries were generated from about 35 message templates, and the keyword rules were written by looking at the same kinds of sentences. Real enquiries are vaguer, longer, mix topics and contain typos. Expect real accuracy to be lower and the number of silent mistakes to be higher. That is exactly why the project keeps the confidence threshold, the forced review of urgent and safety cases, and the evaluation against a known answer key.
+This looks excellent, but it is mostly a property of the data. The 300 enquiries were generated from about 34 message templates, and the keyword rules were written by looking at the same kinds of sentences. Real enquiries are vaguer, longer, mix topics and contain typos. Expect real accuracy to be lower and the number of silent mistakes to be higher. That is exactly why the project keeps the confidence threshold, the forced review of urgent and safety cases, and the evaluation against a known answer key.
 
 ## What I would do next with real data
 
